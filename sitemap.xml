@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lucky845.github.io/archives/b55fa600.html</loc>
+    
+    <lastmod>2025-02-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lucky845.github.io/archives/b55fa599.html</loc>
     
     <lastmod>2025-02-26</lastmod>
@@ -1415,6 +1424,13 @@
   
   <url>
     <loc>https://lucky845.github.io/tags/Redisson/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/</loc>
     <lastmod>2025-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -1,3 +1,4 @@
+https://lucky845.github.io/archives/b55fa600.html
 https://lucky845.github.io/archives/b55fa599.html
 https://lucky845.github.io/archives/b55fa598.html
 https://lucky845.github.io/archives/b55fa597.html
@@ -177,6 +178,7 @@ https://lucky845.github.io/tags/AOF/
 https://lucky845.github.io/tags/Jedis/
 https://lucky845.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/
 https://lucky845.github.io/tags/Redisson/
+https://lucky845.github.io/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/
 https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/
 https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/
 https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/Spring/

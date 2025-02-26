@@ -337,6 +337,36 @@
   </entry>
   
   <entry>
+    <title>【Linux】磁盘清理指南</title>
+    <link href="https://lucky845.github.io/archives/b55fa600.html"/>
+    <id>https://lucky845.github.io/archives/b55fa600.html</id>
+    <published>2025-02-25T23:00:00.000Z</published>
+    <updated>2025-02-26T05:56:18.103Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>随着时间的推移，Linux 系统中的磁盘空间可能会被临时文件、日志文件和不再使用的程序占用。定期清理磁盘可以帮助释放空间，提高系统性能。本文将介绍一些常用的磁盘清理方法和工具。</p><h2 id="1-查看磁盘使用情况"><a href="#1-查看磁盘使用情况" class="headerlink" title="1. 查看磁盘使用情况"></a>1. 查看磁盘使用情况</h2><p>在开始清理之前，首先需要查看磁盘的使用情况。可以使用 <code>df</code> 命令查看各个分区的使用情况：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">df</span> <span class="token parameter variable">-h</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>输出示例：</p><pre class="line-numbers language-none"><code class="language-none">Filesystem      Size  Used Avail Use% Mounted on/dev/sda1       100G   80G   15G  85% /<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="2-清理临时文件"><a href="#2-清理临时文件" class="headerlink" title="2. 清理临时文件"></a>2. 清理临时文件</h2><h3 id="2-1-使用-tmpwatch"><a href="#2-1-使用-tmpwatch" class="headerlink" title="2.1 使用 tmpwatch"></a>2.1 使用 <code>tmpwatch</code></h3><p><code>tmpwatch</code> 是一个用于清理临时文件的工具，可以删除在指定时间内未被访问的文件。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> tmpreaper  <span class="token comment"># Debian/Ubuntu</span><span class="token function">sudo</span> yum <span class="token function">install</span> tmpwatch    <span class="token comment"># RHEL/CentOS</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>使用示例：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> tmpwatch <span class="token parameter variable">--mtime</span> <span class="token number">24</span> /tmp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这将删除 <code>/tmp</code> 目录中 24 小时内未被访问的文件。</p><h3 id="2-2-手动清理"><a href="#2-2-手动清理" class="headerlink" title="2.2 手动清理"></a>2.2 手动清理</h3><p>您也可以手动清理 <code>/tmp</code> 目录：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> <span class="token parameter variable">-rf</span> /tmp/*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="3-清理日志文件"><a href="#3-清理日志文件" class="headerlink" title="3. 清理日志文件"></a>3. 清理日志文件</h2><h3 id="3-1-使用-logrotate"><a href="#3-1-使用-logrotate" class="headerlink" title="3.1 使用 logrotate"></a>3.1 使用 <code>logrotate</code></h3><p><code>logrotate</code> 是一个用于管理日志文件的工具，可以自动轮换、压缩和删除旧的日志文件。确保您的系统已安装并配置 <code>logrotate</code>。</p><h3 id="3-2-手动清理"><a href="#3-2-手动清理" class="headerlink" title="3.2 手动清理"></a>3.2 手动清理</h3><p>您可以手动查看和清理 <code>/var/log</code> 目录中的日志文件：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">du</span> <span class="token parameter variable">-sh</span> /var/log/*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用 <code>rm</code> 命令删除不再需要的日志文件：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /var/log/old-log-file.log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="4-清理包管理器缓存"><a href="#4-清理包管理器缓存" class="headerlink" title="4. 清理包管理器缓存"></a>4. 清理包管理器缓存</h2><h3 id="4-1-Debian-Ubuntu"><a href="#4-1-Debian-Ubuntu" class="headerlink" title="4.1 Debian/Ubuntu"></a>4.1 Debian/Ubuntu</h3><p>使用以下命令清理 APT 缓存：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="4-2-RHEL-CentOS"><a href="#4-2-RHEL-CentOS" class="headerlink" title="4.2 RHEL/CentOS"></a>4.2 RHEL/CentOS</h3><p>使用以下命令清理 YUM 缓存：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> yum clean all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="5-查找和删除大文件"><a href="#5-查找和删除大文件" class="headerlink" title="5. 查找和删除大文件"></a>5. 查找和删除大文件</h2><h3 id="5-1-使用-find"><a href="#5-1-使用-find" class="headerlink" title="5.1 使用 find"></a>5.1 使用 <code>find</code></h3><p>使用 <code>find</code> 命令查找大于 100MB 的文件：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-size</span> +100M<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="5-2-删除不需要的文件"><a href="#5-2-删除不需要的文件" class="headerlink" title="5.2 删除不需要的文件"></a>5.2 删除不需要的文件</h3><p>在确认不再需要的文件后，可以使用 <code>rm</code> 命令删除它们：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /path/to/large-file<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="6-使用-ncdu-进行磁盘使用分析"><a href="#6-使用-ncdu-进行磁盘使用分析" class="headerlink" title="6. 使用 ncdu 进行磁盘使用分析"></a>6. 使用 <code>ncdu</code> 进行磁盘使用分析</h2><p><code>ncdu</code> 是一个基于文本的磁盘使用分析工具，可以帮助您快速找到占用磁盘空间的文件和目录。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> ncdu  <span class="token comment"># Debian/Ubuntu</span><span class="token function">sudo</span> yum <span class="token function">install</span> ncdu  <span class="token comment"># RHEL/CentOS</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>使用示例：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ncdu /<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="7-总结"><a href="#7-总结" class="headerlink" title="7. 总结"></a>7. 总结</h2><p>定期清理 Linux 磁盘可以帮助释放空间，提高系统性能。通过使用上述工具和方法，您可以有效地管理磁盘空间，保持系统的整洁和高效运行。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://www.tecmint.com/clean-linux-disk-space/">Linux Disk Cleanup Guide</a></li><li><a href="https://linux.die.net/man/8/logrotate">Logrotate Documentation</a></li></ul><hr><h2 id="希望这篇文章能帮助您更好地理解如何清理-Linux-磁盘。如果您有任何问题，欢迎在评论区讨论！"><a href="#希望这篇文章能帮助您更好地理解如何清理-Linux-磁盘。如果您有任何问题，欢迎在评论区讨论！" class="headerlink" title="希望这篇文章能帮助您更好地理解如何清理 Linux 磁盘。如果您有任何问题，欢迎在评论区讨论！"></a>希望这篇文章能帮助您更好地理解如何清理 Linux 磁盘。如果您有任何问题，欢迎在评论区讨论！</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;问题背景&quot;&gt;&lt;a href=&quot;#问题背景&quot; class=&quot;headerlink&quot; title=&quot;问题背景&quot;&gt;&lt;/a&gt;问题背景&lt;/h2&gt;&lt;p&gt;随着时间的推移，Linux 系统中的磁盘空间可能会被临时文件、日志文件和不再使用的程序占用。定期清理磁盘可以帮助释放空间，提</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://lucky845.github.io/categories/Linux/"/>
+    
+    
+    <category term="性能优化" scheme="https://lucky845.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+    <category term="Linux" scheme="https://lucky845.github.io/tags/Linux/"/>
+    
+    <category term="系统管理" scheme="https://lucky845.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="磁盘清理" scheme="https://lucky845.github.io/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Linux】系统监控与性能优化</title>
     <link href="https://lucky845.github.io/archives/b55fa599.html"/>
     <id>https://lucky845.github.io/archives/b55fa599.html</id>
@@ -607,38 +637,6 @@
     <category term="事务" scheme="https://lucky845.github.io/tags/%E4%BA%8B%E5%8A%A1/"/>
     
     <category term="数据一致性" scheme="https://lucky845.github.io/tags/%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Redis】持久化方式详解</title>
-    <link href="https://lucky845.github.io/archives/b55fa581.html"/>
-    <id>https://lucky845.github.io/archives/b55fa581.html</id>
-    <published>2025-02-25T08:00:00.000Z</published>
-    <updated>2025-02-25T12:03:52.664Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>Redis 是一个高性能的内存数据库，广泛用于缓存和数据存储。虽然 Redis 的数据存储在内存中，但在某些情况下，我们需要将数据持久化到磁盘，以防止数据丢失。Redis 提供了多种持久化方式，本文将详细介绍 Redis 的持久化机制及其优缺点。</p><h2 id="1-Redis-的持久化方式"><a href="#1-Redis-的持久化方式" class="headerlink" title="1. Redis 的持久化方式"></a>1. Redis 的持久化方式</h2><p>Redis 主要提供两种持久化方式：RDB（快照）和 AOF（追加文件）。这两种方式可以单独使用，也可以结合使用。</p><h3 id="1-1-RDB（Redis-DataBase）"><a href="#1-1-RDB（Redis-DataBase）" class="headerlink" title="1.1 RDB（Redis DataBase）"></a>1.1 RDB（Redis DataBase）</h3><p>RDB 是 Redis 的默认持久化方式，它通过在指定的时间间隔内生成数据的快照来实现持久化。RDB 文件是一个二进制文件，包含了 Redis 数据库的完整数据。</p><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul><li><strong>性能高</strong>：RDB 在生成快照时，Redis 可以继续处理其他请求，因此对性能影响较小。</li><li><strong>数据恢复快</strong>：RDB 文件是一个完整的快照，恢复数据时只需加载这个文件即可。</li></ul><h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul><li><strong>数据丢失风险</strong>：如果 Redis 在快照生成之间崩溃，可能会丢失最近的写入数据。</li><li><strong>持久化时间长</strong>：在数据量较大时，生成 RDB 文件可能需要较长时间，期间会影响性能。</li></ul><h4 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例"></a>配置示例</h4><p>在 <code>redis.conf</code> 配置文件中，可以通过以下配置来设置 RDB 的持久化策略：</p><pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">save 900 1   # 900秒内至少有1个key发生变化save 300 10  # 300秒内至少有10个key发生变化save 60 10000 # 60秒内至少有10000个key发生变化<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="1-2-AOF（Append-Only-File）"><a href="#1-2-AOF（Append-Only-File）" class="headerlink" title="1.2 AOF（Append Only File）"></a>1.2 AOF（Append Only File）</h3><p>AOF 是 Redis 的另一种持久化方式，它通过记录每个写操作来实现持久化。每当执行写命令时，Redis 会将该命令追加到 AOF 文件中。</p><h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><ul><li><strong>数据安全性高</strong>：AOF 可以配置为每次写操作后立即同步到磁盘，最大限度地减少数据丢失。</li><li><strong>可读性强</strong>：AOF 文件是一个文本文件，可以通过简单的文本编辑器查看和修改。</li></ul><h4 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h4><ul><li><strong>性能开销大</strong>：由于每次写操作都需要追加到 AOF 文件，可能会对性能产生影响。</li><li><strong>文件体积大</strong>：AOF 文件可能会随着时间的推移而变得非常大，影响加载速度。</li></ul><h4 id="配置示例-1"><a href="#配置示例-1" class="headerlink" title="配置示例"></a>配置示例</h4><p>在 <code>redis.conf</code> 配置文件中，可以通过以下配置来设置 AOF 的持久化策略：</p><pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">appendonly yesappendfsync always   # 每次写操作后立即同步appendfsync everysec # 每秒同步一次appendfsync no      # 不同步，依赖操作系统<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-RDB-和-AOF-的结合使用"><a href="#2-RDB-和-AOF-的结合使用" class="headerlink" title="2. RDB 和 AOF 的结合使用"></a>2. RDB 和 AOF 的结合使用</h2><p>Redis 允许同时使用 RDB 和 AOF 持久化方式。这样可以在享受 RDB 快照性能的同时，利用 AOF 的高数据安全性。Redis 会在启动时优先加载 AOF 文件，如果 AOF 文件损坏，则会加载 RDB 文件。</p><h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h2><p>Redis 提供了灵活的持久化机制，用户可以根据业务需求选择合适的持久化方式。RDB 适合对性能要求较高的场景，而 AOF 则适合对数据安全性要求较高的场景。结合使用 RDB 和 AOF，可以在性能和数据安全性之间取得平衡。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://redis.io/documentation">Redis 官方文档</a></li><li><a href="https://redis.io/topics/persistence">Redis 持久化机制</a></li></ul><hr><h2 id="希望这篇文章能帮助您更好地理解-Redis-的持久化方式。如果您有任何问题，欢迎在评论区讨论！"><a href="#希望这篇文章能帮助您更好地理解-Redis-的持久化方式。如果您有任何问题，欢迎在评论区讨论！" class="headerlink" title="希望这篇文章能帮助您更好地理解 Redis 的持久化方式。如果您有任何问题，欢迎在评论区讨论！"></a>希望这篇文章能帮助您更好地理解 Redis 的持久化方式。如果您有任何问题，欢迎在评论区讨论！</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;问题背景&quot;&gt;&lt;a href=&quot;#问题背景&quot; class=&quot;headerlink&quot; title=&quot;问题背景&quot;&gt;&lt;/a&gt;问题背景&lt;/h2&gt;&lt;p&gt;Redis 是一个高性能的内存数据库，广泛用于缓存和数据存储。虽然 Redis 的数据存储在内存中，但在某些情况下，我们需要</summary>
-      
-    
-    
-    
-    <category term="数据库" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="Redis" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/"/>
-    
-    
-    <category term="数据库" scheme="https://lucky845.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="Redis" scheme="https://lucky845.github.io/tags/Redis/"/>
-    
-    <category term="持久化" scheme="https://lucky845.github.io/tags/%E6%8C%81%E4%B9%85%E5%8C%96/"/>
-    
-    <category term="数据存储" scheme="https://lucky845.github.io/tags/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
