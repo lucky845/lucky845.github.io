@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【Linux】如何编写一个部署 Spring Boot 程序的 Shell 脚本, Java, Python, Linux, 程序员， 代码， 编程， 开发， 开发者， 技术， 技术， 程序，人生， 生活">
-    <meta name="description" content="问题背景在 Linux 环境中，部署 Spring Boot 应用程序时，通常需要一个 Shell 脚本来简化部署、启动、停止和重启等操作。本文将介绍如何编写一个满足以下特性的 Shell 脚本：
-
-关闭终端后，Java 进程不会退出。
-提">
+    <meta name="keywords" content="【Redis】如何配置 Redis 集群, Java, Python, Linux, 程序员， 代码， 编程， 开发， 开发者， 技术， 技术， 程序，人生， 生活">
+    <meta name="description" content="问题背景Redis 集群是一种分布式架构，能够将数据分散存储在多个 Redis 实例中，从而提高系统的可扩展性和可用性。通过 Redis 集群，您可以实现数据的分片和高可用性，本文将介绍如何配置 Redis 集群。
+1. Redis 集群的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【Linux】如何编写一个部署 Spring Boot 程序的 Shell 脚本 | lucky845的博客</title>
+    <title>【Redis】如何配置 Redis 集群 | lucky845的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -349,12 +347,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【Linux】如何编写一个部署 Spring Boot 程序的 Shell 脚本</h1>
+                    <h1 class="description center-align post-title">【Redis】如何配置 Redis 集群</h1>
                 </div>
             </div>
         </div>
@@ -378,20 +376,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
-                                <a href="/tags/Spring-Boot/">
-                                    <span class="chip bg-color">Spring Boot</span>
+                                <a href="/tags/Redis/">
+                                    <span class="chip bg-color">Redis</span>
                                 </a>
                             
-                                <a href="/tags/Shell-%E8%84%9A%E6%9C%AC/">
-                                    <span class="chip bg-color">Shell 脚本</span>
+                                <a href="/tags/%E9%9B%86%E7%BE%A4/">
+                                    <span class="chip bg-color">集群</span>
                                 </a>
                             
-                                <a href="/tags/%E9%83%A8%E7%BD%B2/">
-                                    <span class="chip bg-color">部署</span>
+                                <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">配置</span>
                                 </a>
                             
                         </div>
@@ -402,12 +400,12 @@
                         <div class="post-cate">
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                                <a href="/categories/Java/" class="post-category">
-                                    Java
+                                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
                                 </a>
                             
-                                <a href="/categories/Java/Spring-Boot/" class="post-category">
-                                    Spring Boot
+                                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/" class="post-category">
+                                    Redis
                                 </a>
                             
                         </div>
@@ -419,7 +417,7 @@
                 
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                        2025-02-25
+                        2025-02-26
                     </div>
                 
 
@@ -433,7 +431,7 @@
                 
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        808
+                        956
                     </div>
                 
 
@@ -470,134 +468,90 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在 Linux 环境中，部署 Spring Boot 应用程序时，通常需要一个 Shell 脚本来简化部署、启动、停止和重启等操作。本文将介绍如何编写一个满足以下特性的 Shell 脚本：</p>
+                <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>Redis 集群是一种分布式架构，能够将数据分散存储在多个 Redis 实例中，从而提高系统的可扩展性和可用性。通过 Redis 集群，您可以实现数据的分片和高可用性，本文将介绍如何配置 Redis 集群。</p>
+<h2 id="1-Redis-集群的基本概念"><a href="#1-Redis-集群的基本概念" class="headerlink" title="1. Redis 集群的基本概念"></a>1. Redis 集群的基本概念</h2><p>Redis 集群通过将数据分片存储在多个节点上来实现高可用性和可扩展性。每个节点负责一部分数据，并且可以通过哈希槽（hash slot）来管理数据的分布。Redis 集群的主要特点包括：</p>
 <ul>
-<li>关闭终端后，Java 进程不会退出。</li>
-<li>提供部署、启动、停止、重启三种常见操作。</li>
-<li>每次部署时，均备份当前的程序包（可通过参数关闭备份）。</li>
+<li><strong>数据分片</strong>：将数据分散存储在多个节点上。</li>
+<li><strong>高可用性</strong>：支持主从复制，确保在主节点故障时可以快速切换到从节点。</li>
+<li><strong>自动故障转移</strong>：当主节点出现故障时，集群会自动将从节点提升为主节点。</li>
 </ul>
-<h2 id="1-脚本结构"><a href="#1-脚本结构" class="headerlink" title="1. 脚本结构"></a>1. 脚本结构</h2><p>以下是一个简单的 Shell 脚本示例，包含了上述特性。您可以根据需要进行修改。</p>
-<h3 id="1-1-创建脚本文件"><a href="#1-1-创建脚本文件" class="headerlink" title="1.1 创建脚本文件"></a>1.1 创建脚本文件</h3><p>在您的 Linux 服务器上，创建一个名为 <code>deploy.sh</code> 的文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">touch</span> deploy.sh
-<span class="token function">chmod</span> +x deploy.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="1-2-编写脚本内容"><a href="#1-2-编写脚本内容" class="headerlink" title="1.2 编写脚本内容"></a>1.2 编写脚本内容</h3><p>将以下内容复制到 <code>deploy.sh</code> 文件中：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-
-<span class="token comment"># 配置参数</span>
-<span class="token assign-left variable">APP_NAME</span><span class="token operator">=</span><span class="token string">"your-spring-boot-app"</span>  <span class="token comment"># 应用名称</span>
-<span class="token assign-left variable">JAR_PATH</span><span class="token operator">=</span><span class="token string">"/path/to/your/app.jar"</span>   <span class="token comment"># JAR 文件路径</span>
-<span class="token assign-left variable">BACKUP_DIR</span><span class="token operator">=</span><span class="token string">"/path/to/backup"</span>       <span class="token comment"># 备份目录</span>
-<span class="token assign-left variable">PID_FILE</span><span class="token operator">=</span><span class="token string">"/tmp/<span class="token variable">${APP_NAME}</span>.pid"</span>    <span class="token comment"># PID 文件路径</span>
-
-<span class="token comment"># 函数：备份当前程序包</span>
-<span class="token function-name function">backup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token parameter variable">-d</span> <span class="token string">"<span class="token variable">$BACKUP_DIR</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-        <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token string">"<span class="token variable">$BACKUP_DIR</span>"</span>
-    <span class="token keyword">fi</span>
-    <span class="token function">cp</span> <span class="token string">"<span class="token variable">$JAR_PATH</span>"</span> <span class="token string">"<span class="token variable">$BACKUP_DIR</span>/<span class="token variable">${APP_NAME}</span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y%m%d%H%M%S<span class="token variable">)</span></span>.jar"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"备份完成: <span class="token variable">$BACKUP_DIR</span>"</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment"># 函数：启动应用</span>
-<span class="token function-name function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-f</span> <span class="token string">"<span class="token variable">$PID_FILE</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-        <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$APP_NAME</span> 已在运行 (PID: <span class="token variable"><span class="token variable">$(</span><span class="token function">cat</span> $PID_FILE<span class="token variable">)</span></span>)"</span>
-        <span class="token builtin class-name">return</span>
-    <span class="token keyword">fi</span>
-    <span class="token function">nohup</span> <span class="token function">java</span> <span class="token parameter variable">-jar</span> <span class="token string">"<span class="token variable">$JAR_PATH</span>"</span> <span class="token operator">&gt;</span> /dev/null <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token file-descriptor important">&amp;1</span> <span class="token operator">&amp;</span>
-    <span class="token builtin class-name">echo</span> <span class="token variable">$!</span> <span class="token operator">&gt;</span> <span class="token string">"<span class="token variable">$PID_FILE</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$APP_NAME</span> 启动成功 (PID: <span class="token variable"><span class="token variable">$(</span><span class="token function">cat</span> $PID_FILE<span class="token variable">)</span></span>)"</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment"># 函数：停止应用</span>
-<span class="token function-name function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token parameter variable">-f</span> <span class="token string">"<span class="token variable">$PID_FILE</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-        <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$APP_NAME</span> 未在运行"</span>
-        <span class="token builtin class-name">return</span>
-    <span class="token keyword">fi</span>
-    <span class="token function">kill</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">cat</span> <span class="token string">"<span class="token variable">$PID_FILE</span>"</span><span class="token variable">)</span></span>
-    <span class="token function">rm</span> <span class="token string">"<span class="token variable">$PID_FILE</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$APP_NAME</span> 停止成功"</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment"># 函数：重启应用</span>
-<span class="token function-name function">restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    stop
-    start
-<span class="token punctuation">}</span>
-
-<span class="token comment"># 函数：显示帮助信息</span>
-<span class="token function-name function">help</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"用法: <span class="token variable">$0</span> [deploy|start|stop|restart] [--no-backup]"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"  deploy: 部署应用并备份当前程序包"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"  start: 启动应用"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"  stop: 停止应用"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"  restart: 重启应用"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"  --no-backup: 部署时不备份当前程序包"</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment"># 解析参数</span>
-<span class="token keyword">case</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token keyword">in</span>
-    deploy<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$2</span>"</span> <span class="token operator">!=</span> <span class="token string">"--no-backup"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-            backup
-        <span class="token keyword">fi</span>
-        start
-        <span class="token punctuation">;</span><span class="token punctuation">;</span>
-    start<span class="token punctuation">)</span>
-        start
-        <span class="token punctuation">;</span><span class="token punctuation">;</span>
-    stop<span class="token punctuation">)</span>
-        stop
-        <span class="token punctuation">;</span><span class="token punctuation">;</span>
-    restart<span class="token punctuation">)</span>
-        restart
-        <span class="token punctuation">;</span><span class="token punctuation">;</span>
-    *<span class="token punctuation">)</span>
-        <span class="token builtin class-name">help</span>
-        <span class="token punctuation">;</span><span class="token punctuation">;</span>
-<span class="token keyword">esac</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-脚本功能说明"><a href="#2-脚本功能说明" class="headerlink" title="2. 脚本功能说明"></a>2. 脚本功能说明</h2><ul>
-<li><strong>备份功能</strong>：在部署时，脚本会将当前的 JAR 文件备份到指定的备份目录。可以通过 <code>--no-backup</code> 参数来关闭备份功能。</li>
-<li><strong>启动功能</strong>：使用 <code>nohup</code> 命令启动 Java 进程，确保即使关闭终端，进程仍然在后台运行。进程的 PID 会被写入到指定的 PID 文件中。</li>
-<li><strong>停止功能</strong>：通过读取 PID 文件来停止正在运行的 Java 进程，并删除 PID 文件。</li>
-<li><strong>重启功能</strong>：先停止应用，再启动应用。</li>
-<li><strong>帮助信息</strong>：提供使用说明，帮助用户了解如何使用脚本。</li>
-</ul>
-<h2 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a>3. 使用示例</h2><ul>
-<li>部署并备份当前程序包：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./deploy.sh deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<h2 id="2-环境准备"><a href="#2-环境准备" class="headerlink" title="2. 环境准备"></a>2. 环境准备</h2><p>在配置 Redis 集群之前，您需要准备以下环境：</p>
 <ul>
-<li>部署但不备份当前程序包：</li>
+<li>至少 3 个 Redis 实例作为主节点。</li>
+<li>至少 3 个 Redis 实例作为从节点（可选，但推荐）。</li>
+<li>确保 Redis 版本为 3.0 及以上。</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./deploy.sh deploy --no-backup<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="3-启动-Redis-实例"><a href="#3-启动-Redis-实例" class="headerlink" title="3. 启动 Redis 实例"></a>3. 启动 Redis 实例</h2><p>在每个 Redis 实例的配置文件中，确保以下配置项：</p>
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># 启用集群模式
+cluster-enabled yes
 
-<ul>
-<li>启动应用：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./deploy.sh start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+# 指定集群配置文件
+cluster-config-file nodes.conf
 
-<ul>
-<li>停止应用：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./deploy.sh stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+# 启用集群节点间的通信
+cluster-node-timeout 5000
 
-<ul>
-<li>重启应用：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./deploy.sh restart<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+# 其他配置项...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过编写一个简单的 Shell 脚本，您可以轻松地在 Linux 环境中部署和管理 Spring Boot 应用程序。该脚本提供了优雅的启动、停止和重启功能，并支持备份当前程序包，帮助您更好地管理应用的生命周期。</p>
+<h3 id="启动-Redis-实例"><a href="#启动-Redis-实例" class="headerlink" title="启动 Redis 实例"></a>启动 Redis 实例</h3><p>在每个 Redis 实例的目录下，使用以下命令启动 Redis：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">redis-server /path/to/redis.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="4-创建-Redis-集群"><a href="#4-创建-Redis-集群" class="headerlink" title="4. 创建 Redis 集群"></a>4. 创建 Redis 集群</h2><p>使用 <code>redis-cli</code> 工具创建 Redis 集群。可以使用以下命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">redis-cli <span class="token parameter variable">--cluster</span> create <span class="token punctuation">\</span>
+<span class="token operator">&lt;</span>主节点1的IP<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>端口<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+<span class="token operator">&lt;</span>主节点2的IP<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>端口<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+<span class="token operator">&lt;</span>主节点3的IP<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>端口<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+--cluster-replicas <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>例如，如果您有三个主节点，分别为 <code>192.168.1.1:7000</code>、<code>192.168.1.2:7000</code> 和 <code>192.168.1.3:7000</code>，可以使用以下命令创建集群：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">redis-cli <span class="token parameter variable">--cluster</span> create <span class="token punctuation">\</span>
+<span class="token number">192.168</span>.1.1:7000 <span class="token punctuation">\</span>
+<span class="token number">192.168</span>.1.2:7000 <span class="token punctuation">\</span>
+<span class="token number">192.168</span>.1.3:7000 <span class="token punctuation">\</span>
+--cluster-replicas <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在这个命令中，<code>--cluster-replicas 1</code> 表示为每个主节点创建一个从节点。</p>
+<h2 id="5-验证集群配置"><a href="#5-验证集群配置" class="headerlink" title="5. 验证集群配置"></a>5. 验证集群配置</h2><p>创建集群后，可以使用以下命令验证集群的状态：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">redis-cli <span class="token parameter variable">-c</span> <span class="token parameter variable">-h</span> <span class="token operator">&lt;</span>主节点IP<span class="token operator">&gt;</span> <span class="token parameter variable">-p</span> <span class="token operator">&lt;</span>端口<span class="token operator">&gt;</span> cluster info<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您应该能够看到集群的状态信息，包括节点数量、槽数量等。</p>
+<h2 id="6-使用-Redis-集群"><a href="#6-使用-Redis-集群" class="headerlink" title="6. 使用 Redis 集群"></a>6. 使用 Redis 集群</h2><p>在应用程序中使用 Redis 集群时，确保使用支持集群的 Redis 客户端库。例如，在 Java 中，可以使用 Jedis 或 Lettuce 客户端。</p>
+<h3 id="使用-Jedis-客户端示例"><a href="#使用-Jedis-客户端示例" class="headerlink" title="使用 Jedis 客户端示例"></a>使用 Jedis 客户端示例</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">redis<span class="token punctuation">.</span>clients<span class="token punctuation">.</span>jedis<span class="token punctuation">.</span></span><span class="token class-name">JedisCluster</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashSet</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Set</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RedisClusterExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> nodes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        nodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"192.168.1.1:7000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        nodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"192.168.1.2:7000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        nodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"192.168.1.3:7000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JedisCluster</span> jedisCluster <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JedisCluster</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 使用 Redis 集群</span>
+        jedisCluster<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"key"</span><span class="token punctuation">,</span> <span class="token string">"value"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> value <span class="token operator">=</span> jedisCluster<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"key"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"获取的值: "</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 关闭连接</span>
+        jedisCluster<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="7-注意事项"><a href="#7-注意事项" class="headerlink" title="7. 注意事项"></a>7. 注意事项</h2><ol>
+<li><strong>节点数量</strong>：建议至少使用 6 个节点（3 个主节点和 3 个从节点）以确保高可用性。</li>
+<li><strong>网络配置</strong>：确保所有节点之间的网络连接正常，防火墙设置允许节点间的通信。</li>
+<li><strong>数据迁移</strong>：在集群创建后，数据会自动分配到各个节点，您可以使用 <code>CLUSTER ADDSLOTS</code> 命令手动分配槽。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过以上步骤，您可以成功配置 Redis 集群，实现数据的分片和高可用性。合理的集群配置可以提高系统的性能和稳定性。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/">Spring Boot Documentation</a></li>
-<li><a target="_blank" rel="noopener" href="https://tldp.org/LDP/Bash-Beginners-Guide/html/">Bash Scripting Guide</a></li>
+<li><a target="_blank" rel="noopener" href="https://redis.io/topics/cluster-tutorial">Redis Cluster Documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://redis.io/documentation">Redis 官方文档</a></li>
 </ul>
 <hr>
-<h2 id="希望这篇文章能帮助您更好地理解和实现-Linux-环境下的-Spring-Boot-应用部署。如果您有任何问题，欢迎在评论区讨论！"><a href="#希望这篇文章能帮助您更好地理解和实现-Linux-环境下的-Spring-Boot-应用部署。如果您有任何问题，欢迎在评论区讨论！" class="headerlink" title="希望这篇文章能帮助您更好地理解和实现 Linux 环境下的 Spring Boot 应用部署。如果您有任何问题，欢迎在评论区讨论！"></a>希望这篇文章能帮助您更好地理解和实现 Linux 环境下的 Spring Boot 应用部署。如果您有任何问题，欢迎在评论区讨论！</h2>
+<h2 id="希望这篇文章能帮助您更好地理解和配置-Redis-集群。如果您有任何问题，欢迎在评论区讨论！"><a href="#希望这篇文章能帮助您更好地理解和配置-Redis-集群。如果您有任何问题，欢迎在评论区讨论！" class="headerlink" title="希望这篇文章能帮助您更好地理解和配置 Redis 集群。如果您有任何问题，欢迎在评论区讨论！"></a>希望这篇文章能帮助您更好地理解和配置 Redis 集群。如果您有任何问题，欢迎在评论区讨论！</h2>
                 
             </div>
             <hr/>
@@ -623,7 +577,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lucky845.github.io/archives/b55fa582.html">https://lucky845.github.io/archives/b55fa582.html</a>
+                    <a href="https://lucky845.github.io/archives/a55fa583.html">https://lucky845.github.io/archives/a55fa583.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -661,20 +615,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
-                                <a href="/tags/Spring-Boot/">
-                                    <span class="chip bg-color">Spring Boot</span>
+                                <a href="/tags/Redis/">
+                                    <span class="chip bg-color">Redis</span>
                                 </a>
                             
-                                <a href="/tags/Shell-%E8%84%9A%E6%9C%AC/">
-                                    <span class="chip bg-color">Shell 脚本</span>
+                                <a href="/tags/%E9%9B%86%E7%BE%A4/">
+                                    <span class="chip bg-color">集群</span>
                                 </a>
                             
-                                <a href="/tags/%E9%83%A8%E7%BD%B2/">
-                                    <span class="chip bg-color">部署</span>
+                                <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">配置</span>
                                 </a>
                             
                         </div>
@@ -785,13 +739,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/archives/c5fa583.html">
+                <a href="/archives/b55fa584.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="【Spring Boot】使用 Redis 实现限流操作">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="【Redis】缓存击穿、缓存穿透与缓存雪崩的常见问题及解决方案">
                         
-                        <span class="card-title">【Spring Boot】使用 Redis 实现限流操作</span>
+                        <span class="card-title">【Redis】缓存击穿、缓存穿透与缓存雪崩的常见问题及解决方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -802,18 +756,18 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-26
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
                                 </a>
                             
-                            <a href="/categories/Java/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/" class="post-category">
+                                    Redis
                                 </a>
                             
                             
@@ -823,24 +777,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                     <a href="/tags/Redis/">
                         <span class="chip bg-color">Redis</span>
                     </a>
                     
-                    <a href="/tags/Spring-Boot/">
-                        <span class="chip bg-color">Spring Boot</span>
+                    <a href="/tags/%E7%BC%93%E5%AD%98/">
+                        <span class="chip bg-color">缓存</span>
                     </a>
                     
-                    <a href="/tags/AOP/">
-                        <span class="chip bg-color">AOP</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%99%90%E6%B5%81/">
-                        <span class="chip bg-color">限流</span>
+                    <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">性能优化</span>
                     </a>
                     
                 </div>
@@ -854,13 +804,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/b55fa581.html">
+                <a href="/archives/b55fa605.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="【Spring Boot】如何在 Logback 中配置彩色输出">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="【Spring Boot】解决跨域问题的几种方式">
                         
-                        <span class="card-title">【Spring Boot】如何在 Logback 中配置彩色输出</span>
+                        <span class="card-title">【Spring Boot】解决跨域问题的几种方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -871,7 +821,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-02-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-02-26
                             </span>
                         <span class="publish-author">
                             
@@ -900,12 +850,12 @@
                         <span class="chip bg-color">Spring Boot</span>
                     </a>
                     
-                    <a href="/tags/Logback/">
-                        <span class="chip bg-color">Logback</span>
+                    <a href="/tags/%E8%B7%A8%E5%9F%9F/">
+                        <span class="chip bg-color">跨域</span>
                     </a>
                     
-                    <a href="/tags/%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">日志配置</span>
+                    <a href="/tags/CORS/">
+                        <span class="chip bg-color">CORS</span>
                     </a>
                     
                 </div>
