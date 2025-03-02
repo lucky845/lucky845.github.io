@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://lucky845.github.io/archives/d7a9c123.html</loc>
+    
+    <lastmod>2025-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lucky845.github.io/archives/b65fa589.html</loc>
     
     <lastmod>2025-03-01</lastmod>
@@ -1869,6 +1878,20 @@
   
   <url>
     <loc>https://lucky845.github.io/tags/Nacos/</loc>
+    <lastmod>2025-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/tags/Sentinel/</loc>
+    <lastmod>2025-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2025-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
