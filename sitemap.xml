@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lucky845.github.io/archives/e55fb502.html</loc>
+    
+    <lastmod>2025-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lucky845.github.io/archives/e55fb501.html</loc>
     
     <lastmod>2025-03-03</lastmod>
@@ -2056,6 +2065,13 @@
   
   <url>
     <loc>https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/categories/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</loc>
     <lastmod>2025-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
