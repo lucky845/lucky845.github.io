@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lucky845.github.io/archives/8f9e706f.html</loc>
+    <loc>https://lucky845.github.io/archives/9f8e706f.html</loc>
     
     <lastmod>2025-03-04</lastmod>
     
@@ -20,16 +20,25 @@
   </url>
   
   <url>
-    <loc>https://lucky845.github.io/archives/e55fb502.html</loc>
+    <loc>https://lucky845.github.io/archives/e55fb501.html</loc>
     
-    <lastmod>2025-03-03</lastmod>
+    <lastmod>2025-03-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lucky845.github.io/archives/e55fb501.html</loc>
+    <loc>https://lucky845.github.io/archives/8f9e706f.html</loc>
+    
+    <lastmod>2025-03-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/archives/e55fb502.html</loc>
     
     <lastmod>2025-03-03</lastmod>
     
@@ -1995,6 +2004,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://lucky845.github.io/tags/%E6%B3%9B%E5%9E%8B/</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/tags/%E9%80%9A%E9%85%8D%E7%AC%A6/</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -2104,6 +2127,27 @@
   
   <url>
     <loc>https://lucky845.github.io/categories/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2025-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
