@@ -442,14 +442,14 @@
                 
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.8k
+                        2.9k
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        11 分
+                        12 分
                     </div>
                 
 
@@ -486,7 +486,36 @@
 <li><strong>实现类（Implementations）</strong>：接口的具体实现，如ArrayList、LinkedList、HashSet、HashMap等</li>
 <li><strong>算法（Algorithms）</strong>：对集合进行操作的方法，如排序、搜索等</li>
 </ol>
-<h3 id="集合框架层次结构"><a href="#集合框架层次结构" class="headerlink" title="集合框架层次结构"></a>集合框架层次结构</h3><p><img src="https://s2.loli.net/2023/10/15/qJKGHxYXZjwWCcr.png" alt="Java集合框架层次结构"></p>
+<h3 id="集合框架层次结构"><a href="#集合框架层次结构" class="headerlink" title="集合框架层次结构"></a>集合框架层次结构</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Collection</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>List</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>ArrayList</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>LinkedList</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Vector</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>  <span class="token comment">//线程安全</span>
+			<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Stack</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>  <span class="token comment">//线程安全</span>
+			
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Set</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>HashSet</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>SortedSet</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+			<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>TreeSet</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+			
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Queue</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Deque</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>PriorityQueue</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+		
+<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Map</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>SortedMap</span><span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span>
+		<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>TreeMap</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+		
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Hashtable</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>  <span class="token comment">//线程安全</span>
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>HashMap</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>LinkedHashMap</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+	<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>WeakHashMap</span><span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span>
+
+<span class="token operator">--</span>
+<span class="token punctuation">[</span><span class="token class-name">I</span><span class="token punctuation">]</span><span class="token operator">:</span>接口
+<span class="token punctuation">[</span><span class="token class-name">C</span><span class="token punctuation">]</span><span class="token operator">:</span>类				<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h2 id="核心接口详解"><a href="#核心接口详解" class="headerlink" title="核心接口详解"></a>核心接口详解</h2><h3 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h3><p>Collection是集合层次结构的根接口，它提供了所有集合都应该实现的基本操作。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">extends</span> <span class="token class-name">Iterable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
     <span class="token comment">// 基本操作</span>
@@ -1490,7 +1519,7 @@ it<span class="token punctuation">.</span><span class="token function">next</spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">119.7k</span>
+                        class="white-color">119.8k</span>
             
             
             
