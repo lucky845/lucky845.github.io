@@ -4,9 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【Linux】Shell 脚本编程入门, Java, Spring Boot, Spring Cloud, Python, Django, Linux, DevOps, 后端开发, 全栈开发, Web开发, 微服务, 云原生, 数据库, MySQL, Redis, 分布式系统, 程序员, 技术博客, 编程学习, 开发经验">
-    <meta name="description" content="问题背景Shell 脚本是 Linux 系统中用于自动化任务和管理系统的重要工具。通过编写 Shell 脚本，用户可以将一系列命令组合在一起，简化日常操作，提高工作效率。本文将介绍 Shell 脚本的基本概念、语法、常用命令以及编写技巧。
-">
+    <meta name="keywords" content="【Java】LinkedList核心源码解析与实现原理详解, Java, Spring Boot, Spring Cloud, Python, Django, Linux, DevOps, 后端开发, 全栈开发, Web开发, 微服务, 云原生, 数据库, MySQL, Redis, 分布式系统, 程序员, 技术博客, 编程学习, 开发经验">
+    <meta name="description" content="一、底层数据结构LinkedList是基于双向链表实现的List接口，其核心数据结构是内部的Node节点类：
+// JDK 1.8 LinkedList部分源码
+private static class Node&amp;lt;E&amp;gt; {
+  ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +31,7 @@
 </script>
 
 
-    <title>【Linux】Shell 脚本编程入门 | lucky845的博客</title>
+    <title>【Java】LinkedList核心源码解析与实现原理详解 | lucky845的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -358,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【Linux】Shell 脚本编程入门</h1>
+                    <h1 class="description center-align post-title">【Java】LinkedList核心源码解析与实现原理详解</h1>
                 </div>
             </div>
         </div>
@@ -387,20 +389,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/Java%E9%9B%86%E5%90%88/">
+                                    <span class="chip bg-color">Java集合</span>
                                 </a>
                             
-                                <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
-                                    <span class="chip bg-color">系统管理</span>
-                                </a>
-                            
-                                <a href="/tags/Shell/">
-                                    <span class="chip bg-color">Shell</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">脚本编程</span>
+                                <a href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">源码分析</span>
                                 </a>
                             
                         </div>
@@ -411,8 +405,12 @@
                         <div class="post-cate">
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                                <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                                <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
                                 </a>
                             
                         </div>
@@ -424,28 +422,28 @@
                 
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                        2025-02-26
+                        2025-03-10
                     </div>
                 
 
                 
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2025-02-26
+                        2025-03-10
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        682
+                        1.6k
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        6 分
                     </div>
                 
 
@@ -475,79 +473,321 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>Shell 脚本是 Linux 系统中用于自动化任务和管理系统的重要工具。通过编写 Shell 脚本，用户可以将一系列命令组合在一起，简化日常操作，提高工作效率。本文将介绍 Shell 脚本的基本概念、语法、常用命令以及编写技巧。</p>
-<h2 id="1-什么是-Shell-脚本"><a href="#1-什么是-Shell-脚本" class="headerlink" title="1. 什么是 Shell 脚本"></a>1. 什么是 Shell 脚本</h2><p>Shell 脚本是一种文本文件，其中包含一系列可以在命令行中执行的命令。Shell 脚本通常以 <code>.sh</code> 为扩展名，可以在 Linux 的各种 Shell 环境中运行，如 Bash、Zsh 等。</p>
-<h2 id="2-创建和运行-Shell-脚本"><a href="#2-创建和运行-Shell-脚本" class="headerlink" title="2. 创建和运行 Shell 脚本"></a>2. 创建和运行 Shell 脚本</h2><h3 id="2-1-创建-Shell-脚本"><a href="#2-1-创建-Shell-脚本" class="headerlink" title="2.1 创建 Shell 脚本"></a>2.1 创建 Shell 脚本</h3><p>使用文本编辑器（如 <code>nano</code> 或 <code>vim</code>）创建一个新的 Shell 脚本文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">nano</span> myscript.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="一、底层数据结构"><a href="#一、底层数据结构" class="headerlink" title="一、底层数据结构"></a>一、底层数据结构</h2><p>LinkedList是基于双向链表实现的List接口，其核心数据结构是内部的Node节点类：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// JDK 1.8 LinkedList部分源码</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token class-name">E</span> item<span class="token punctuation">;</span>           <span class="token comment">// 节点存储的元素</span>
+    <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> next<span class="token punctuation">;</span>     <span class="token comment">// 后继节点引用</span>
+    <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> prev<span class="token punctuation">;</span>     <span class="token comment">// 前驱节点引用</span>
 
-<p>在文件的第一行添加 Shebang，指定使用的 Shell：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> prev<span class="token punctuation">,</span> <span class="token class-name">E</span> element<span class="token punctuation">,</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>item <span class="token operator">=</span> element<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> next<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>prev <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>然后在文件中添加要执行的命令，例如：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-<span class="token builtin class-name">echo</span> <span class="token string">"Hello, World!"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>与ArrayList基于数组实现不同，LinkedList通过节点之间的相互引用，形成了一个双向链表结构：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">transient</span> <span class="token keyword">int</span> size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token comment">// 链表大小</span>
+<span class="token keyword">transient</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> first<span class="token punctuation">;</span>       <span class="token comment">// 头节点引用</span>
+<span class="token keyword">transient</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> last<span class="token punctuation">;</span>        <span class="token comment">// 尾节点引用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-2-赋予执行权限"><a href="#2-2-赋予执行权限" class="headerlink" title="2.2 赋予执行权限"></a>2.2 赋予执行权限</h3><p>在运行脚本之前，需要为脚本文件赋予执行权限：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">chmod</span> +x myscript.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="2-3-运行-Shell-脚本"><a href="#2-3-运行-Shell-脚本" class="headerlink" title="2.3 运行 Shell 脚本"></a>2.3 运行 Shell 脚本</h3><p>使用以下命令运行脚本：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./myscript.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="3-Shell-脚本的基本语法"><a href="#3-Shell-脚本的基本语法" class="headerlink" title="3. Shell 脚本的基本语法"></a>3. Shell 脚本的基本语法</h2><h3 id="3-1-变量"><a href="#3-1-变量" class="headerlink" title="3.1 变量"></a>3.1 变量</h3><p>在 Shell 脚本中，可以使用变量存储数据：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"Alice"</span>
-<span class="token builtin class-name">echo</span> <span class="token string">"Hello, <span class="token variable">$name</span>!"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="3-2-条件语句"><a href="#3-2-条件语句" class="headerlink" title="3.2 条件语句"></a>3.2 条件语句</h3><p>使用 <code>if</code> 语句进行条件判断：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$name</span>"</span> <span class="token operator">==</span> <span class="token string">"Alice"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"Welcome, Alice!"</span>
-<span class="token keyword">else</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"Who are you?"</span>
-<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-3-循环"><a href="#3-3-循环" class="headerlink" title="3.3 循环"></a>3.3 循环</h3><p>使用 <code>for</code> 和 <code>while</code> 循环执行重复操作：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># for 循环</span>
-<span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">..</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"Number: <span class="token variable">$i</span>"</span>
-<span class="token keyword">done</span>
-
-<span class="token comment"># while 循环</span>
-<span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">1</span>
-<span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$count</span> <span class="token parameter variable">-le</span> <span class="token number">5</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"Count: <span class="token variable">$count</span>"</span>
-    <span class="token variable"><span class="token punctuation">((</span>count<span class="token operator">++</span><span class="token punctuation">))</span></span>
-<span class="token keyword">done</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-4-函数"><a href="#3-4-函数" class="headerlink" title="3.4 函数"></a>3.4 函数</h3><p>定义和调用函数：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token keyword">function</span> <span class="token function-name function">greet</span> <span class="token punctuation">{</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"Hello, <span class="token variable">$1</span>!"</span>
+<h2 id="二、构造方法解析"><a href="#二、构造方法解析" class="headerlink" title="二、构造方法解析"></a>二、构造方法解析</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 无参构造</span>
+<span class="token keyword">public</span> <span class="token class-name">LinkedList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
 
-greet <span class="token string">"Bob"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">// 集合参数构造</span>
+<span class="token keyword">public</span> <span class="token class-name">LinkedList</span><span class="token punctuation">(</span><span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">addAll</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4-常用命令"><a href="#4-常用命令" class="headerlink" title="4. 常用命令"></a>4. 常用命令</h2><p>在 Shell 脚本中，可以使用许多常用命令，例如：</p>
+<p>与ArrayList不同，LinkedList的构造方法非常简单，无参构造方法仅创建一个空链表，不需要初始化容量。集合参数构造方法则是通过addAll方法将集合中的元素添加到链表中。</p>
+<h2 id="三、关键成员变量"><a href="#三、关键成员变量" class="headerlink" title="三、关键成员变量"></a>三、关键成员变量</h2><table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>first</td>
+<td>指向链表的第一个节点</td>
+</tr>
+<tr>
+<td>last</td>
+<td>指向链表的最后一个节点</td>
+</tr>
+<tr>
+<td>size</td>
+<td>链表中的元素数量</td>
+</tr>
+<tr>
+<td>modCount</td>
+<td>结构性修改计数器（用于快速失败机制）</td>
+</tr>
+</tbody></table>
+<h2 id="四、核心方法源码解析"><a href="#四、核心方法源码解析" class="headerlink" title="四、核心方法源码解析"></a>四、核心方法源码解析</h2><h3 id="1-add方法执行流程"><a href="#1-add方法执行流程" class="headerlink" title="1. add方法执行流程"></a>1. add方法执行流程</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">linkLast</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">linkLast</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> l <span class="token operator">=</span> last<span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> newNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> e<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    last <span class="token operator">=</span> newNode<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        first <span class="token operator">=</span> newNode<span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        l<span class="token punctuation">.</span>next <span class="token operator">=</span> newNode<span class="token punctuation">;</span>
+    size<span class="token operator">++</span><span class="token punctuation">;</span>
+    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>执行流程：</strong></p>
+<ol>
+<li>创建一个新节点，前驱指向当前的last节点，后继为null</li>
+<li>将last引用指向新节点</li>
+<li>如果链表为空（l == null），则first也指向新节点</li>
+<li>否则，将原last节点的next指向新节点</li>
+<li>更新size和modCount</li>
+</ol>
+<h3 id="2-addFirst方法执行流程"><a href="#2-addFirst方法执行流程" class="headerlink" title="2. addFirst方法执行流程"></a>2. addFirst方法执行流程</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addFirst</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">linkFirst</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">linkFirst</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> f <span class="token operator">=</span> first<span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> newNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> e<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    first <span class="token operator">=</span> newNode<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>f <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        last <span class="token operator">=</span> newNode<span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        f<span class="token punctuation">.</span>prev <span class="token operator">=</span> newNode<span class="token punctuation">;</span>
+    size<span class="token operator">++</span><span class="token punctuation">;</span>
+    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>执行流程：</strong></p>
+<ol>
+<li>创建一个新节点，前驱为null，后继指向当前的first节点</li>
+<li>将first引用指向新节点</li>
+<li>如果链表为空（f == null），则last也指向新节点</li>
+<li>否则，将原first节点的prev指向新节点</li>
+<li>更新size和modCount</li>
+</ol>
+<h3 id="3-get方法执行流程"><a href="#3-get方法执行流程" class="headerlink" title="3. get方法执行流程"></a>3. get方法执行流程</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">E</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">checkElementIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">node</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token function">node</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 二分查找优化：根据index位置决定从头还是从尾开始查找</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token punctuation">(</span>size <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> x <span class="token operator">=</span> first<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            x <span class="token operator">=</span> x<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> x <span class="token operator">=</span> last<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&gt;</span> index<span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span>
+            x <span class="token operator">=</span> x<span class="token punctuation">.</span>prev<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>执行流程：</strong></p>
+<ol>
+<li>检查索引是否越界</li>
+<li>调用node(index)方法获取对应位置的节点</li>
+<li>返回节点的item值</li>
+</ol>
+<p><strong>优化策略：</strong></p>
 <ul>
-<li><code>echo</code>：输出文本。</li>
-<li><code>read</code>：从用户输入读取数据。</li>
-<li><code>grep</code>：搜索文本。</li>
-<li><code>awk</code>：文本处理工具。</li>
-<li><code>sed</code>：流编辑器。</li>
+<li>根据索引位置，选择从头节点还是尾节点开始查找，减少遍历次数</li>
+<li>如果索引小于size/2，从头开始查找；否则从尾开始查找</li>
 </ul>
-<h2 id="5-错误处理"><a href="#5-错误处理" class="headerlink" title="5. 错误处理"></a>5. 错误处理</h2><p>在编写 Shell 脚本时，处理错误是非常重要的。可以使用 <code>$?</code> 检查上一个命令的退出状态：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">command</span>
-<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> <span class="token parameter variable">-ne</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"Command failed!"</span>
-<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-remove方法执行流程"><a href="#4-remove方法执行流程" class="headerlink" title="4. remove方法执行流程"></a>4. remove方法执行流程</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">E</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">checkElementIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">unlink</span><span class="token punctuation">(</span><span class="token function">node</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<h2 id="6-脚本调试"><a href="#6-脚本调试" class="headerlink" title="6. 脚本调试"></a>6. 脚本调试</h2><p>在调试脚本时，可以使用 <code>-x</code> 选项运行脚本，以显示每个命令的执行过程：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token parameter variable">-x</span> myscript.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token class-name">E</span> <span class="token function">unlink</span><span class="token punctuation">(</span><span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token class-name">E</span> element <span class="token operator">=</span> x<span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> next <span class="token operator">=</span> x<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> prev <span class="token operator">=</span> x<span class="token punctuation">.</span>prev<span class="token punctuation">;</span>
 
-<h2 id="7-总结"><a href="#7-总结" class="headerlink" title="7. 总结"></a>7. 总结</h2><p>Shell 脚本编程是 Linux 系统管理的重要技能，通过掌握基本语法、常用命令和编写技巧，您可以有效地自动化任务，提高工作效率。无论是简单的脚本还是复杂的自动化工具，Shell 脚本都能为您提供强大的支持。</p>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>prev <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        first <span class="token operator">=</span> next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        prev<span class="token punctuation">.</span>next <span class="token operator">=</span> next<span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span>prev <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>next <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        last <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        next<span class="token punctuation">.</span>prev <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    x<span class="token punctuation">.</span>item <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    size<span class="token operator">--</span><span class="token punctuation">;</span>
+    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> element<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>执行流程：</strong></p>
+<ol>
+<li>检查索引是否越界</li>
+<li>调用node(index)方法获取对应位置的节点</li>
+<li>调用unlink方法删除节点并返回节点的值</li>
+<li>unlink方法中：<ul>
+<li>保存节点的值、前驱和后继</li>
+<li>根据节点位置（是否为头/尾节点）调整链表引用</li>
+<li>将被删除节点的引用置为null，帮助GC</li>
+<li>更新size和modCount</li>
+<li>返回被删除的元素</li>
+</ul>
+</li>
+</ol>
+<h2 id="五、LinkedList作为队列和栈的实现"><a href="#五、LinkedList作为队列和栈的实现" class="headerlink" title="五、LinkedList作为队列和栈的实现"></a>五、LinkedList作为队列和栈的实现</h2><p>LinkedList实现了Deque接口，可以作为队列和栈使用：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 作为队列使用</span>
+<span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 入队</span>
+queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 出队</span>
+
+<span class="token comment">// 作为栈使用</span>
+<span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 入栈</span>
+stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 出栈</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>相关方法对应关系：</p>
+<table>
+<thead>
+<tr>
+<th>队列方法</th>
+<th>栈方法</th>
+<th>LinkedList方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>offer(e)</td>
+<td>push(e)</td>
+<td>addLast(e)/addFirst(e)</td>
+<td>添加元素</td>
+</tr>
+<tr>
+<td>poll()</td>
+<td>pop()</td>
+<td>removeFirst()</td>
+<td>移除并返回元素</td>
+</tr>
+<tr>
+<td>peek()</td>
+<td>peek()</td>
+<td>getFirst()</td>
+<td>获取但不移除元素</td>
+</tr>
+</tbody></table>
+<h2 id="六、迭代器实现原理"><a href="#六、迭代器实现原理" class="headerlink" title="六、迭代器实现原理"></a>六、迭代器实现原理</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">class</span> <span class="token class-name">ListItr</span> <span class="token keyword">implements</span> <span class="token class-name">ListIterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> lastReturned<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> next<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> nextIndex<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> expectedModCount <span class="token operator">=</span> modCount<span class="token punctuation">;</span>
+
+    <span class="token comment">// 迭代器方法实现...</span>
+    
+    <span class="token keyword">public</span> <span class="token class-name">E</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">checkForComodification</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NoSuchElementException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        lastReturned <span class="token operator">=</span> next<span class="token punctuation">;</span>
+        next <span class="token operator">=</span> next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        nextIndex<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> lastReturned<span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">checkForComodification</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>modCount <span class="token operator">!=</span> expectedModCount<span class="token punctuation">)</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ConcurrentModificationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>LinkedList的迭代器实现与ArrayList类似，都使用了快速失败机制，但内部实现有所不同：</p>
+<ul>
+<li>LinkedList迭代器直接持有节点引用，而不是索引</li>
+<li>通过节点引用的next和prev进行遍历，不需要通过索引计算</li>
+</ul>
+<h2 id="七、性能对比分析"><a href="#七、性能对比分析" class="headerlink" title="七、性能对比分析"></a>七、性能对比分析</h2><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>LinkedList</th>
+<th>ArrayList</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add(E)</td>
+<td>O(1)</td>
+<td>平均O(1)，最坏O(n)</td>
+<td>LinkedList直接添加到末尾；ArrayList可能需要扩容</td>
+</tr>
+<tr>
+<td>add(int, E)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>都需要找到指定位置，但LinkedList还需要遍历</td>
+</tr>
+<tr>
+<td>get(int)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>ArrayList直接通过索引访问；LinkedList需要遍历</td>
+</tr>
+<tr>
+<td>remove(int)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>LinkedList需要先遍历找到位置，但删除操作本身是O(1)</td>
+</tr>
+</tbody></table>
+<p><strong>内存占用对比：</strong></p>
+<ul>
+<li>ArrayList: 仅存储元素引用和少量管理变量</li>
+<li>LinkedList: 每个元素额外存储两个引用（prev和next），内存占用较大</li>
+</ul>
+<h2 id="八、使用场景建议"><a href="#八、使用场景建议" class="headerlink" title="八、使用场景建议"></a>八、使用场景建议</h2><p><strong>适合使用LinkedList的场景：</strong></p>
+<ol>
+<li>频繁在两端添加/删除元素</li>
+<li>需要实现队列或栈的数据结构</li>
+<li>不需要频繁随机访问元素</li>
+<li>对内存占用不敏感</li>
+</ol>
+<p><strong>不适合使用LinkedList的场景：</strong></p>
+<ol>
+<li>需要频繁随机访问元素</li>
+<li>对内存占用敏感</li>
+<li>数据量较大且操作主要是遍历</li>
+</ol>
+<h2 id="九、源码实现的关键设计思想"><a href="#九、源码实现的关键设计思想" class="headerlink" title="九、源码实现的关键设计思想"></a>九、源码实现的关键设计思想</h2><ol>
+<li><strong>双向链表设计</strong>：通过双向链表实现，支持从两端高效操作</li>
+<li><strong>二分查找优化</strong>：get方法中根据索引位置决定从头还是从尾开始查找</li>
+<li><strong>接口多态性</strong>：实现多个接口（List, Deque），提供多种数据结构功能</li>
+<li><strong>快速失败机制</strong>：通过modCount实现迭代过程中的并发修改检测</li>
+</ol>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://tldp.org/LDP/Bash-Beginners-Guide/html/">Bash Scripting Guide</a></li>
-<li><a target="_blank" rel="noopener" href="https://tldp.org/LDP/abs/html/">Advanced Bash-Scripting Guide</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html">Oracle Java Collections Framework官方文档</a></li>
+<li>《Effective Java（第三版）》 第4章 类和接口</li>
+<li>《Java核心技术 卷Ⅰ》 第9章 集合</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/google/guava/wiki/CollectionUtilitiesExplained">Google Guava Collections指南</a></li>
 </ul>
 <hr>
-<h2 id="希望这篇文章能帮助您更好地理解-Linux-的-Shell-脚本编程。如果您有任何问题，欢迎在评论区讨论！"><a href="#希望这篇文章能帮助您更好地理解-Linux-的-Shell-脚本编程。如果您有任何问题，欢迎在评论区讨论！" class="headerlink" title="希望这篇文章能帮助您更好地理解 Linux 的 Shell 脚本编程。如果您有任何问题，欢迎在评论区讨论！"></a>希望这篇文章能帮助您更好地理解 Linux 的 Shell 脚本编程。如果您有任何问题，欢迎在评论区讨论！</h2>
+<p>本文详细介绍了LinkedList核心源码解析与实现原理，希望对您有所帮助。如果您有任何问题，欢迎在评论区讨论！</p>
+
                 
             </div>
             <hr/>
@@ -573,7 +813,7 @@ greet <span class="token string">"Bob"</span><span aria-hidden="true" class="lin
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lucky845.github.io/archives/b55fa598.html">https://lucky845.github.io/archives/b55fa598.html</a>
+                    <a href="https://lucky845.github.io/archives/7a8b905d.html">https://lucky845.github.io/archives/7a8b905d.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -611,20 +851,12 @@ greet <span class="token string">"Bob"</span><span aria-hidden="true" class="lin
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/Java%E9%9B%86%E5%90%88/">
+                                    <span class="chip bg-color">Java集合</span>
                                 </a>
                             
-                                <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
-                                    <span class="chip bg-color">系统管理</span>
-                                </a>
-                            
-                                <a href="/tags/Shell/">
-                                    <span class="chip bg-color">Shell</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">脚本编程</span>
+                                <a href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">源码分析</span>
                                 </a>
                             
                         </div>
@@ -731,17 +963,18 @@ greet <span class="token string">"Bob"</span><span aria-hidden="true" class="lin
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/archives/b55fa599.html">
+                <a href="/archives/7a8b905d.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="【Linux】系统监控与性能优化">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="【Java】LinkedList核心源码解析与实现原理详解">
                         
-                        <span class="card-title">【Linux】系统监控与性能优化</span>
+                        <span class="card-title">【Java】LinkedList核心源码解析与实现原理详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -751,38 +984,35 @@ greet <span class="token string">"Bob"</span><span aria-hidden="true" class="lin
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">性能优化</span>
+                    <a href="/tags/Java%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">Java集合</span>
                     </a>
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
-                        <span class="chip bg-color">系统管理</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%9B%91%E6%8E%A7/">
-                        <span class="chip bg-color">系统监控</span>
+                    <a href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">源码分析</span>
                     </a>
                     
                 </div>
@@ -796,13 +1026,13 @@ greet <span class="token string">"Bob"</span><span aria-hidden="true" class="lin
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/b55fa597.html">
+                <a href="/archives/66c41391.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【Linux】网络配置详解">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="【Java】ArrayList核心源码解析与扩容机制详解">
                         
-                        <span class="card-title">【Linux】网络配置详解</span>
+                        <span class="card-title">【Java】ArrayList核心源码解析与扩容机制详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -813,14 +1043,18 @@ greet <span class="token string">"Bob"</span><span aria-hidden="true" class="lin
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
                                 </a>
                             
                             
@@ -830,20 +1064,12 @@ greet <span class="token string">"Bob"</span><span aria-hidden="true" class="lin
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">配置</span>
+                    <a href="/tags/Java%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">Java集合</span>
                     </a>
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
-                        <span class="chip bg-color">系统管理</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">网络</span>
+                    <a href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">源码分析</span>
                     </a>
                     
                 </div>
