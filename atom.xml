@@ -3,11 +3,11 @@
   <title>lucky845的博客</title>
   
   <subtitle>lucky845的博客</subtitle>
-  <link href="https://lucky845.github.io/atom.xml" rel="self"/>
+  <link href="https://blog.lucky845.top/atom.xml" rel="self"/>
   
-  <link href="https://lucky845.github.io/"/>
+  <link href="https://blog.lucky845.top/"/>
   <updated>2025-03-10T09:26:31.747Z</updated>
-  <id>https://lucky845.github.io/</id>
+  <id>https://blog.lucky845.top/</id>
   
   <author>
     <name>lucky845</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>【Java】ConcurrentHashMap核心源码与底层数据结构分析</title>
-    <link href="https://lucky845.github.io/archives/7a8b905f.html"/>
-    <id>https://lucky845.github.io/archives/7a8b905f.html</id>
+    <link href="https://blog.lucky845.top/archives/7a8b905f.html"/>
+    <id>https://blog.lucky845.top/archives/7a8b905f.html</id>
     <published>2025-03-10T06:00:00.000Z</published>
     <updated>2025-03-10T09:26:31.747Z</updated>
     
@@ -33,23 +33,23 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="并发编程" scheme="https://lucky845.github.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    <category term="并发编程" scheme="https://blog.lucky845.top/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Java集合" scheme="https://lucky845.github.io/tags/Java%E9%9B%86%E5%90%88/"/>
+    <category term="Java集合" scheme="https://blog.lucky845.top/tags/Java%E9%9B%86%E5%90%88/"/>
     
-    <category term="源码分析" scheme="https://lucky845.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <category term="源码分析" scheme="https://blog.lucky845.top/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>【Java】HashMap核心源码解析与实现原理详解</title>
-    <link href="https://lucky845.github.io/archives/7a8b905e.html"/>
-    <id>https://lucky845.github.io/archives/7a8b905e.html</id>
+    <link href="https://blog.lucky845.top/archives/7a8b905e.html"/>
+    <id>https://blog.lucky845.top/archives/7a8b905e.html</id>
     <published>2025-03-10T03:00:00.000Z</published>
     <updated>2025-03-10T04:20:30.056Z</updated>
     
@@ -63,21 +63,21 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java集合" scheme="https://lucky845.github.io/tags/Java%E9%9B%86%E5%90%88/"/>
+    <category term="Java集合" scheme="https://blog.lucky845.top/tags/Java%E9%9B%86%E5%90%88/"/>
     
-    <category term="源码分析" scheme="https://lucky845.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <category term="源码分析" scheme="https://blog.lucky845.top/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>【Java】LinkedList核心源码解析与实现原理详解</title>
-    <link href="https://lucky845.github.io/archives/7a8b905d.html"/>
-    <id>https://lucky845.github.io/archives/7a8b905d.html</id>
+    <link href="https://blog.lucky845.top/archives/7a8b905d.html"/>
+    <id>https://blog.lucky845.top/archives/7a8b905d.html</id>
     <published>2025-03-10T02:00:00.000Z</published>
     <updated>2025-03-10T04:03:46.785Z</updated>
     
@@ -91,21 +91,21 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java集合" scheme="https://lucky845.github.io/tags/Java%E9%9B%86%E5%90%88/"/>
+    <category term="Java集合" scheme="https://blog.lucky845.top/tags/Java%E9%9B%86%E5%90%88/"/>
     
-    <category term="源码分析" scheme="https://lucky845.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <category term="源码分析" scheme="https://blog.lucky845.top/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>【Java】ArrayList核心源码解析与扩容机制详解</title>
-    <link href="https://lucky845.github.io/archives/66c41391.html"/>
-    <id>https://lucky845.github.io/archives/66c41391.html</id>
+    <link href="https://blog.lucky845.top/archives/66c41391.html"/>
+    <id>https://blog.lucky845.top/archives/66c41391.html</id>
     <published>2025-03-06T05:00:00.000Z</published>
     <updated>2025-03-06T11:22:56.195Z</updated>
     
@@ -119,21 +119,21 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java集合" scheme="https://lucky845.github.io/tags/Java%E9%9B%86%E5%90%88/"/>
+    <category term="Java集合" scheme="https://blog.lucky845.top/tags/Java%E9%9B%86%E5%90%88/"/>
     
-    <category term="源码分析" scheme="https://lucky845.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <category term="源码分析" scheme="https://blog.lucky845.top/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Java集合框架详解与面试题分析</title>
-    <link href="https://lucky845.github.io/archives/7a8b905c.html"/>
-    <id>https://lucky845.github.io/archives/7a8b905c.html</id>
+    <link href="https://blog.lucky845.top/archives/7a8b905c.html"/>
+    <id>https://blog.lucky845.top/archives/7a8b905c.html</id>
     <published>2025-03-06T04:00:00.000Z</published>
     <updated>2025-03-06T11:21:18.245Z</updated>
     
@@ -147,25 +147,25 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="集合框架" scheme="https://lucky845.github.io/tags/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    <category term="集合框架" scheme="https://blog.lucky845.top/tags/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
     
-    <category term="面试题" scheme="https://lucky845.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="面试题" scheme="https://blog.lucky845.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Java SPI 机制详解</title>
-    <link href="https://lucky845.github.io/archives/8f9e712f.html"/>
-    <id>https://lucky845.github.io/archives/8f9e712f.html</id>
+    <link href="https://blog.lucky845.top/archives/8f9e712f.html"/>
+    <id>https://blog.lucky845.top/archives/8f9e712f.html</id>
     <published>2025-03-05T03:00:00.000Z</published>
     <updated>2025-03-05T06:18:45.700Z</updated>
     
@@ -179,25 +179,25 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="设计模式" scheme="https://lucky845.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="https://blog.lucky845.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="SPI" scheme="https://lucky845.github.io/tags/SPI/"/>
+    <category term="SPI" scheme="https://blog.lucky845.top/tags/SPI/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Java语法糖详解：从基础到高级特性</title>
-    <link href="https://lucky845.github.io/archives/8f9e713f.html"/>
-    <id>https://lucky845.github.io/archives/8f9e713f.html</id>
+    <link href="https://blog.lucky845.top/archives/8f9e713f.html"/>
+    <id>https://blog.lucky845.top/archives/8f9e713f.html</id>
     <published>2025-03-05T03:00:00.000Z</published>
     <updated>2025-03-05T08:56:35.707Z</updated>
     
@@ -211,23 +211,23 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="语法糖" scheme="https://lucky845.github.io/tags/%E8%AF%AD%E6%B3%95%E7%B3%96/"/>
+    <category term="语法糖" scheme="https://blog.lucky845.top/tags/%E8%AF%AD%E6%B3%95%E7%B3%96/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Unsafe魔法类详解</title>
-    <link href="https://lucky845.github.io/archives/8f9e701f.html"/>
-    <id>https://lucky845.github.io/archives/8f9e701f.html</id>
+    <link href="https://blog.lucky845.top/archives/8f9e701f.html"/>
+    <id>https://blog.lucky845.top/archives/8f9e701f.html</id>
     <published>2025-03-05T02:00:00.000Z</published>
     <updated>2025-03-05T04:36:55.311Z</updated>
     
@@ -238,25 +238,25 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="并发编程" scheme="https://lucky845.github.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    <category term="并发编程" scheme="https://blog.lucky845.top/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="JVM" scheme="https://lucky845.github.io/tags/JVM/"/>
+    <category term="JVM" scheme="https://blog.lucky845.top/tags/JVM/"/>
     
   </entry>
   
   <entry>
     <title>【Java】 BigDecimal详解：精确数值计算的最佳实践</title>
-    <link href="https://lucky845.github.io/archives/8f9e707f.html"/>
-    <id>https://lucky845.github.io/archives/8f9e707f.html</id>
+    <link href="https://blog.lucky845.top/archives/8f9e707f.html"/>
+    <id>https://blog.lucky845.top/archives/8f9e707f.html</id>
     <published>2025-03-04T05:00:00.000Z</published>
     <updated>2025-03-04T11:37:54.812Z</updated>
     
@@ -270,25 +270,25 @@
     
     
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="BigDecimal" scheme="https://lucky845.github.io/tags/BigDecimal/"/>
+    <category term="BigDecimal" scheme="https://blog.lucky845.top/tags/BigDecimal/"/>
     
-    <category term="数值计算" scheme="https://lucky845.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    <category term="数值计算" scheme="https://blog.lucky845.top/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Java泛型与通配符详解</title>
-    <link href="https://lucky845.github.io/archives/9f8e706f.html"/>
-    <id>https://lucky845.github.io/archives/9f8e706f.html</id>
+    <link href="https://blog.lucky845.top/archives/9f8e706f.html"/>
+    <id>https://blog.lucky845.top/archives/9f8e706f.html</id>
     <published>2025-03-04T04:00:00.000Z</published>
     <updated>2025-03-04T11:32:55.203Z</updated>
     
@@ -302,25 +302,25 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="泛型" scheme="https://lucky845.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+    <category term="泛型" scheme="https://blog.lucky845.top/tags/%E6%B3%9B%E5%9E%8B/"/>
     
-    <category term="通配符" scheme="https://lucky845.github.io/tags/%E9%80%9A%E9%85%8D%E7%AC%A6/"/>
+    <category term="通配符" scheme="https://blog.lucky845.top/tags/%E9%80%9A%E9%85%8D%E7%AC%A6/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Java序列化机制详解</title>
-    <link href="https://lucky845.github.io/archives/8f9e706f.html"/>
-    <id>https://lucky845.github.io/archives/8f9e706f.html</id>
+    <link href="https://blog.lucky845.top/archives/8f9e706f.html"/>
+    <id>https://blog.lucky845.top/archives/8f9e706f.html</id>
     <published>2025-03-04T03:00:00.000Z</published>
     <updated>2025-03-04T11:32:22.537Z</updated>
     
@@ -334,25 +334,25 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="性能优化" scheme="https://lucky845.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <category term="性能优化" scheme="https://blog.lucky845.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
-    <category term="序列化" scheme="https://lucky845.github.io/tags/%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    <category term="序列化" scheme="https://blog.lucky845.top/tags/%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Java反射机制详解：原理、实践与最佳实践</title>
-    <link href="https://lucky845.github.io/archives/8f9e708f.html"/>
-    <id>https://lucky845.github.io/archives/8f9e708f.html</id>
+    <link href="https://blog.lucky845.top/archives/8f9e708f.html"/>
+    <id>https://blog.lucky845.top/archives/8f9e708f.html</id>
     <published>2025-03-04T02:00:00.000Z</published>
     <updated>2025-03-04T11:40:03.633Z</updated>
     
@@ -366,23 +366,23 @@
     
     
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="反射" scheme="https://lucky845.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
+    <category term="反射" scheme="https://blog.lucky845.top/tags/%E5%8F%8D%E5%B0%84/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Java synchronized 性能优化全面解析</title>
-    <link href="https://lucky845.github.io/archives/e55fb501.html"/>
-    <id>https://lucky845.github.io/archives/e55fb501.html</id>
+    <link href="https://blog.lucky845.top/archives/e55fb501.html"/>
+    <id>https://blog.lucky845.top/archives/e55fb501.html</id>
     <published>2025-03-03T06:30:00.000Z</published>
     <updated>2025-03-04T11:32:31.176Z</updated>
     
@@ -396,25 +396,25 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="技术笔记" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java基础" scheme="https://lucky845.github.io/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://blog.lucky845.top/categories/Java/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="性能优化" scheme="https://lucky845.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <category term="性能优化" scheme="https://blog.lucky845.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
-    <category term="并发编程" scheme="https://lucky845.github.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    <category term="并发编程" scheme="https://blog.lucky845.top/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>【MySQL】百万级数据快速对比与批量插入实践</title>
-    <link href="https://lucky845.github.io/archives/b55fa57f.html"/>
-    <id>https://lucky845.github.io/archives/b55fa57f.html</id>
+    <link href="https://blog.lucky845.top/archives/b55fa57f.html"/>
+    <id>https://blog.lucky845.top/archives/b55fa57f.html</id>
     <published>2025-03-03T03:00:00.000Z</published>
     <updated>2025-03-03T01:40:39.821Z</updated>
     
@@ -431,25 +431,25 @@
     
     
     
-    <category term="数据库" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://blog.lucky845.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="MySQL" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/"/>
+    <category term="MySQL" scheme="https://blog.lucky845.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/"/>
     
     
-    <category term="数据库" scheme="https://lucky845.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://blog.lucky845.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="性能优化" scheme="https://lucky845.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <category term="性能优化" scheme="https://blog.lucky845.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
-    <category term="MySQL" scheme="https://lucky845.github.io/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://blog.lucky845.top/tags/MySQL/"/>
     
-    <category term="批量处理" scheme="https://lucky845.github.io/tags/%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86/"/>
+    <category term="批量处理" scheme="https://blog.lucky845.top/tags/%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>【Java】电商高峰期线程池爆满优化实践</title>
-    <link href="https://lucky845.github.io/archives/e55fb502.html"/>
-    <id>https://lucky845.github.io/archives/e55fb502.html</id>
+    <link href="https://blog.lucky845.top/archives/e55fb502.html"/>
+    <id>https://blog.lucky845.top/archives/e55fb502.html</id>
     <published>2025-03-03T02:30:00.000Z</published>
     <updated>2025-03-03T08:06:18.784Z</updated>
     
@@ -463,23 +463,23 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
-    <category term="线程池" scheme="https://lucky845.github.io/categories/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    <category term="线程池" scheme="https://blog.lucky845.top/categories/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="线程池" scheme="https://lucky845.github.io/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    <category term="线程池" scheme="https://blog.lucky845.top/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
     
-    <category term="性能优化" scheme="https://lucky845.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <category term="性能优化" scheme="https://blog.lucky845.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>【MySQL】深分页性能问题分析与优化方案</title>
-    <link href="https://lucky845.github.io/archives/b55fa58f.html"/>
-    <id>https://lucky845.github.io/archives/b55fa58f.html</id>
+    <link href="https://blog.lucky845.top/archives/b55fa58f.html"/>
+    <id>https://blog.lucky845.top/archives/b55fa58f.html</id>
     <published>2025-03-03T02:00:00.000Z</published>
     <updated>2025-03-03T01:36:52.305Z</updated>
     
@@ -493,25 +493,25 @@
     
     
     
-    <category term="数据库" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://blog.lucky845.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="MySQL" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/"/>
+    <category term="MySQL" scheme="https://blog.lucky845.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/"/>
     
     
-    <category term="数据库" scheme="https://lucky845.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://blog.lucky845.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="性能优化" scheme="https://lucky845.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <category term="性能优化" scheme="https://blog.lucky845.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
-    <category term="MySQL" scheme="https://lucky845.github.io/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://blog.lucky845.top/tags/MySQL/"/>
     
-    <category term="分页查询" scheme="https://lucky845.github.io/tags/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/"/>
+    <category term="分页查询" scheme="https://blog.lucky845.top/tags/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/"/>
     
   </entry>
   
   <entry>
     <title>【Java】Sentinel规则持久化到Nacos配置中心完全指南</title>
-    <link href="https://lucky845.github.io/archives/d7a9c124.html"/>
-    <id>https://lucky845.github.io/archives/d7a9c124.html</id>
+    <link href="https://blog.lucky845.top/archives/d7a9c124.html"/>
+    <id>https://blog.lucky845.top/archives/d7a9c124.html</id>
     <published>2025-03-02T04:00:00.000Z</published>
     <updated>2025-03-04T11:46:47.762Z</updated>
     
@@ -522,21 +522,21 @@
     
     
     
-    <category term="Java" scheme="https://lucky845.github.io/categories/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/categories/Java/"/>
     
     
-    <category term="Java" scheme="https://lucky845.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lucky845.top/tags/Java/"/>
     
-    <category term="Nacos" scheme="https://lucky845.github.io/tags/Nacos/"/>
+    <category term="Nacos" scheme="https://blog.lucky845.top/tags/Nacos/"/>
     
-    <category term="Sentinel" scheme="https://lucky845.github.io/tags/Sentinel/"/>
+    <category term="Sentinel" scheme="https://blog.lucky845.top/tags/Sentinel/"/>
     
   </entry>
   
   <entry>
     <title>【Docker】Sentinel部署指南</title>
-    <link href="https://lucky845.github.io/archives/d7a9c123.html"/>
-    <id>https://lucky845.github.io/archives/d7a9c123.html</id>
+    <link href="https://blog.lucky845.top/archives/d7a9c123.html"/>
+    <id>https://blog.lucky845.top/archives/d7a9c123.html</id>
     <published>2025-03-02T03:00:00.000Z</published>
     <updated>2025-03-02T10:47:33.626Z</updated>
     
@@ -550,25 +550,25 @@
     
     
     
-    <category term="Linux" scheme="https://lucky845.github.io/categories/Linux/"/>
+    <category term="Linux" scheme="https://blog.lucky845.top/categories/Linux/"/>
     
-    <category term="Docker" scheme="https://lucky845.github.io/categories/Linux/Docker/"/>
+    <category term="Docker" scheme="https://blog.lucky845.top/categories/Linux/Docker/"/>
     
     
-    <category term="Docker" scheme="https://lucky845.github.io/tags/Docker/"/>
+    <category term="Docker" scheme="https://blog.lucky845.top/tags/Docker/"/>
     
-    <category term="容器化" scheme="https://lucky845.github.io/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/"/>
+    <category term="容器化" scheme="https://blog.lucky845.top/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/"/>
     
-    <category term="Sentinel" scheme="https://lucky845.github.io/tags/Sentinel/"/>
+    <category term="Sentinel" scheme="https://blog.lucky845.top/tags/Sentinel/"/>
     
-    <category term="微服务" scheme="https://lucky845.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    <category term="微服务" scheme="https://blog.lucky845.top/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>【Docker】 Docker部署Nacos（单机/集群）完全指南</title>
-    <link href="https://lucky845.github.io/archives/e55fa612.html"/>
-    <id>https://lucky845.github.io/archives/e55fa612.html</id>
+    <link href="https://blog.lucky845.top/archives/e55fa612.html"/>
+    <id>https://blog.lucky845.top/archives/e55fa612.html</id>
     <published>2025-03-02T02:00:00.000Z</published>
     <updated>2025-03-04T11:46:12.227Z</updated>
     
@@ -579,19 +579,19 @@
     
     
     
-    <category term="Docker" scheme="https://lucky845.github.io/categories/Docker/"/>
+    <category term="Docker" scheme="https://blog.lucky845.top/categories/Docker/"/>
     
     
-    <category term="Docker" scheme="https://lucky845.github.io/tags/Docker/"/>
+    <category term="Docker" scheme="https://blog.lucky845.top/tags/Docker/"/>
     
-    <category term="Nacos" scheme="https://lucky845.github.io/tags/Nacos/"/>
+    <category term="Nacos" scheme="https://blog.lucky845.top/tags/Nacos/"/>
     
   </entry>
   
   <entry>
     <title>【Redis】缓存机制详解</title>
-    <link href="https://lucky845.github.io/archives/b65fa590.html"/>
-    <id>https://lucky845.github.io/archives/b65fa590.html</id>
+    <link href="https://blog.lucky845.top/archives/b65fa590.html"/>
+    <id>https://blog.lucky845.top/archives/b65fa590.html</id>
     <published>2025-03-01T09:00:00.000Z</published>
     <updated>2025-03-01T10:45:13.880Z</updated>
     
@@ -605,18 +605,18 @@
     
     
     
-    <category term="数据库" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://blog.lucky845.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="Redis" scheme="https://lucky845.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/"/>
+    <category term="Redis" scheme="https://blog.lucky845.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/"/>
     
     
-    <category term="数据库" scheme="https://lucky845.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://blog.lucky845.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="Redis" scheme="https://lucky845.github.io/tags/Redis/"/>
+    <category term="Redis" scheme="https://blog.lucky845.top/tags/Redis/"/>
     
-    <category term="缓存" scheme="https://lucky845.github.io/tags/%E7%BC%93%E5%AD%98/"/>
+    <category term="缓存" scheme="https://blog.lucky845.top/tags/%E7%BC%93%E5%AD%98/"/>
     
-    <category term="性能优化" scheme="https://lucky845.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <category term="性能优化" scheme="https://blog.lucky845.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
