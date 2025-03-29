@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.lucky845.top/archives/9e7d3f2a.html</loc>
+    
+    <lastmod>2025-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.lucky845.top/archives/7e8f9a2d.html</loc>
     
     <lastmod>2025-03-29</lastmod>
@@ -2257,6 +2266,20 @@
   
   <url>
     <loc>https://blog.lucky845.top/tags/%E5%8E%9F%E5%AD%90%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lucky845.top/tags/JMM/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lucky845.top/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2025-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
