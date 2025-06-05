@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>lucky845的博客</title>
+  <title>lucky845的博客 | Java/Spring Boot/Python全栈技术分享</title>
   
-  <subtitle>lucky845的博客</subtitle>
+  <subtitle>专注Java、Spring Boot、Python全栈开发的技术博客。分享实战经验、源码解析及系统架构设计，助力开发者成长。</subtitle>
   <link href="https://blog.lucky845.top/atom.xml" rel="self"/>
   
   <link href="https://blog.lucky845.top/"/>
