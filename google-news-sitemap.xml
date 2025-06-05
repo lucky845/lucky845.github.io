@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-news/0.9 http://www.google.com/schemas/sitemap-news/0.9/sitemap-news.xsd">
+  <url>
+    <loc>https://blog.lucky845.top/archives/7a8b905g.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】LinkedHashMap核心源码解析与实现原理详解</news:title>
+      <news:publication_date>2025-03-20T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7e8f9a2e.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】ThreadLocal详解：原理、使用场景与最佳实践</news:title>
+      <news:publication_date>2025-06-05T08:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/e55fb503.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】线程池详解：原理、参数与最佳实践</news:title>
+      <news:publication_date>2025-03-31T14:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/9e7d3f2a.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】JMM内存模型详解</news:title>
+      <news:publication_date>2025-03-29T15:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7e8f9a2d.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】CAS机制详解</news:title>
+      <news:publication_date>2025-03-29T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa588.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】乐观锁与悲观锁详解</news:title>
+      <news:publication_date>2025-03-27T18:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7d9e5f2b.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】DelayQueue延迟队列核心源码与实现机制详解</news:title>
+      <news:publication_date>2025-03-23T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/9e4d7f2a.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】ArrayBlockingQueue核心源码与阻塞队列实现机制详解</news:title>
+      <news:publication_date>2025-03-21T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8d7c2f3e.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】CopyOnWriteArrayList核心源码解析与写时复制机制详解</news:title>
+      <news:publication_date>2025-03-20T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7a8b905f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】ConcurrentHashMap核心源码与底层数据结构分析</news:title>
+      <news:publication_date>2025-03-10T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7a8b905e.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】HashMap核心源码解析与实现原理详解</news:title>
+      <news:publication_date>2025-03-10T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7a8b905d.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】LinkedList核心源码解析与实现原理详解</news:title>
+      <news:publication_date>2025-03-10T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/66c41391.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】ArrayList核心源码解析与扩容机制详解</news:title>
+      <news:publication_date>2025-03-06T13:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7a8b905c.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Java集合框架详解与面试题分析</news:title>
+      <news:publication_date>2025-03-06T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f9e712f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Java SPI 机制详解</news:title>
+      <news:publication_date>2025-03-05T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f9e713f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Java语法糖详解：从基础到高级特性</news:title>
+      <news:publication_date>2025-03-05T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f9e701f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Unsafe魔法类详解</news:title>
+      <news:publication_date>2025-03-05T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f9e707f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】 BigDecimal详解：精确数值计算的最佳实践</news:title>
+      <news:publication_date>2025-03-04T13:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/9f8e706f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Java泛型与通配符详解</news:title>
+      <news:publication_date>2025-03-04T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f9e706f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Java序列化机制详解</news:title>
+      <news:publication_date>2025-03-04T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f9e708f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Java反射机制详解：原理、实践与最佳实践</news:title>
+      <news:publication_date>2025-03-04T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/e55fb501.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Java synchronized 性能优化全面解析</news:title>
+      <news:publication_date>2025-03-03T14:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa57f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【MySQL】百万级数据快速对比与批量插入实践</news:title>
+      <news:publication_date>2025-03-03T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/e55fb502.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】电商高峰期线程池爆满优化实践</news:title>
+      <news:publication_date>2025-03-03T10:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa58f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【MySQL】深分页性能问题分析与优化方案</news:title>
+      <news:publication_date>2025-03-03T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/d7a9c124.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】Sentinel规则持久化到Nacos配置中心完全指南</news:title>
+      <news:publication_date>2025-03-02T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/d7a9c123.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】Sentinel部署指南</news:title>
+      <news:publication_date>2025-03-02T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/e55fa612.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】 Docker部署Nacos（单机/集群）完全指南</news:title>
+      <news:publication_date>2025-03-02T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b65fa590.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】缓存机制详解</news:title>
+      <news:publication_date>2025-03-01T17:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b65fa589.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】实战指南：从入门到精通</news:title>
+      <news:publication_date>2025-03-01T17:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa587.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】数据类型详解及其使用方法</news:title>
+      <news:publication_date>2025-02-26T18:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/c55fa584.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】哨兵模式详解与实践</news:title>
+      <news:publication_date>2025-03-01T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/d55fa599.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】部署RocketMQ完全指南</news:title>
+      <news:publication_date>2025-02-28T17:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/e55fa599.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】PostgreSQL部署与配置指南</news:title>
+      <news:publication_date>2025-02-28T17:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/e55fa598.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】MySQL部署与配置指南</news:title>
+      <news:publication_date>2025-02-28T16:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/e55fa597.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】Redis部署与配置指南</news:title>
+      <news:publication_date>2025-02-28T16:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/d55fa598.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】部署RabbitMQ及配置延时队列完全指南</news:title>
+      <news:publication_date>2025-02-28T15:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/d55fa596.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】Compose使用与配置指南</news:title>
+      <news:publication_date>2025-02-28T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/d55fa597.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】部署Elasticsearch与Kibana完全指南</news:title>
+      <news:publication_date>2025-02-28T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/c55fa595.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Docker】高级配置指南</news:title>
+      <news:publication_date>2025-02-28T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa594.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】文件系统操作详解</news:title>
+      <news:publication_date>2025-02-26T01:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa603.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】软件源配置详解</news:title>
+      <news:publication_date>2025-02-27T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa604.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】运维常见故障与解决方案</news:title>
+      <news:publication_date>2025-02-26T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa592.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】基于 Redis 实现在线游戏积分排行榜</news:title>
+      <news:publication_date>2025-02-26T23:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa591.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】功能扩展：Lua 脚本及其使用方法</news:title>
+      <news:publication_date>2025-02-26T22:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa590.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】RDB 和 AOF 持久化方式的区别及使用场景</news:title>
+      <news:publication_date>2025-02-26T21:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa589.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redisson】Redis Java 客户端的使用方法</news:title>
+      <news:publication_date>2025-02-26T20:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b65fa588.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Jedis】Redis Java 客户端的使用方法</news:title>
+      <news:publication_date>2025-02-26T19:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa586.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】的各种用途与使用场景</news:title>
+      <news:publication_date>2025-02-26T17:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa585.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】与数据库一致性的问题及解决办法</news:title>
+      <news:publication_date>2025-02-26T16:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa584.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】缓存击穿、缓存穿透与缓存雪崩的常见问题及解决方案</news:title>
+      <news:publication_date>2025-02-26T15:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/a55fa583.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】如何配置 Redis 集群</news:title>
+      <news:publication_date>2025-02-26T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa605.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】解决跨域问题的几种方式</news:title>
+      <news:publication_date>2025-02-26T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa602.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】常见问题解答</news:title>
+      <news:publication_date>2025-02-26T09:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa601.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】实现禁用境外 IP 的脚本</news:title>
+      <news:publication_date>2025-02-26T08:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa600.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】磁盘清理指南</news:title>
+      <news:publication_date>2025-02-26T07:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa599.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】系统监控与性能优化</news:title>
+      <news:publication_date>2025-02-26T06:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa598.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】Shell 脚本编程入门</news:title>
+      <news:publication_date>2025-02-26T05:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa597.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】网络配置详解</news:title>
+      <news:publication_date>2025-02-26T04:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa596.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】用户和权限系统详解</news:title>
+      <news:publication_date>2025-02-26T03:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa595.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】如何扩容已使用的磁盘</news:title>
+      <news:publication_date>2025-02-26T02:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa593.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】基础命令介绍</news:title>
+      <news:publication_date>2025-02-26T00:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa582.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Linux】如何编写一个部署 Spring Boot 程序的 Shell 脚本</news:title>
+      <news:publication_date>2025-02-25T13:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa581.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何在 Logback 中配置彩色输出</news:title>
+      <news:publication_date>2025-02-25T12:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa583.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Redis】主从复制机制详解</news:title>
+      <news:publication_date>2025-02-25T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/c5fa583.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】使用 Redis 实现限流操作</news:title>
+      <news:publication_date>2025-02-25T14:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa580.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何处理 YAML 或 Properties 的解析异常 MalformedInputException</news:title>
+      <news:publication_date>2025-02-25T11:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa579.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何优雅地停止服务</news:title>
+      <news:publication_date>2025-02-25T10:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa578.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何处理同名 Bean 对象多次注册导致的启动失败问题</news:title>
+      <news:publication_date>2025-02-25T09:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa577.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何统一给配置项属性值加密</news:title>
+      <news:publication_date>2025-02-25T08:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa576.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何在所有 Web 请求的前后执行自定义代码</news:title>
+      <news:publication_date>2025-02-25T07:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa575.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何解决 Bean 装配过程中的循环依赖</news:title>
+      <news:publication_date>2025-02-25T06:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa574.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何在程序启动完毕后自动执行任务</news:title>
+      <news:publication_date>2025-02-25T05:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa573.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何进行级联校验多层级的参数对象</news:title>
+      <news:publication_date>2025-02-25T04:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa572.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何进行 Body、Query、Path Variable 类型的参数校验</news:title>
+      <news:publication_date>2025-02-25T03:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa571.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何阻止某个第三方组件的自动装配</news:title>
+      <news:publication_date>2025-02-25T02:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa570.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】如何解决同一实例内部方法调用时部分事务失效的问题</news:title>
+      <news:publication_date>2025-02-25T01:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa569.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Cloud Gateway】如何配置全局异常处理</news:title>
+      <news:publication_date>2025-02-25T00:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa568.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何实现全局统一异常处理</news:title>
+      <news:publication_date>2025-02-24T23:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa567.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何解决 @ConfigurationProperties 不生效的问题</news:title>
+      <news:publication_date>2025-02-24T22:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa566.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】如何静态获取 HttpServletRequest 和 Response</news:title>
+      <news:publication_date>2025-02-24T21:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa565.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】如何快速添加 Maven 依赖项</news:title>
+      <news:publication_date>2025-02-24T20:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa564.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】如何声明和使用异步方法</news:title>
+      <news:publication_date>2025-02-24T19:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa563.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】如何同时启用多个Redis连接</news:title>
+      <news:publication_date>2025-02-24T18:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa562.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】解决动态数据源在多线程环境下的传递问题</news:title>
+      <news:publication_date>2025-02-24T17:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa561.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】使用动态数据源框架实现动态数据源切换</news:title>
+      <news:publication_date>2025-02-24T17:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa560.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】如何实现动态数据源切换</news:title>
+      <news:publication_date>2025-02-24T16:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa55f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】如何同时启用多个数据源</news:title>
+      <news:publication_date>2025-02-24T16:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa55e.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】如何从JAR包外部读取配置文件</news:title>
+      <news:publication_date>2025-02-24T15:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/4977917d.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring】解决数据库 Long 类型雪花 ID 前端精度损失的问题</news:title>
+      <news:publication_date>2025-02-24T14:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/b55fa55d.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Spring Boot】统一处理Web请求的JSON日期格式</news:title>
+      <news:publication_date>2025-02-24T14:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/4f5e305f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之模板方法模式详解</news:title>
+      <news:publication_date>2025-02-23T21:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/3f4e205f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之代理模式详解</news:title>
+      <news:publication_date>2025-02-23T20:50:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/2f3e105f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之享元模式详解</news:title>
+      <news:publication_date>2025-02-23T20:40:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/1f2e005f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之外观模式详解</news:title>
+      <news:publication_date>2025-02-23T20:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/0f1e905f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之组合模式详解</news:title>
+      <news:publication_date>2025-02-23T20:20:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/9f0e805f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之装饰器模式详解</news:title>
+      <news:publication_date>2025-02-23T20:10:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f9e705f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之桥接模式详解</news:title>
+      <news:publication_date>2025-02-23T20:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/7f8e605f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之适配器模式详解</news:title>
+      <news:publication_date>2025-02-23T19:50:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/6f7e505f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之迭代器模式详解</news:title>
+      <news:publication_date>2025-02-23T21:20:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/5f6e405f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之命令模式详解</news:title>
+      <news:publication_date>2025-02-23T21:10:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/6f7e504f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之原型模式详解</news:title>
+      <news:publication_date>2025-02-23T19:40:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/5f6e403f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之工厂模式详解</news:title>
+      <news:publication_date>2025-02-23T19:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/4d5e302f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之建造者模式详解</news:title>
+      <news:publication_date>2025-02-23T19:20:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/fc0d0894.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之单例模式详解</news:title>
+      <news:publication_date>2025-02-23T19:00:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/4a17b156.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Hello World</news:title>
+      <news:publication_date>2025-02-23T12:42:38+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/8f3e2c7a.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>【Java】PriorityQueue优先队列核心源码详解</news:title>
+      <news:publication_date>2024-03-21T13:30:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://blog.lucky845.top/archives/3722688e.html</loc>
+    <news:news>
+      <news:publication>
+        <news:language>zh-CN</news:language>
+        <news:name>Unknown Author</news:name>
+      </news:publication>
+      <news:title>Java设计模式之抽象工厂模式详解</news:title>
+      <news:publication_date>2025-02-23T19:13:00+08:00</news:publication_date>
+    </news:news>
+  </url>
+</urlset>
