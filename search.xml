@@ -59,9 +59,9 @@
       
         <tags>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 系统调优 </tag>
             
@@ -292,9 +292,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> 分布式系统 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 分布式系统 </tag>
             
             <tag> 并发 </tag>
             
@@ -763,9 +763,9 @@
       
         <tags>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 序列化 </tag>
             
@@ -827,11 +827,11 @@
       
         <tags>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Java </tag>
             
             <tag> 并发编程 </tag>
+            
+            <tag> 性能优化 </tag>
             
         </tags>
       
@@ -891,9 +891,9 @@
       
         <tags>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 线程池 </tag>
             
@@ -1429,11 +1429,11 @@
             
             <tag> 系统管理 </tag>
             
-            <tag> 日志管理 </tag>
-            
             <tag> 磁盘清理 </tag>
             
             <tag> 性能优化 </tag>
+            
+            <tag> 日志管理 </tag>
             
         </tags>
       
@@ -2106,11 +2106,11 @@
             
             <tag> 系统管理 </tag>
             
+            <tag> Linux </tag>
+            
             <tag> 磁盘清理 </tag>
             
             <tag> 性能优化 </tag>
-            
-            <tag> Linux </tag>
             
         </tags>
       
@@ -2137,9 +2137,9 @@
             
             <tag> 系统管理 </tag>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 系统监控 </tag>
             
@@ -2356,9 +2356,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> 消息队列 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 消息队列 </tag>
             
             <tag> 发布/订阅 </tag>
             
