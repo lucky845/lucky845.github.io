@@ -32,7 +32,6 @@ jobs:
       - name: Fetch and update gh-pages branch
         run: |
           git fetch origin
-          git checkout -b gh-pages origin/gh-pages
           DIFF_COUNT=$(git diff --name-only master..gh-pages | wc -l | xargs)
           echo "DIFF_COUNT=$DIFF_COUNT" >> $GITHUB_ENV
 
