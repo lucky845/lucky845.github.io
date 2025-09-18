@@ -29,36 +29,14 @@ jobs:
           git checkout -B master origin/master || git checkout master
           git pull origin master
 
-      # 确保gh-pages分支是最新的
-      - name: Fetch and update gh-pages branch
-        run: |
-          git fetch origin gh-pages:gh-pages
-          git checkout gh-pages
-          git pull origin gh-pages
-          # 显示gh-pages和master分支的最新提交信息
-          echo "Latest commit on gh-pages: $(git log -1 --oneline)"
-          git checkout master
-          echo "Latest commit on master: $(git log -1 --oneline)"
-          # 检查两个分支之间的差异
-          echo "Checking differences between gh-pages and master..."
-          DIFF_COUNT=$(git diff --name-only master..gh-pages | wc -l)
-          echo "Found $DIFF_COUNT files different between branches"
-          # 如果有差异，显示前几个不同的文件
-          if [ $DIFF_COUNT -gt 0 ]; then
-            echo "Sample of differing files:"
-            git diff --name-only master..gh-pages | head -5
-          fi
-          echo "DIFF_COUNT=$DIFF_COUNT" >> $GITHUB_ENV
-
       # 创建临时分支
       - name: Create temporary branch
-        if: env.DIFF_COUNT > 0
         run: |
           # 生成唯一的分支名，使用时间戳避免冲突
           BRANCH_NAME="merge-gh-pages-$(date +%s)"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-          # 基于更新后的gh-pages分支创建新的临时分支
-          git checkout -b $BRANCH_NAME gh-pages
+          # 基于gh-pages分支创建新的临时分支
+          git checkout -b $BRANCH_NAME origin/gh-pages
           # 推送到远程仓库
           git push origin $BRANCH_NAME
           echo "Created and pushed temporary branch: $BRANCH_NAME"
@@ -66,7 +44,6 @@ jobs:
       # 创建Pull Request
       - name: Create Pull Request
         id: create_pr
-        if: env.DIFF_COUNT > 0
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -78,27 +55,15 @@ jobs:
             
             Triggered by commit: ${{ github.sha }}
             
-            Detected ${{ env.DIFF_COUNT }} files different between branches.
-            
             Please review the changes before merging.
           draft: false
-
-      # 设置SKIP_MERGE环境变量（处理分支无差异的情况）
-      - name: Set SKIP_MERGE variable
-        if: env.DIFF_COUNT == 0
-        run: |
-          echo "No changes to merge between gh-pages and master"
-          echo "SKIP_MERGE=true" >> $GITHUB_ENV
 
       # 检查PR是否成功创建
       - name: Check PR creation
         id: check_pr
-        if: env.DIFF_COUNT > 0
         run: |
           if [ -z "${{ steps.create_pr.outputs.pull-request-number }}" ]; then
-            echo "Failed to create pull request despite differences detected"
-            echo "Displaying detailed differences between branches..."
-            git diff --stat master..gh-pages
+            echo "No changes to merge (branch already up to date)"
             echo "SKIP_MERGE=true" >> $GITHUB_ENV
           else
             echo "PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}" >> $GITHUB_ENV
@@ -136,9 +101,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 清理临时分支（如果创建了的话）
+      # 清理临时分支（无论成功与否都执行）
       - name: Clean up temporary branch
-        if: always() && env.BRANCH_NAME != ''
+        if: always()
         run: |
           # 清理临时分支
           git push origin --delete ${{ env.BRANCH_NAME }} || echo "Branch already deleted"
