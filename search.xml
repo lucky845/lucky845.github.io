@@ -290,11 +290,11 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 数据库 </tag>
             
             <tag> 分布式系统 </tag>
+            
+            <tag> Java </tag>
             
             <tag> 并发 </tag>
             
@@ -763,9 +763,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 性能优化 </tag>
+            
+            <tag> Java </tag>
             
             <tag> 序列化 </tag>
             
@@ -827,11 +827,11 @@
       
         <tags>
             
+            <tag> 性能优化 </tag>
+            
             <tag> Java </tag>
             
             <tag> 并发编程 </tag>
-            
-            <tag> 性能优化 </tag>
             
         </tags>
       
@@ -891,9 +891,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 性能优化 </tag>
+            
+            <tag> Java </tag>
             
             <tag> 线程池 </tag>
             
@@ -953,11 +953,11 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Nacos </tag>
             
             <tag> Sentinel </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -1046,9 +1046,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> Redis </tag>
-            
             <tag> 性能优化 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 缓存 </tag>
             
@@ -1079,9 +1079,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> Redis </tag>
-            
             <tag> 性能优化 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 缓存 </tag>
             
@@ -1147,9 +1147,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> Redis </tag>
-            
             <tag> 性能优化 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 线程模型 </tag>
             
@@ -1751,9 +1751,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> Java </tag>
             
             <tag> 客户端 </tag>
             
@@ -1784,9 +1784,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> Java </tag>
             
             <tag> Jedis </tag>
             
@@ -1852,9 +1852,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> Redis </tag>
-            
             <tag> 性能优化 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 缓存 </tag>
             
@@ -1918,9 +1918,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> Redis </tag>
-            
             <tag> 性能优化 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 缓存 </tag>
             
@@ -2294,9 +2294,9 @@
             
             <tag> Linux </tag>
             
-            <tag> 文件系统 </tag>
-            
             <tag> 磁盘管理 </tag>
+            
+            <tag> 文件系统 </tag>
             
         </tags>
       
@@ -2453,13 +2453,13 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Redis </tag>
             
-            <tag> Spring Boot </tag>
+            <tag> Java </tag>
             
             <tag> AOP </tag>
+            
+            <tag> Spring Boot </tag>
             
             <tag> 分布式锁 </tag>
             
@@ -2488,9 +2488,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> Java </tag>
             
             <tag> Spring Boot </tag>
             
@@ -2554,13 +2554,13 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Redis </tag>
             
-            <tag> Spring Boot </tag>
+            <tag> Java </tag>
             
             <tag> AOP </tag>
+            
+            <tag> Spring Boot </tag>
             
             <tag> 限流 </tag>
             
@@ -3020,11 +3020,11 @@
             
             <tag> Java </tag>
             
-            <tag> 异常处理 </tag>
-            
             <tag> Spring Cloud </tag>
             
             <tag> Gateway </tag>
+            
+            <tag> 异常处理 </tag>
             
         </tags>
       
@@ -3216,11 +3216,11 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 数据库 </tag>
             
             <tag> Redis </tag>
+            
+            <tag> Java </tag>
             
             <tag> Spring </tag>
             
@@ -3251,17 +3251,17 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 数据库 </tag>
             
-            <tag> Spring </tag>
+            <tag> Java </tag>
             
-            <tag> 线程池 </tag>
+            <tag> Spring </tag>
             
             <tag> 数据源 </tag>
             
             <tag> 动态数据源 </tag>
+            
+            <tag> 线程池 </tag>
             
         </tags>
       
@@ -3288,9 +3288,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 数据库 </tag>
+            
+            <tag> Java </tag>
             
             <tag> Spring </tag>
             
@@ -3325,9 +3325,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 数据库 </tag>
+            
+            <tag> Java </tag>
             
             <tag> Spring </tag>
             
@@ -3360,9 +3360,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 数据库 </tag>
+            
+            <tag> Java </tag>
             
             <tag> Spring </tag>
             
@@ -3406,39 +3406,6 @@
     
     
     <entry>
-      <title>【Spring Boot】统一处理Web请求的JSON日期格式</title>
-      <link href="/archives/b55fa55d.html"/>
-      <url>/archives/b55fa55d.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在Spring Web开发中,前后端交互经常会遇到日期时间格式的问题。默认情况下:</p><ol><li>后端返回给前端的时间戳是一个长整型数字</li><li>前端传递的日期格式可能各不相同</li><li>不同接口对日期格式要求不一致</li></ol><p>这些问题会导致:</p><ul><li>前端需要手动处理时间格式转换</li><li>代码中充斥着大量的日期格式化代码</li><li>可能出现日期解析错误</li></ul><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="1-全局日期格式化配置"><a href="#1-全局日期格式化配置" class="headerlink" title="1. 全局日期格式化配置"></a>1. 全局日期格式化配置</h3><p>创建配置类统一处理日期格式:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateFormatConfig</span> <span class="token punctuation">{</span>        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">DATE_FORMAT</span> <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd"</span><span class="token punctuation">;</span>    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">DATE_TIME_FORMAT</span> <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">;</span>        <span class="token annotation punctuation">@Bean</span>    <span class="token keyword">public</span> <span class="token class-name">Jackson2ObjectMapperBuilderCustomizer</span> <span class="token function">jsonCustomizer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> builder <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>            builder<span class="token punctuation">.</span><span class="token function">simpleDateFormat</span><span class="token punctuation">(</span><span class="token constant">DATE_TIME_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">serializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateSerializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">serializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateTimeSerializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_TIME_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">deserializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateDeserializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">deserializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateTimeDeserializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_TIME_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-使用-JsonFormat注解"><a href="#2-使用-JsonFormat注解" class="headerlink" title="2. 使用@JsonFormat注解"></a>2. 使用@JsonFormat注解</h3><p>对于特定字段需要自定义格式时:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@JsonFormat</span><span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">,</span> timezone <span class="token operator">=</span> <span class="token string">"GMT+8"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDateTime</span> createTime<span class="token punctuation">;</span>        <span class="token annotation punctuation">@JsonFormat</span><span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDate</span> birthday<span class="token punctuation">;</span>        <span class="token comment">// getter setter</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="3-自定义日期序列化和反序列化"><a href="#3-自定义日期序列化和反序列化" class="headerlink" title="3. 自定义日期序列化和反序列化"></a>3. 自定义日期序列化和反序列化</h3><p>对于更复杂的日期处理需求:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomLocalDateTimeSerializer</span> <span class="token keyword">extends</span> <span class="token class-name">JsonSerializer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@Override</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">serialize</span><span class="token punctuation">(</span><span class="token class-name">LocalDateTime</span> value<span class="token punctuation">,</span> <span class="token class-name">JsonGenerator</span> gen<span class="token punctuation">,</span> <span class="token class-name">SerializerProvider</span> serializers<span class="token punctuation">)</span>             <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            gen<span class="token punctuation">.</span><span class="token function">writeString</span><span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomLocalDateTimeDeserializer</span> <span class="token keyword">extends</span> <span class="token class-name">JsonDeserializer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@Override</span>    <span class="token keyword">public</span> <span class="token class-name">LocalDateTime</span> <span class="token function">deserialize</span><span class="token punctuation">(</span><span class="token class-name">JsonParser</span> p<span class="token punctuation">,</span> <span class="token class-name">DeserializationContext</span> ctxt<span class="token punctuation">)</span>             <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>        <span class="token class-name">String</span> dateStr <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">StringUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>dateStr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>dateStr<span class="token punctuation">,</span> <span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="实际应用示例"><a href="#实际应用示例" class="headerlink" title="实际应用示例"></a>实际应用示例</h2><h3 id="1-Controller层使用"><a href="#1-Controller层使用" class="headerlink" title="1. Controller层使用"></a>1. Controller层使用</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@RestController</span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/api"</span><span class="token punctuation">)</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>        <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">"/user"</span><span class="token punctuation">)</span>    <span class="token keyword">public</span> <span class="token class-name">Result</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">createUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">// LocalDateTime会自动按配置格式处理</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"创建时间: "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getCreateTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"生日: "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getBirthday</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">return</span> <span class="token class-name">Result</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>        <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/{id}"</span><span class="token punctuation">)</span>    <span class="token keyword">public</span> <span class="token class-name">Result</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token class-name">Long</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setCreateTime</span><span class="token punctuation">(</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setBirthday</span><span class="token punctuation">(</span><span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 返回的日期会自动格式化</span>        <span class="token keyword">return</span> <span class="token class-name">Result</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-测试验证"><a href="#2-测试验证" class="headerlink" title="2. 测试验证"></a>2. 测试验证</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@SpringBootTest</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateFormatTest</span> <span class="token punctuation">{</span>        <span class="token annotation punctuation">@Autowired</span>    <span class="token keyword">private</span> <span class="token class-name">ObjectMapper</span> objectMapper<span class="token punctuation">;</span>        <span class="token annotation punctuation">@Test</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testDateFormat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>        <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setCreateTime</span><span class="token punctuation">(</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setBirthday</span><span class="token punctuation">(</span><span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token class-name">String</span> json <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"序列化结果: "</span> <span class="token operator">+</span> json<span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token class-name">User</span> parsedUser <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"反序列化结果: "</span> <span class="token operator">+</span> parsedUser<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="最佳实践建议"><a href="#最佳实践建议" class="headerlink" title="最佳实践建议"></a>最佳实践建议</h2><ol><li><p>统一使用LocalDateTime和LocalDate替代Date类型</p></li><li><p>在配置文件中集中管理日期格式模式字符串</p></li><li><p>考虑时区问题,建议:</p><ul><li>服务器统一使用UTC时间</li><li>在展示层处理时区转换</li><li>在配置中明确指定时区</li></ul></li><li><p>对于特殊格式要求:</p><ul><li>优先使用@JsonFormat注解</li><li>其次考虑自定义序列化器</li></ul></li><li><p>添加参数校验:</p></li></ol><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@NotNull</span><span class="token punctuation">(</span>message <span class="token operator">=</span> <span class="token string">"创建时间不能为空"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDateTime</span> createTime<span class="token punctuation">;</span>        <span class="token annotation punctuation">@Past</span><span class="token punctuation">(</span>message <span class="token operator">=</span> <span class="token string">"生日必须是过去的日期"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDate</span> birthday<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol><li><p>时区问题</p><ul><li>现象:前后端显示时间相差几个小时</li><li>解决:指定正确的时区,如 <code>timezone = "GMT+8"</code></li></ul></li><li><p>格式解析异常</p><ul><li>现象:日期字符串无法正确解析</li><li>解决:检查日期格式是否匹配,增加异常处理</li></ul></li><li><p>性能问题</p><ul><li>现象:日期转换影响接口性能</li><li>解决:使用缓存,避免重复创建DateTimeFormatter</li></ul></li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过合理配置和规范使用,我们可以优雅地解决JSON日期格式问题:</p><ol><li>全局配置处理通用场景</li><li>注解处理特殊需求</li><li>自定义序列化处理复杂情况</li></ol><p>这样既保证了代码的统一性,又提供了足够的灵活性。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.json">Spring Boot Documentation</a></li><li><a href="https://github.com/FasterXML/jackson-docs">Jackson Documentation</a></li><li><a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html">Java 8 Date/Time API</a></li></ul><hr><h2 id="希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！"><a href="#希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！" class="headerlink" title="希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！ "></a>希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！ </h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-          <category> Spring Boot </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Spring Boot </tag>
-            
-            <tag> JSON </tag>
-            
-            <tag> 日期格式 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>【Spring】解决数据库 Long 类型雪花 ID 前端精度损失的问题</title>
       <link href="/archives/4977917d.html"/>
       <url>/archives/4977917d.html</url>
@@ -3468,6 +3435,39 @@
             <tag> JSON序列化 </tag>
             
             <tag> FastJson2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【Spring Boot】统一处理Web请求的JSON日期格式</title>
+      <link href="/archives/b55fa55d.html"/>
+      <url>/archives/b55fa55d.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在Spring Web开发中,前后端交互经常会遇到日期时间格式的问题。默认情况下:</p><ol><li>后端返回给前端的时间戳是一个长整型数字</li><li>前端传递的日期格式可能各不相同</li><li>不同接口对日期格式要求不一致</li></ol><p>这些问题会导致:</p><ul><li>前端需要手动处理时间格式转换</li><li>代码中充斥着大量的日期格式化代码</li><li>可能出现日期解析错误</li></ul><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="1-全局日期格式化配置"><a href="#1-全局日期格式化配置" class="headerlink" title="1. 全局日期格式化配置"></a>1. 全局日期格式化配置</h3><p>创建配置类统一处理日期格式:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateFormatConfig</span> <span class="token punctuation">{</span>        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">DATE_FORMAT</span> <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd"</span><span class="token punctuation">;</span>    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">DATE_TIME_FORMAT</span> <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">;</span>        <span class="token annotation punctuation">@Bean</span>    <span class="token keyword">public</span> <span class="token class-name">Jackson2ObjectMapperBuilderCustomizer</span> <span class="token function">jsonCustomizer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> builder <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>            builder<span class="token punctuation">.</span><span class="token function">simpleDateFormat</span><span class="token punctuation">(</span><span class="token constant">DATE_TIME_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">serializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateSerializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">serializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateTimeSerializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_TIME_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">deserializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateDeserializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            builder<span class="token punctuation">.</span><span class="token function">deserializers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">LocalDateTimeDeserializer</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token constant">DATE_TIME_FORMAT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-使用-JsonFormat注解"><a href="#2-使用-JsonFormat注解" class="headerlink" title="2. 使用@JsonFormat注解"></a>2. 使用@JsonFormat注解</h3><p>对于特定字段需要自定义格式时:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@JsonFormat</span><span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">,</span> timezone <span class="token operator">=</span> <span class="token string">"GMT+8"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDateTime</span> createTime<span class="token punctuation">;</span>        <span class="token annotation punctuation">@JsonFormat</span><span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDate</span> birthday<span class="token punctuation">;</span>        <span class="token comment">// getter setter</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="3-自定义日期序列化和反序列化"><a href="#3-自定义日期序列化和反序列化" class="headerlink" title="3. 自定义日期序列化和反序列化"></a>3. 自定义日期序列化和反序列化</h3><p>对于更复杂的日期处理需求:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomLocalDateTimeSerializer</span> <span class="token keyword">extends</span> <span class="token class-name">JsonSerializer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@Override</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">serialize</span><span class="token punctuation">(</span><span class="token class-name">LocalDateTime</span> value<span class="token punctuation">,</span> <span class="token class-name">JsonGenerator</span> gen<span class="token punctuation">,</span> <span class="token class-name">SerializerProvider</span> serializers<span class="token punctuation">)</span>             <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            gen<span class="token punctuation">.</span><span class="token function">writeString</span><span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomLocalDateTimeDeserializer</span> <span class="token keyword">extends</span> <span class="token class-name">JsonDeserializer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@Override</span>    <span class="token keyword">public</span> <span class="token class-name">LocalDateTime</span> <span class="token function">deserialize</span><span class="token punctuation">(</span><span class="token class-name">JsonParser</span> p<span class="token punctuation">,</span> <span class="token class-name">DeserializationContext</span> ctxt<span class="token punctuation">)</span>             <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>        <span class="token class-name">String</span> dateStr <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">StringUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>dateStr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>dateStr<span class="token punctuation">,</span> <span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="实际应用示例"><a href="#实际应用示例" class="headerlink" title="实际应用示例"></a>实际应用示例</h2><h3 id="1-Controller层使用"><a href="#1-Controller层使用" class="headerlink" title="1. Controller层使用"></a>1. Controller层使用</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@RestController</span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/api"</span><span class="token punctuation">)</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>        <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">"/user"</span><span class="token punctuation">)</span>    <span class="token keyword">public</span> <span class="token class-name">Result</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">createUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">// LocalDateTime会自动按配置格式处理</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"创建时间: "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getCreateTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"生日: "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getBirthday</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">return</span> <span class="token class-name">Result</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>        <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/{id}"</span><span class="token punctuation">)</span>    <span class="token keyword">public</span> <span class="token class-name">Result</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token class-name">Long</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setCreateTime</span><span class="token punctuation">(</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setBirthday</span><span class="token punctuation">(</span><span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 返回的日期会自动格式化</span>        <span class="token keyword">return</span> <span class="token class-name">Result</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-测试验证"><a href="#2-测试验证" class="headerlink" title="2. 测试验证"></a>2. 测试验证</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@SpringBootTest</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateFormatTest</span> <span class="token punctuation">{</span>        <span class="token annotation punctuation">@Autowired</span>    <span class="token keyword">private</span> <span class="token class-name">ObjectMapper</span> objectMapper<span class="token punctuation">;</span>        <span class="token annotation punctuation">@Test</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testDateFormat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>        <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setCreateTime</span><span class="token punctuation">(</span><span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        user<span class="token punctuation">.</span><span class="token function">setBirthday</span><span class="token punctuation">(</span><span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token class-name">String</span> json <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"序列化结果: "</span> <span class="token operator">+</span> json<span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token class-name">User</span> parsedUser <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"反序列化结果: "</span> <span class="token operator">+</span> parsedUser<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="最佳实践建议"><a href="#最佳实践建议" class="headerlink" title="最佳实践建议"></a>最佳实践建议</h2><ol><li><p>统一使用LocalDateTime和LocalDate替代Date类型</p></li><li><p>在配置文件中集中管理日期格式模式字符串</p></li><li><p>考虑时区问题,建议:</p><ul><li>服务器统一使用UTC时间</li><li>在展示层处理时区转换</li><li>在配置中明确指定时区</li></ul></li><li><p>对于特殊格式要求:</p><ul><li>优先使用@JsonFormat注解</li><li>其次考虑自定义序列化器</li></ul></li><li><p>添加参数校验:</p></li></ol><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@NotNull</span><span class="token punctuation">(</span>message <span class="token operator">=</span> <span class="token string">"创建时间不能为空"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDateTime</span> createTime<span class="token punctuation">;</span>        <span class="token annotation punctuation">@Past</span><span class="token punctuation">(</span>message <span class="token operator">=</span> <span class="token string">"生日必须是过去的日期"</span><span class="token punctuation">)</span>    <span class="token keyword">private</span> <span class="token class-name">LocalDate</span> birthday<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol><li><p>时区问题</p><ul><li>现象:前后端显示时间相差几个小时</li><li>解决:指定正确的时区,如 <code>timezone = "GMT+8"</code></li></ul></li><li><p>格式解析异常</p><ul><li>现象:日期字符串无法正确解析</li><li>解决:检查日期格式是否匹配,增加异常处理</li></ul></li><li><p>性能问题</p><ul><li>现象:日期转换影响接口性能</li><li>解决:使用缓存,避免重复创建DateTimeFormatter</li></ul></li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过合理配置和规范使用,我们可以优雅地解决JSON日期格式问题:</p><ol><li>全局配置处理通用场景</li><li>注解处理特殊需求</li><li>自定义序列化处理复杂情况</li></ol><p>这样既保证了代码的统一性,又提供了足够的灵活性。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.json">Spring Boot Documentation</a></li><li><a href="https://github.com/FasterXML/jackson-docs">Jackson Documentation</a></li><li><a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html">Java 8 Date/Time API</a></li></ul><hr><h2 id="希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！"><a href="#希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！" class="headerlink" title="希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！ "></a>希望这篇文章能帮助您更好地解决全局日期配置的问题。如果您有任何问题，欢迎在评论区讨论！ </h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Spring Boot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Spring Boot </tag>
+            
+            <tag> JSON </tag>
+            
+            <tag> 日期格式 </tag>
             
         </tags>
       

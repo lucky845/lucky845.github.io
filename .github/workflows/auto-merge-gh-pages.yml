@@ -39,14 +39,14 @@ jobs:
           echo "Latest commit on gh-pages: $(git log -1 --oneline)"
           git checkout master
           echo "Latest commit on master: $(git log -1 --oneline)"
-          # 检查两个分支之间的差异
+          # 检查两个分支之间的差异 - 注意这里修改了比较方向，从gh-pages到master
           echo "Checking differences between gh-pages and master..."
-          DIFF_COUNT=$(git diff --name-only master..gh-pages | wc -l)
+          DIFF_COUNT=$(git diff --name-only gh-pages..master | wc -l)
           echo "Found $DIFF_COUNT files different between branches"
           # 如果有差异，显示前几个不同的文件
           if [ $DIFF_COUNT -gt 0 ]; then
             echo "Sample of differing files:"
-            git diff --name-only master..gh-pages | head -5
+            git diff --name-only gh-pages..master | head -5
           fi
           echo "DIFF_COUNT=$DIFF_COUNT" >> $GITHUB_ENV
 
@@ -98,7 +98,7 @@ jobs:
           if [ -z "${{ steps.create_pr.outputs.pull-request-number }}" ]; then
             echo "Failed to create pull request despite differences detected"
             echo "Displaying detailed differences between branches..."
-            git diff --stat master..gh-pages
+            git diff --stat gh-pages..master
             echo "SKIP_MERGE=true" >> $GITHUB_ENV
           else
             echo "PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}" >> $GITHUB_ENV
