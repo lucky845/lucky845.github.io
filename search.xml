@@ -1046,9 +1046,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 缓存 </tag>
             
@@ -1079,9 +1079,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 缓存 </tag>
             
@@ -1147,9 +1147,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 线程模型 </tag>
             
@@ -1852,9 +1852,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 缓存 </tag>
             
@@ -1918,9 +1918,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 缓存 </tag>
             
@@ -3020,11 +3020,11 @@
             
             <tag> Java </tag>
             
+            <tag> 异常处理 </tag>
+            
             <tag> Spring Cloud </tag>
             
             <tag> Gateway </tag>
-            
-            <tag> 异常处理 </tag>
             
         </tags>
       

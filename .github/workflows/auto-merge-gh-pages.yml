@@ -1,4 +1,4 @@
-name: Auto Merge GH Pages to Master
+name: Auto Merge gh-pages to master
 
 on:
   push:
@@ -18,14 +18,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取所有历史记录
+          fetch-depth: 0
 
       # 配置Git
       - name: Configure Git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          # 确保master分支存在并更新
           git checkout -B master origin/master || git checkout master
           git pull origin master
 
@@ -35,18 +34,15 @@ jobs:
           git fetch origin gh-pages:gh-pages
           git checkout gh-pages
           git pull origin gh-pages
-          # 显示gh-pages和master分支的最新提交信息
           echo "Latest commit on gh-pages: $(git log -1 --oneline)"
           git checkout master
           echo "Latest commit on master: $(git log -1 --oneline)"
-          # 检查两个分支之间的差异 - 注意这里修改了比较方向，从gh-pages到master
-          echo "Checking differences between gh-pages and master..."
-          DIFF_COUNT=$(git diff --name-only gh-pages..master | wc -l)
+          echo "Checking differences between master and gh-pages..."
+          DIFF_COUNT=$(git diff --name-only master..gh-pages | wc -l)
           echo "Found $DIFF_COUNT files different between branches"
-          # 如果有差异，显示前几个不同的文件
           if [ $DIFF_COUNT -gt 0 ]; then
             echo "Sample of differing files:"
-            git diff --name-only gh-pages..master | head -5
+            git diff --name-only master..gh-pages | head -5
           fi
           echo "DIFF_COUNT=$DIFF_COUNT" >> $GITHUB_ENV
 
@@ -54,12 +50,9 @@ jobs:
       - name: Create temporary branch
         if: env.DIFF_COUNT > 0
         run: |
-          # 生成唯一的分支名，使用时间戳避免冲突
           BRANCH_NAME="merge-gh-pages-$(date +%s)"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-          # 基于更新后的gh-pages分支创建新的临时分支
           git checkout -b $BRANCH_NAME gh-pages
-          # 推送到远程仓库
           git push origin $BRANCH_NAME
           echo "Created and pushed temporary branch: $BRANCH_NAME"
 
@@ -83,7 +76,7 @@ jobs:
             Please review the changes before merging.
           draft: false
 
-      # 设置SKIP_MERGE环境变量（处理分支无差异的情况）
+      # 设置SKIP_MERGE环境变量
       - name: Set SKIP_MERGE variable
         if: env.DIFF_COUNT == 0
         run: |
@@ -98,48 +91,59 @@ jobs:
           if [ -z "${{ steps.create_pr.outputs.pull-request-number }}" ]; then
             echo "Failed to create pull request despite differences detected"
             echo "Displaying detailed differences between branches..."
-            git diff --stat gh-pages..master
+            git diff --stat master..gh-pages
             echo "SKIP_MERGE=true" >> $GITHUB_ENV
           else
             echo "PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}" >> $GITHUB_ENV
             echo "SKIP_MERGE=false" >> $GITHUB_ENV
           fi
 
-      # 自动合并Pull Request（可选，根据需要启用）
+      # 自动合并Pull Request
       - name: Auto Merge Pull Request
         if: env.SKIP_MERGE != 'true'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ env.PR_NUMBER }}
-          merge-method: squash # 使用squash合并方式
+          merge-method: squash
 
-      # 等待PR自动合并完成
-      - name: Wait for PR to merge
+      # 查看PR状态
+      - name: Check PR status after enabling automerge
         if: env.SKIP_MERGE != 'true'
         run: |
-          echo "Waiting for PR #${{ env.PR_NUMBER }} to merge..."
-          for i in {1..60}; do # 最多等待60分钟
-            PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
-            if [ "$PR_STATE" = "MERGED" ]; then
-              echo "PR merged successfully!"
-              exit 0
-            elif [ "$PR_STATE" = "CLOSED" ]; then
-              echo "PR was closed without merging!"
-              exit 1
-            fi
-            echo "Checking again in 60 seconds..."
-            sleep 60
-          done
-          echo "Timeout waiting for PR to merge"
-          exit 1
+          echo "PR #${{ env.PR_NUMBER }} details after enabling automerge:"
+          gh pr view ${{ env.PR_NUMBER }} --json state,mergedAt,autoMergeRequest
+          echo "PR URL: https://github.com/${{ github.repository }}/pull/${{ env.PR_NUMBER }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 清理临时分支（如果创建了的话）
+      # 手动合并PR（替代自动合并等待）
+      - name: Merge PR manually if needed
+        if: env.SKIP_MERGE != 'true'
+        run: |
+          echo "Attempting to merge PR #${{ env.PR_NUMBER }} manually..."
+          PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
+          if [ "$PR_STATE" != "MERGED" ] && [ "$PR_STATE" != "CLOSED" ]; then
+            echo "PR is still open, trying to merge manually..."
+            gh pr merge ${{ env.PR_NUMBER }} --squash --delete-branch --subject "Auto Merge: GH Pages Updates to Master"
+            echo "Manual merge command executed"
+            # 检查合并结果
+            sleep 10
+            NEW_PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
+            if [ "$NEW_PR_STATE" = "MERGED" ]; then
+              echo "PR merged successfully!"
+            else
+              echo "Failed to merge PR manually, current state: $NEW_PR_STATE"
+            fi
+          else
+            echo "PR is already $PR_STATE, skipping manual merge"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 清理临时分支
       - name: Clean up temporary branch
         if: always() && env.BRANCH_NAME != ''
         run: |
-          # 清理临时分支
           git push origin --delete ${{ env.BRANCH_NAME }} || echo "Branch already deleted"
           echo "Cleaned up temporary branch: ${{ env.BRANCH_NAME }}"
