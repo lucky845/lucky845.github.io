@@ -29,28 +29,13 @@ jobs:
           git checkout -B master origin/master || git checkout master
           git pull origin master
 
-      # 创建临时分支，基于gh-pages分支的更改
-      - name: Create temporary branch
-        run: |
-          BRANCH_NAME="merge-gh-pages-$(date +%s)"
-          git checkout -b $BRANCH_NAME
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-
-      # 将gh-pages分支的更改合并到临时分支
-      - name: Merge gh-pages changes
-        run: |
-          git merge origin/gh-pages --allow-unrelated-histories -X theirs
-          # 解决可能的冲突，这里我们选择保留gh-pages的更改
-          git add .
-          git commit -m "Merge gh-pages changes to temporary branch" || echo "No changes to commit"
-
-      # 创建Pull Request
+      # 创建Pull Request，直接使用gh-pages分支
       - name: Create Pull Request
         id: create_pr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.BRANCH_NAME }}
+          branch: gh-pages
           base: master
           title: "Auto Merge: GH Pages Updates to Master"
           body: |
@@ -98,9 +83,3 @@ jobs:
           exit 1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # 清理临时分支
-      - name: Clean up temporary branch
-        if: success()
-        run: |
-          git push origin --delete ${{ env.BRANCH_NAME }} || echo "Branch already deleted"
