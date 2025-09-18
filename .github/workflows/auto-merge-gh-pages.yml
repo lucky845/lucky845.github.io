@@ -28,36 +28,6 @@ jobs:
           git checkout -B master origin/master || git checkout master
           git pull origin master
 
-      # 确保gh-pages分支是最新的
-      - name: Fetch and update gh-pages branch
-        run: |
-          git fetch origin gh-pages:gh-pages
-          git checkout gh-pages
-          git pull origin gh-pages
-          git checkout master
-          DIFF_COUNT=$(git diff --name-only master..gh-pages | wc -l)
-          echo "DIFF_COUNT=$DIFF_COUNT" >> $GITHUB_ENV
-
-      # 创建临时分支
-      - name: Create temporary branch
-        if: env.DIFF_COUNT > 0
-        run: |
-          BRANCH_NAME="merge-gh-pages-$(date +%s)"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-          # 从master分支创建临时分支
-          git checkout -b $BRANCH_NAME master
-          # 合并gh-pages的更改到临时分支
-          git merge --no-ff gh-pages -m "Merge gh-pages changes into $BRANCH_NAME"
-          MERGE_EXIT_CODE=$?
-          if [ $MERGE_EXIT_CODE -ne 0 ]; then
-            # 尝试强制接受gh-pages版本（适合静态站点）
-            git checkout --theirs .
-            git add .
-            git commit -m "Resolve merge conflicts by accepting gh-pages version"
-          fi
-          # 推送临时分支到远程
-          git push origin $BRANCH_NAME
-
       # 创建Pull Request
       - name: Create Pull Request
         id: create_pr
@@ -65,7 +35,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.BRANCH_NAME }}
+          branch: gh-pages
           base: master
           title: "Auto Merge: GH Pages Updates to Master"
           body: |
@@ -135,9 +105,3 @@ jobs:
       - name: Workflow summary
         run: |
           echo "Workflow completed."
-
-      # 清理临时分支
-      - name: Clean up temporary branch
-        if: always() && env.BRANCH_NAME != ''
-        run: |
-          git push origin --delete ${{ env.BRANCH_NAME }} || true
