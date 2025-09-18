@@ -1,0 +1,106 @@
+name: Auto Merge GH Pages to Master
+
+on:
+  push:
+    branches:
+      - gh-pages
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  create-and-merge-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: write
+    steps:
+      # 检出代码仓库
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取所有历史记录
+
+      # 配置Git
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          # 确保master分支存在并更新
+          git checkout -B master origin/master || git checkout master
+          git pull origin master
+
+      # 创建临时分支，基于gh-pages分支的更改
+      - name: Create temporary branch
+        run: |
+          BRANCH_NAME="merge-gh-pages-$(date +%s)"
+          git checkout -b $BRANCH_NAME
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+      # 将gh-pages分支的更改合并到临时分支
+      - name: Merge gh-pages changes
+        run: |
+          git merge origin/gh-pages --allow-unrelated-histories -X theirs
+          # 解决可能的冲突，这里我们选择保留gh-pages的更改
+          git add .
+          git commit -m "Merge gh-pages changes to temporary branch" || echo "No changes to commit"
+
+      # 创建Pull Request
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.BRANCH_NAME }}
+          base: master
+          title: "Auto Merge: GH Pages Updates to Master"
+          body: |
+            This is an automatically generated pull request to merge updates from gh-pages branch to master branch.
+            
+            Triggered by commit: ${{ github.sha }}
+            
+            Please review the changes before merging.
+          draft: false
+
+      # 检查PR是否成功创建
+      - name: Check PR creation
+        run: |
+          if [ -z "${{ steps.create_pr.outputs.pull-request-number }}" ]; then
+            echo "Failed to create pull request"
+            exit 1
+          fi
+          echo "PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}" >> $GITHUB_ENV
+
+      # 自动合并Pull Request（可选，根据需要启用）
+      - name: Auto Merge Pull Request
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ env.PR_NUMBER }}
+          merge-method: squash # 使用squash合并方式
+
+      # 等待PR自动合并完成
+      - name: Wait for PR to merge
+        run: |
+          echo "Waiting for PR #${{ env.PR_NUMBER }} to merge..."
+          for i in {1..60}; do # 最多等待60分钟
+            PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
+            if [ "$PR_STATE" = "MERGED" ]; then
+              echo "PR merged successfully!"
+              exit 0
+            elif [ "$PR_STATE" = "CLOSED" ]; then
+              echo "PR was closed without merging!"
+              exit 1
+            fi
+            echo "Checking again in 60 seconds..."
+            sleep 60
+          done
+          echo "Timeout waiting for PR to merge"
+          exit 1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 清理临时分支
+      - name: Clean up temporary branch
+        if: success()
+        run: |
+          git push origin --delete ${{ env.BRANCH_NAME }} || echo "Branch already deleted"
