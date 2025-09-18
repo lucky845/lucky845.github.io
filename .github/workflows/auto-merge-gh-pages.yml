@@ -60,15 +60,19 @@ jobs:
 
       # 检查PR是否成功创建
       - name: Check PR creation
+        id: check_pr
         run: |
           if [ -z "${{ steps.create_pr.outputs.pull-request-number }}" ]; then
-            echo "Failed to create pull request"
-            exit 1
+            echo "No changes to merge (branch already up to date)"
+            echo "SKIP_MERGE=true" >> $GITHUB_ENV
+          else
+            echo "PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}" >> $GITHUB_ENV
+            echo "SKIP_MERGE=false" >> $GITHUB_ENV
           fi
-          echo "PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}" >> $GITHUB_ENV
 
       # 自动合并Pull Request（可选，根据需要启用）
       - name: Auto Merge Pull Request
+        if: env.SKIP_MERGE != 'true'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -77,6 +81,7 @@ jobs:
 
       # 等待PR自动合并完成
       - name: Wait for PR to merge
+        if: env.SKIP_MERGE != 'true'
         run: |
           echo "Waiting for PR #${{ env.PR_NUMBER }} to merge..."
           for i in {1..60}; do # 最多等待60分钟
