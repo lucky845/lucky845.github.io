@@ -290,11 +290,11 @@
       
         <tags>
             
+            <tag> Java </tag>
+            
             <tag> 数据库 </tag>
             
             <tag> 分布式系统 </tag>
-            
-            <tag> Java </tag>
             
             <tag> 并发 </tag>
             
@@ -763,9 +763,9 @@
       
         <tags>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 序列化 </tag>
             
@@ -827,11 +827,11 @@
       
         <tags>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Java </tag>
             
             <tag> 并发编程 </tag>
+            
+            <tag> 性能优化 </tag>
             
         </tags>
       
@@ -891,9 +891,9 @@
       
         <tags>
             
-            <tag> 性能优化 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 性能优化 </tag>
             
             <tag> 线程池 </tag>
             
@@ -953,11 +953,11 @@
       
         <tags>
             
+            <tag> Java </tag>
+            
             <tag> Nacos </tag>
             
             <tag> Sentinel </tag>
-            
-            <tag> Java </tag>
             
         </tags>
       
@@ -1751,9 +1751,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 客户端 </tag>
             
@@ -1784,9 +1784,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Redis </tag>
             
             <tag> Jedis </tag>
             
@@ -2356,9 +2356,9 @@
             
             <tag> 数据库 </tag>
             
-            <tag> Redis </tag>
-            
             <tag> 消息队列 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 发布/订阅 </tag>
             
@@ -2453,9 +2453,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Redis </tag>
             
             <tag> AOP </tag>
             
@@ -2488,9 +2488,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Redis </tag>
             
             <tag> Spring Boot </tag>
             
@@ -2554,9 +2554,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Redis </tag>
             
             <tag> AOP </tag>
             
@@ -2657,9 +2657,9 @@
             
             <tag> Java </tag>
             
-            <tag> 异常处理 </tag>
-            
             <tag> Spring Boot </tag>
+            
+            <tag> 异常处理 </tag>
             
             <tag> 配置解析 </tag>
             
@@ -3020,11 +3020,11 @@
             
             <tag> Java </tag>
             
+            <tag> 异常处理 </tag>
+            
             <tag> Spring Cloud </tag>
             
             <tag> Gateway </tag>
-            
-            <tag> 异常处理 </tag>
             
         </tags>
       
@@ -3053,9 +3053,9 @@
             
             <tag> Java </tag>
             
-            <tag> 异常处理 </tag>
-            
             <tag> Spring Boot </tag>
+            
+            <tag> 异常处理 </tag>
             
             <tag> 全局处理 </tag>
             
@@ -3216,11 +3216,11 @@
       
         <tags>
             
+            <tag> Java </tag>
+            
             <tag> 数据库 </tag>
             
             <tag> Redis </tag>
-            
-            <tag> Java </tag>
             
             <tag> Spring </tag>
             
@@ -3251,17 +3251,17 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Java </tag>
             
-            <tag> Spring </tag>
+            <tag> 数据库 </tag>
             
-            <tag> 线程池 </tag>
+            <tag> Spring </tag>
             
             <tag> 数据源 </tag>
             
             <tag> 动态数据源 </tag>
+            
+            <tag> 线程池 </tag>
             
         </tags>
       
@@ -3288,9 +3288,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 数据库 </tag>
             
             <tag> Spring </tag>
             
@@ -3325,9 +3325,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 数据库 </tag>
             
             <tag> Spring </tag>
             
@@ -3360,9 +3360,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 数据库 </tag>
             
             <tag> Spring </tag>
             

@@ -28,17 +28,9 @@ jobs:
           git checkout -B master origin/master || git checkout master
           git pull origin master
 
-      # 确保gh-pages分支是最新的
-      - name: Fetch and update gh-pages branch
-        run: |
-          git fetch origin
-          DIFF_COUNT=$(git diff --name-only master..gh-pages | wc -l | xargs)
-          echo "DIFF_COUNT=$DIFF_COUNT" >> $GITHUB_ENV
-
       # 创建Pull Request
       - name: Create Pull Request
         id: create_pr
-        if: env.DIFF_COUNT > 0
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -50,65 +42,13 @@ jobs:
             
             Triggered by commit: ${{ github.sha }}
             
-            Detected ${{ env.DIFF_COUNT }} files different between branches.
-            
             Please review the changes before merging.
           draft: false
 
-      # 设置SKIP_MERGE环境变量
-      - name: Set SKIP_MERGE variable
-        if: env.DIFF_COUNT == 0
-        run: |
-          echo "SKIP_MERGE=true" >> $GITHUB_ENV
-
-      # 检查PR是否成功创建
-      - name: Check PR creation
-        id: check_pr
-        if: env.DIFF_COUNT > 0
-        run: |
-          if [ -z "${{ steps.create_pr.outputs.pull-request-number }}" ]; then
-            echo "SKIP_MERGE=true" >> $GITHUB_ENV
-          else
-            echo "PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}" >> $GITHUB_ENV
-            echo "SKIP_MERGE=false" >> $GITHUB_ENV
-          fi
-
       # 自动合并Pull Request
       - name: Auto Merge Pull Request
-        if: env.SKIP_MERGE != 'true'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ env.PR_NUMBER }}
+          pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
           merge-method: squash
-
-      # 查看PR状态
-      - name: Check PR status after enabling automerge
-        if: env.SKIP_MERGE != 'true'
-        run: |
-          gh pr view ${{ env.PR_NUMBER }} --json state,mergedAt,autoMergeRequest
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # 手动合并PR（替代自动合并等待）
-      - name: Merge PR manually if needed
-        if: env.SKIP_MERGE != 'true'
-        run: |
-          # 首先检查PR是否真的存在
-          PR_EXISTS=$(gh pr view ${{ env.PR_NUMBER }} --json number --jq .number || echo "none")
-          if [ "$PR_EXISTS" != "none" ]; then
-            PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
-            if [ "$PR_STATE" != "MERGED" ] && [ "$PR_STATE" != "CLOSED" ]; then
-              # 尝试手动合并PR
-              gh pr merge ${{ env.PR_NUMBER }} --squash --delete-branch --subject "Auto Merge: GH Pages Updates to Master"
-              # 检查合并结果
-              sleep 10
-            fi
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # 最后输出总结信息
-      - name: Workflow summary
-        run: |
-          echo "Workflow completed."
