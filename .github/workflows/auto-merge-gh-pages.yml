@@ -14,24 +14,10 @@ jobs:
       pull-requests: write
       checks: write
     steps:
-      # 检出代码仓库
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # 配置Git
-      - name: Configure Git
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git checkout -B master origin/master || git checkout master
-          git pull origin master
-
       # 创建Pull Request
       - name: Create Pull Request
         id: create_pr
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
@@ -44,9 +30,13 @@ jobs:
             
             Please review the changes before merging.
           draft: false
+          labels: |
+            automerge
+            gh-pages
 
       # 自动合并Pull Request
       - name: Auto Merge Pull Request
+        if: ${{steps.create_pr.outputs.pull-request-number}} != ''
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
