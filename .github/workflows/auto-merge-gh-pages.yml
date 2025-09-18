@@ -28,6 +28,15 @@ jobs:
           git checkout -B master origin/master || git checkout master
           git pull origin master
 
+      # 确保gh-pages分支是最新的
+      - name: Fetch and update gh-pages branch
+        run: |
+          git fetch origin
+          git checkout -b master origin/master
+          git checkout -b gh-pages origin/gh-pages
+          DIFF_COUNT=$(git diff --name-only master..gh-pages | wc -l)
+          echo "DIFF_COUNT=$DIFF_COUNT" >> $GITHUB_ENV
+
       # 创建Pull Request
       - name: Create Pull Request
         id: create_pr
