@@ -52,9 +52,28 @@ jobs:
         run: |
           BRANCH_NAME="merge-gh-pages-$(date +%s)"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-          git checkout -b $BRANCH_NAME gh-pages
+          # 从master分支创建临时分支
+          git checkout -b $BRANCH_NAME master
+          echo "Created temporary branch: $BRANCH_NAME from master"
+          # 合并gh-pages的更改到临时分支
+          echo "Merging gh-pages changes into temporary branch..."
+          git merge --no-ff gh-pages -m "Merge gh-pages changes into $BRANCH_NAME"
+          MERGE_EXIT_CODE=$?
+          if [ $MERGE_EXIT_CODE -ne 0 ]; then
+            echo "Warning: Merge resulted in conflicts. Attempting to resolve..."
+            # 列出冲突文件
+            echo "Conflicting files:"
+            git diff --name-only --diff-filter=U
+            # 尝试强制接受gh-pages版本（适合静态站点）
+            echo "Attempting to resolve conflicts by accepting gh-pages version..."
+            git checkout --theirs .
+            git add .
+            git commit -m "Resolve merge conflicts by accepting gh-pages version"
+            echo "Conflicts resolved"
+          fi
+          # 推送临时分支到远程
           git push origin $BRANCH_NAME
-          echo "Created and pushed temporary branch: $BRANCH_NAME"
+          echo "Pushed temporary branch: $BRANCH_NAME"
 
       # 创建Pull Request
       - name: Create Pull Request
@@ -121,23 +140,53 @@ jobs:
       - name: Merge PR manually if needed
         if: env.SKIP_MERGE != 'true'
         run: |
-          echo "Attempting to merge PR #${{ env.PR_NUMBER }} manually..."
-          PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
-          if [ "$PR_STATE" != "MERGED" ] && [ "$PR_STATE" != "CLOSED" ]; then
-            echo "PR is still open, trying to merge manually..."
-            gh pr merge ${{ env.PR_NUMBER }} --squash --delete-branch --subject "Auto Merge: GH Pages Updates to Master"
-            echo "Manual merge command executed"
-            # 检查合并结果
-            sleep 10
-            NEW_PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
-            if [ "$NEW_PR_STATE" = "MERGED" ]; then
-              echo "PR merged successfully!"
-            else
-              echo "Failed to merge PR manually, current state: $NEW_PR_STATE"
-            fi
+          echo "=== Attempting to merge PR #${{ env.PR_NUMBER }} manually... ==="
+          echo "PR_NUMBER: ${{ env.PR_NUMBER }}"
+          echo "REPOSITORY: ${{ github.repository }}"
+          # 首先检查PR是否真的存在
+          PR_EXISTS=$(gh pr view ${{ env.PR_NUMBER }} --json number --jq .number || echo "none")
+          if [ "$PR_EXISTS" = "none" ]; then
+            echo "ERROR: PR #${{ env.PR_NUMBER }} does not exist!"
+            echo "Displaying repository PRs..."
+            gh pr list --repo ${{ github.repository }}
           else
-            echo "PR is already $PR_STATE, skipping manual merge"
+            PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
+            echo "Current PR state: $PR_STATE"
+            if [ "$PR_STATE" != "MERGED" ] && [ "$PR_STATE" != "CLOSED" ]; then
+              echo "PR is still open, trying to merge manually..."
+              # 尝试手动合并PR
+              echo "Running: gh pr merge ${{ env.PR_NUMBER }} --squash --delete-branch --subject \"Auto Merge: GH Pages Updates to Master\""
+              gh pr merge ${{ env.PR_NUMBER }} --squash --delete-branch --subject "Auto Merge: GH Pages Updates to Master"
+              MERGE_EXIT_CODE=$?
+              echo "Merge command exit code: $MERGE_EXIT_CODE"
+              # 检查合并结果
+              sleep 10
+              NEW_PR_STATE=$(gh pr view ${{ env.PR_NUMBER }} --json state --jq .state)
+              echo "Updated PR state: $NEW_PR_STATE"
+              if [ "$NEW_PR_STATE" = "MERGED" ]; then
+                echo "✅ PR merged successfully!"
+              else
+                echo "❌ Failed to merge PR manually, current state: $NEW_PR_STATE"
+                echo "Displaying PR details..."
+                gh pr view ${{ env.PR_NUMBER }} --json state,mergedAt,autoMergeRequest,mergeable
+              fi
+            else
+              echo "PR is already $PR_STATE, skipping manual merge"
+            fi
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 最后输出总结信息
+      - name: Workflow summary
+        run: |
+          echo "=== Workflow execution summary ==="
+          echo "Repository: ${{ github.repository }}"
+          echo "Triggered by: ${{ github.event_name }} (${{ github.sha }})"
+          echo "Detected differences: ${{ env.DIFF_COUNT || 'unknown' }} files"
+          echo "PR created: ${{ steps.create_pr.outputs.pull-request-number != '' && 'Yes' || 'No' }}"
+          echo "PR number: ${{ steps.create_pr.outputs.pull-request-number || 'N/A' }}"
+          echo "Merge status: ${{ env.SKIP_MERGE == 'true' && 'Skipped' || 'Attempted' }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -145,5 +194,6 @@ jobs:
       - name: Clean up temporary branch
         if: always() && env.BRANCH_NAME != ''
         run: |
+          echo "=== Cleaning up temporary branch: ${{ env.BRANCH_NAME }} ==="
           git push origin --delete ${{ env.BRANCH_NAME }} || echo "Branch already deleted"
           echo "Cleaned up temporary branch: ${{ env.BRANCH_NAME }}"
