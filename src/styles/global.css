@@ -13,7 +13,7 @@
     --wrap:74rem;
   }
   *,*::before,*::after{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%;overflow-x:hidden;max-width:100%}
   body{
     margin:0;
     background:var(--bg);
@@ -23,10 +23,16 @@
     line-height:1.72;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+    max-width:100%;
+    min-width:0;
+    width:100%;
   }
+  #app{min-width:0;width:100%;max-width:100%}
+  img,video,canvas,svg,iframe{max-width:100%;height:auto}
   a{color:inherit;text-decoration:none}
   a:focus-visible,button:focus-visible{outline:2px solid var(--trace);outline-offset:3px}
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem);width:100%;min-width:0}
   .skip{
     position:absolute;left:-9999px;top:0;background:var(--trace);color:var(--bg);
     padding:.6rem 1rem;z-index:99;font-size:.85rem;
@@ -54,8 +60,9 @@
   }
   .bar-role{font-size:.8rem;color:var(--dim)}
   .bar-nav{
-    margin-left:auto;display:flex;gap:1.4rem;
-    font-family:var(--mono);font-size:.82rem;
+    margin-left:auto;display:flex;gap:1rem 1.4rem;flex-wrap:wrap;
+    font-family:var(--mono);font-size:.82rem;min-width:0;
+    max-width:100%;
   }
   .bar-nav a{color:var(--ink-soft);padding-bottom:.15rem;border-bottom:1px solid transparent}
   .bar-nav a:hover{color:var(--trace);border-bottom-color:var(--trace)}
@@ -63,12 +70,13 @@
   /* ── Hero ────────────────────────────────── */
   .hero{
     position:relative;
-    display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,19rem);
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,19rem);
     gap:clamp(2rem,6vw,5rem);
     align-items:start;
     padding-top:clamp(2.4rem,6vw,4.6rem);
     padding-bottom:clamp(2.4rem,5vw,3.6rem);
     overflow:hidden;
+    min-width:0;
   }
   /* 示波器画布：垫在内容底下，淡入淡出融入面板 */
   .hero-scope{
@@ -112,6 +120,8 @@
     background:var(--panel);
     border:1px solid var(--line);
     padding:1.1rem 1.15rem .9rem;
+    min-width:0;
+    width:100%;
   }
   .readout-head{
     display:flex;justify-content:space-between;align-items:baseline;
@@ -181,11 +191,12 @@
   .projects{list-style:none;margin:0;padding:0}
   .project{
     display:grid;
-    grid-template-columns:minmax(9rem,17rem) minmax(0,1fr) auto;
+    grid-template-columns:minmax(0,17rem) minmax(0,1fr) minmax(0,max-content);
     gap:.4rem clamp(1rem,3vw,2.4rem);
     align-items:baseline;
     padding:1.05rem 0;
     border-bottom:1px solid var(--line);
+    min-width:0;
   }
   .project:first-child{padding-top:0}
   .project:last-child{border-bottom:none}
@@ -199,7 +210,8 @@
   .p-meta span{
     font-family:var(--mono);font-size:.68rem;
     color:var(--dim);border:1px solid var(--line);
-    padding:.1rem .45rem;white-space:nowrap;
+    padding:.1rem .45rem;white-space:normal;
+    overflow-wrap:anywhere;
   }
   .p-meta span.live{color:var(--amber);border-color:rgba(216,154,63,.45)}
 
@@ -228,18 +240,18 @@
 
   /* ── 响应式 ──────────────────────────────── */
   @media (max-width:880px){
-    .hero{grid-template-columns:1fr;gap:2.2rem;padding-top:2.4rem}
+    .hero{grid-template-columns:minmax(0,1fr);gap:2.2rem;padding-top:2.4rem}
     .hero h1{max-width:none}
-    .readout{max-width:min(28rem,100%)}
-    .project{grid-template-columns:1fr;gap:.45rem}
+    .readout{max-width:min(28rem,100%);width:100%}
+    .project{grid-template-columns:minmax(0,1fr);gap:.45rem}
     .p-meta{justify-content:flex-start;margin-top:.3rem}
-    .bar-nav{width:100%;margin-left:0;gap:1.2rem;padding-top:.1rem}
+    .bar-nav{width:100%;margin-left:0;gap:1rem 1.2rem;padding-top:.1rem;flex-wrap:wrap}
     .bar-in{min-height:0;padding-top:.7rem;padding-bottom:.7rem}
   }
   @media (max-width:440px){
     .bar-role{display:none}
     .links li{flex-direction:column;gap:.15rem}
-    .bars li{grid-template-columns:minmax(5.5rem,7rem) minmax(0,1fr) 2.2rem;gap:.7rem}
+    .bars li{grid-template-columns:minmax(0,7rem) minmax(0,1fr) minmax(0,2.6rem);gap:.7rem}
   }
 
   /* ── 动效：只有条形图生长一处 ─────────────────
