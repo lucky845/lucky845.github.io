@@ -3,6 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  # 博客更新后由 lucky845-blog 仓库发起，立刻重建主页（需要配置 DISPATCH_TOKEN）
+  repository_dispatch:
+    types: [blog-updated]
+  # 兜底：即使没有任何人触发，也定时拉一次博客的最新数字
+  schedule:
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -24,6 +30,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      # 拉博客的 stats.json；抓不到会自动退回仓库里上一次的数据，不会中断部署
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -1,3 +1,5 @@
+import { archivePages, noteCount, tagCount } from './site'
+
 export interface LinkItem {
   label: string
   href: string
@@ -11,7 +13,7 @@ export const noteLinks: LinkItem[] = [
   {
     label: '归档',
     href: 'https://blog.lucky845.top/archives/',
-    note: '按时间翻全部笔记，共 12 页',
+    note: `按时间翻全部笔记，共 ${archivePages} 页`,
   },
   {
     label: '分类',
@@ -21,7 +23,7 @@ export const noteLinks: LinkItem[] = [
   {
     label: '标签',
     href: 'https://blog.lucky845.top/tags/',
-    note: '按具体技术点找，比如线程池、序列化、分布式锁',
+    note: `按具体技术点找，${noteCount} 篇里出现过 ${tagCount} 个标签`,
   },
   {
     label: 'RSS',

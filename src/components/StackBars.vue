@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { barWidth, stack } from '../data/stack'
-import { noteCount } from '../data/site'
+import { barWidth, noteCount, stack } from '../data/site'
 import { useInView } from '../composables/useInView'
 
 const list = ref<HTMLElement | null>(null)

@@ -1,0 +1,51 @@
+{
+  "posts": 137,
+  "categories": 23,
+  "tags": 172,
+  "archivePages": 12,
+  "stack": [
+    {
+      "name": "Java",
+      "count": 75
+    },
+    {
+      "name": "数据库",
+      "count": 26
+    },
+    {
+      "name": "设计模式",
+      "count": 24
+    },
+    {
+      "name": "Redis",
+      "count": 24
+    },
+    {
+      "name": "Spring Boot",
+      "count": 21
+    },
+    {
+      "name": "Linux",
+      "count": 15
+    },
+    {
+      "name": "并发编程",
+      "count": 14
+    },
+    {
+      "name": "性能优化",
+      "count": 14
+    },
+    {
+      "name": "系统管理",
+      "count": 13
+    },
+    {
+      "name": "Docker",
+      "count": 13
+    }
+  ],
+  "generatedAt": "2026-11-01T06:09:37.250Z",
+  "source": "https://blog.lucky845.top/stats.json",
+  "fetchedAt": "2026-11-01T06:10:59.780Z"
+}

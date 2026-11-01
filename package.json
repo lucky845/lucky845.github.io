@@ -6,7 +6,9 @@
   "description": "lucky845 的个人主页 lucky845.top",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "stats": "node scripts/fetch-stats.mjs",
+    "build": "node scripts/fetch-stats.mjs && vite build",
+    "build:offline": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
