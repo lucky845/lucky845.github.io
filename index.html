@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lucky845 — 后端、全栈、运维</title>
+<meta name="description" content="lucky845 的个人主页。Java、Spring Boot、Linux、Redis 后端工程师，写 132 篇源码与线上问题追查笔记，造了几个自己每天在用的工具。">
+<meta name="theme-color" content="#E7EBEE">
+<meta property="og:title" content="lucky845 — 后端、全栈、运维">
+<meta property="og:description" content="Java、Spring Boot、Linux、Redis。线上问题追到源码那一层再回来，追完的都写在笔记里。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lucky845.top/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%23121D25'/%3E%3Crect x='7' y='7' width='4' height='18' fill='%23A2521C'/%3E%3Crect x='14' y='14' width='11' height='4' fill='%23E7EBEE'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#E7EBEE;
+    --paper-2:#F2F5F6;
+    --ink:#121D25;
+    --ink-soft:#33454F;
+    --muted:#5F7079;
+    --rule:#C5D1D8;
+    --brick:#A2521C;
+    --teal:#1B6B67;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:"PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    --wrap:72rem;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--brick);outline-offset:3px}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+  .skip{
+    position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--paper);
+    padding:.6rem 1rem;z-index:99;font-size:.85rem;
+  }
+  .skip:focus{left:1rem;top:1rem}
+
+  /* ── 顶栏 ───────────────────────────────── */
+  .top{
+    display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;
+    padding-top:1.5rem;padding-bottom:1.4rem;
+  }
+  .brand{
+    font-family:var(--mono);font-size:1.02rem;font-weight:600;
+    letter-spacing:-.01em;
+  }
+  .brand::after{
+    content:"";display:inline-block;width:6px;height:6px;
+    background:var(--brick);margin-left:.45rem;vertical-align:baseline;
+  }
+  .role{
+    font-size:.82rem;color:var(--muted);letter-spacing:.02em;
+    padding-left:.2rem;border-left:1px solid var(--rule);
+  }
+  .top-nav{
+    margin-left:auto;display:flex;gap:1.35rem;
+    font-family:var(--mono);font-size:.82rem;
+  }
+  .top-nav a{color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:.1rem}
+  .top-nav a:hover{color:var(--brick);border-bottom-color:var(--brick)}
+
+  /* ── Hero ──────────────────────────────── */
+  .hero{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(15rem,17.5rem);
+    gap:clamp(2rem,6vw,5rem);
+    align-items:start;
+    padding-top:clamp(2rem,6vw,4.5rem);
+    padding-bottom:clamp(2.5rem,6vw,4rem);
+    border-top:1px solid var(--ink);
+  }
+  .kicker{
+    margin:0 0 1.4rem;font-family:var(--mono);font-size:.78rem;
+    letter-spacing:.06em;color:var(--brick);
+  }
+  .hero h1{
+    margin:0;
+    font-size:clamp(1.95rem,5.1vw,3.55rem);
+    line-height:1.18;
+    font-weight:700;
+    letter-spacing:-.025em;
+    max-width:min(22ch,100%);
+  }
+  .lede{
+    margin:1.5rem 0 0;max-width:min(48ch,100%);
+    font-size:1rem;line-height:1.85;color:var(--ink-soft);
+  }
+  .cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+  .btn{
+    display:inline-block;padding:.62rem 1.3rem;
+    font-size:.9rem;font-weight:600;
+    background:var(--ink);color:var(--paper);
+    border:1px solid var(--ink);
+    transition:background-color .18s ease,color .18s ease;
+  }
+  .btn:hover{background:var(--brick);border-color:var(--brick)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:transparent;color:var(--brick);border-color:var(--brick)}
+
+  /* 侧边档案表 */
+  .status{margin:0;border-top:1px solid var(--ink)}
+  .status .row{
+    display:flex;justify-content:space-between;align-items:baseline;
+    gap:1rem;padding:.62rem 0;border-bottom:1px solid var(--rule);
+  }
+  .status dt{font-size:.8rem;color:var(--muted);font-weight:400}
+  .status dd{
+    margin:0;font-family:var(--mono);font-size:.92rem;font-weight:600;
+    color:var(--ink);font-variant-numeric:tabular-nums;
+  }
+  .status .stamp{
+    padding:.7rem 0 0;font-size:.72rem;color:var(--muted);line-height:1.6;
+  }
+
+  /* ── 区块 ──────────────────────────────── */
+  .sec-block{
+    padding-top:clamp(2.2rem,5vw,3.4rem);
+    padding-bottom:clamp(2rem,4vw,2.8rem);
+    border-top:1px solid var(--rule);
+  }
+  .sec-title{
+    display:flex;align-items:center;gap:.7rem;
+    margin:0 0 .7rem;font-size:1.05rem;font-weight:700;letter-spacing:-.01em;
+  }
+  .mark{width:9px;height:9px;background:var(--brick);flex:none}
+  .sec-note{
+    margin:0 0 2rem;max-width:min(52ch,100%);
+    font-size:.92rem;color:var(--muted);line-height:1.75;
+  }
+
+  /* 项目列表 */
+  .projects{list-style:none;margin:0;padding:0}
+  .project{
+    display:grid;
+    grid-template-columns:minmax(9rem,18rem) minmax(0,1fr) auto;
+    gap:.4rem clamp(1rem,3vw,2.5rem);
+    align-items:baseline;
+    padding:1.05rem 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .project:first-child{padding-top:0}
+  .project:last-child{border-bottom:none}
+  .p-title{
+    font-family:var(--mono);font-size:.92rem;font-weight:600;
+    color:var(--ink);overflow-wrap:break-word;hyphens:none;
+  }
+  .p-title:hover{color:var(--brick);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  .p-desc{margin:0;font-size:.9rem;line-height:1.7;color:var(--ink-soft)}
+  .p-meta{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end}
+  .p-meta span{
+    font-family:var(--mono);font-size:.68rem;letter-spacing:.02em;
+    color:var(--muted);border:1px solid var(--rule);border-radius:2px;
+    padding:.08rem .42rem;white-space:nowrap;
+  }
+  .p-meta span.live{color:var(--teal);border-color:var(--teal)}
+
+  /* 入口列表 */
+  .links{list-style:none;margin:0;padding:0;max-width:46rem}
+  .links li{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.2rem;
+    padding:.72rem 0;border-bottom:1px solid var(--rule);
+  }
+  .links li:last-child{border-bottom:none}
+  .links a{
+    font-family:var(--mono);font-size:.9rem;font-weight:600;min-width:6.5rem;
+    color:var(--ink);border-bottom:1px solid var(--rule);
+  }
+  .links a:hover{color:var(--brick);border-bottom-color:var(--brick)}
+  .links .note{font-size:.86rem;color:var(--muted)}
+
+  /* 页脚 */
+  .foot{
+    padding-top:2rem;padding-bottom:3rem;
+    border-top:1px solid var(--ink);
+  }
+  .foot p{margin:0;font-family:var(--mono);font-size:.74rem;color:var(--muted);line-height:1.9}
+
+  /* ── 响应式 ─────────────────────────────── */
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;gap:2.4rem;padding-top:2.2rem}
+    .hero h1{max-width:none}
+    .status{max-width:min(26rem,100%)}
+    .project{grid-template-columns:1fr;gap:.45rem}
+    .p-meta{justify-content:flex-start;margin-top:.3rem}
+    .top-nav{width:100%;margin-left:0;gap:1.2rem;padding-top:.2rem}
+  }
+  @media (max-width:420px){
+    .role{font-size:.76rem;border-left:none;padding-left:0}
+    .links li{flex-direction:column;gap:.15rem}
+  }
+
+  /* ── 入场 ──────────────────────────────────
+     只动 transform，不动 opacity：首屏内容任何时候都是可见的，
+     动画只是位移，禁止出现"动画没跑完就白屏"的情况。      */
+  @keyframes settle{from{transform:translateY(10px)}to{transform:none}}
+  @media (prefers-reduced-motion:no-preference){
+    .hero-copy > *,.status{animation:settle .5s cubic-bezier(.22,.7,.3,1) backwards}
+    .hero-copy > :nth-child(1){animation-delay:.04s}
+    .hero-copy > :nth-child(2){animation-delay:.1s}
+    .hero-copy > :nth-child(3){animation-delay:.17s}
+    .hero-copy > :nth-child(4){animation-delay:.24s}
+    .status{animation-delay:.2s}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="top wrap">
+  <a class="brand" href="/">lucky845</a>
+  <span class="role">后端 · 全栈 · 运维</span>
+  <nav class="top-nav" aria-label="主要导航">
+    <a href="https://blog.lucky845.top/">笔记</a>
+    <a href="#work">项目</a>
+    <a href="https://github.com/lucky845" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="kicker">Java / Spring Boot / Linux / Redis</p>
+      <h1 id="hero-title">做后端，<br>也把后端拆开写下来。</h1>
+      <p class="lede">
+        线上出的问题，我习惯追到源码和系统参数那一层再回来。
+        JVM 内存模型、线程池、Redis 持久化、磁盘扩容这些追查过程，
+        都写成了能直接复用的笔记。
+      </p>
+      <div class="cta">
+        <a class="btn" href="https://blog.lucky845.top/">读笔记</a>
+        <a class="btn ghost" href="#work">看项目</a>
+      </div>
+    </div>
+
+    <dl class="status" aria-label="站点档案">
+      <div class="row"><dt>笔记</dt><dd>132 篇</dd></div>
+      <div class="row"><dt>分类</dt><dd>22 个</dd></div>
+      <div class="row"><dt>标签</dt><dd>160 个</dd></div>
+      <div class="row"><dt>公开项目</dt><dd>8 个</dd></div>
+      <div class="row"><dt>域名</dt><dd>lucky845.top</dd></div>
+      <div class="stamp">数字取自博客 About 页与 GitHub，截至 2025 年 9 月。</div>
+    </dl>
+  </section>
+
+  <section id="work" class="sec-block wrap" aria-labelledby="work-title">
+    <h2 class="sec-title" id="work-title"><span class="mark" aria-hidden="true"></span>在造的东西</h2>
+    <p class="sec-note">自己每天在用的，或者拿来把某个问题想透的。全部开源在 GitHub。</p>
+    <ul class="projects">
+      <li class="project">
+        <a class="p-title" href="https://blog.lucky845.top/deepseek-monitor/">deepseek-monitor</a>
+        <p class="p-desc">DeepSeek 用量监控。同一份 Flutter 代码跑在 Android、iOS、macOS、Windows、Linux 和浏览器上，桌面端带小组件。</p>
+        <p class="p-meta"><span>Dart</span><span>六端</span><span class="live">可在线试用</span></p>
+      </li>
+      <li class="project">
+        <a class="p-title" href="https://github.com/lucky845/easy-captcha" rel="noopener">easy-captcha</a>
+        <p class="p-desc">Spring Boot starter 形式的验证码生成器，靠自动配置接进项目，多种验证码类型开箱可用。</p>
+        <p class="p-meta"><span>Java</span><span>Spring Boot</span></p>
+      </li>
+      <li class="project">
+        <a class="p-title" href="https://github.com/lucky845/github-profile-statistics-card" rel="noopener">github-profile-statistics-card</a>
+        <p class="p-desc">把多个平台的数据统计渲染成一张卡片，可以直接挂到 GitHub 个人主页 README 里。</p>
+        <p class="p-meta"><span>TypeScript</span><span>服务</span></p>
+      </li>
+      <li class="project">
+        <a class="p-title" href="https://github.com/lucky845/AnimeTimeline" rel="noopener">AnimeTimeline</a>
+        <p class="p-desc">用 Python 爬取番剧放送时间表，整理成一份 Markdown 文件。</p>
+        <p class="p-meta"><span>Python</span><span>爬虫</span></p>
+      </li>
+      <li class="project">
+        <a class="p-title" href="https://github.com/lucky845/ts-tetris-game" rel="noopener">ts-tetris-game</a>
+        <p class="p-desc">TypeScript 加 HTML5 Canvas 写的俄罗斯方块，经典玩法的一个现代实现。</p>
+        <p class="p-meta"><span>TypeScript</span><span>Canvas</span></p>
+      </li>
+      <li class="project">
+        <a class="p-title" href="https://github.com/lucky845/group-avatar-generator" rel="noopener">group-avatar-generator</a>
+        <p class="p-desc">上传多张图片，自动拼成微信群里那种九宫格群头像。</p>
+        <p class="p-meta"><span>TypeScript</span><span>工具</span></p>
+      </li>
+      <li class="project">
+        <a class="p-title" href="https://github.com/lucky845/ouchn-course-brusher-script" rel="noopener">ouchn-course-brusher-script</a>
+        <p class="p-desc">基于 Vue 3 和 TypeScript 重构的油猴脚本，面向国家开放大学实验学院的课程页面。</p>
+        <p class="p-meta"><span>TypeScript</span><span>油猴</span></p>
+      </li>
+      <li class="project">
+        <a class="p-title" href="https://github.com/lucky845/daily-commit-bot" rel="noopener">daily-commit-bot</a>
+        <p class="p-desc">用 Shell 和 GitHub Actions 搭起来的定时提交小工具。</p>
+        <p class="p-meta"><span>Shell</span><span>Actions</span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="notes" class="sec-block wrap" aria-labelledby="notes-title">
+    <h2 class="sec-title" id="notes-title"><span class="mark" aria-hidden="true"></span>写下来的东西</h2>
+    <p class="sec-note">132 篇，22 个分类，160 个标签。源码解析和线上故障追查占大头，长文居多。</p>
+    <ul class="links">
+      <li>
+        <a href="https://blog.lucky845.top/archives/">归档</a>
+        <span class="note">按时间翻全部笔记，共 11 页</span>
+      </li>
+      <li>
+        <a href="https://blog.lucky845.top/categories/">分类</a>
+        <span class="note">Java、Spring Boot、Linux、Redis、数据库、并发编程</span>
+      </li>
+      <li>
+        <a href="https://blog.lucky845.top/tags/">标签</a>
+        <span class="note">160 个关键词，适合按具体技术点找</span>
+      </li>
+      <li>
+        <a href="https://blog.lucky845.top/atom.xml">RSS</a>
+        <span class="note">订阅新文章，用任意阅读器</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="elsewhere" class="sec-block wrap" aria-labelledby="elsewhere-title">
+    <h2 class="sec-title" id="elsewhere-title"><span class="mark" aria-hidden="true"></span>在别处</h2>
+    <ul class="links">
+      <li>
+        <a href="https://github.com/lucky845" rel="noopener">GitHub</a>
+        <span class="note">代码和全部公开项目</span>
+      </li>
+      <li>
+        <a href="mailto:1447545564@qq.com">邮箱</a>
+        <span class="note">合作、提问、纠错都可以直接发</span>
+      </li>
+      <li>
+        <a href="https://lucky845.github.io/">GitHub Pages</a>
+        <span class="note">站点原始地址，会跳转到当前域名</span>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <p>
+    © 2025 lucky845　·　静态站点，GitHub Pages 托管　·　<a href="https://github.com/lucky845/lucky845-home" rel="noopener">源码在这个仓库</a><br>
+    这个页面没有外部依赖，不加载任何第三方字体和脚本。
+  </p>
+</footer>
+
+</body>
+</html>
