@@ -10,6 +10,12 @@
 <meta property="og:description" content="Java、Spring Boot、Linux、Redis。线上问题追到源码那一层再回来，追完的都写在笔记里。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lucky845.top/">
+<meta property="og:site_name" content="lucky845">
+<meta property="og:locale" content="zh_CN">
+<link rel="canonical" href="https://lucky845.top/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"lucky845","url":"https://lucky845.top/","description":"Java、Spring Boot、Linux、Redis 后端工程师，写源码与线上问题追查笔记。","knowsAbout":["Java","Spring Boot","Linux","Redis","Docker","Flutter"],"sameAs":["https://github.com/lucky845"]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%230C1216'/%3E%3Crect x='7' y='7' width='4' height='18' fill='%234EC2C6'/%3E%3Crect x='14' y='14' width='11' height='4' fill='%23CEDFE3'/%3E%3C/svg%3E">
 <style>
   :root{
@@ -76,12 +82,22 @@
 
   /* ── Hero ────────────────────────────────── */
   .hero{
+    position:relative;
     display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,19rem);
     gap:clamp(2rem,6vw,5rem);
     align-items:start;
     padding-top:clamp(2.4rem,6vw,4.6rem);
     padding-bottom:clamp(2.4rem,5vw,3.6rem);
+    overflow:hidden;
   }
+  /* 示波器画布：垫在内容底下，淡入淡出融入面板 */
+  .hero-scope{
+    position:absolute;inset:0;width:100%;height:100%;
+    z-index:0;pointer-events:none;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26%,#000 80%,transparent 100%);
+    mask-image:linear-gradient(180deg,transparent 0,#000 26%,#000 80%,transparent 100%);
+  }
+  .hero-copy,.readout{position:relative;z-index:1}
   .prompt{
     margin:0 0 1.3rem;font-family:var(--mono);font-size:.8rem;color:var(--trace);
     display:flex;flex-wrap:wrap;gap:.5rem;
@@ -251,18 +267,20 @@
      条形缺省就是满宽可见，动画只是从 0 长出来的一次性效果；
      动画没跑、被关掉、或跑到一半截图，图都是完整的。       */
   @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-  @media (prefers-reduced-motion:no-preference){
-    .b-fill{animation:grow .8s cubic-bezier(.2,.7,.25,1) forwards}
-    .bars li:nth-child(1) .b-fill{animation-delay:.05s}
-    .bars li:nth-child(2) .b-fill{animation-delay:.1s}
-    .bars li:nth-child(3) .b-fill{animation-delay:.15s}
-    .bars li:nth-child(4) .b-fill{animation-delay:.2s}
-    .bars li:nth-child(5) .b-fill{animation-delay:.25s}
-    .bars li:nth-child(6) .b-fill{animation-delay:.3s}
-    .bars li:nth-child(7) .b-fill{animation-delay:.35s}
-    .bars li:nth-child(8) .b-fill{animation-delay:.4s}
-    .bars li:nth-child(9) .b-fill{animation-delay:.45s}
-    .bars li:nth-child(10) .b-fill{animation-delay:.5s}
+  /* js-anim 只在 JS 可用且未开启减少动效时加上；
+     条形缺省满宽，进入视口后由 JS 加 .armed 才从 0 生长。 */
+  html.js-anim .b-fill{transform:scaleX(0)}
+  html.js-anim .b-fill.armed{animation:grow .8s cubic-bezier(.2,.7,.25,1) forwards}
+  html.js-anim .fx{opacity:0;transform:translateY(14px)}
+  html.js-anim .fx.in{
+    opacity:1;transform:none;
+    transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.25,1);
+  }
+  .bar.scrolled{box-shadow:0 8px 24px rgba(4,10,13,.5)}
+  /* 兜底：打印时全部可见 */
+  @media print{
+    .fx{opacity:1!important;transform:none!important}
+    .hero-scope{display:none}
   }
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation:none!important;transition:none!important}
@@ -289,6 +307,7 @@
 <main id="main">
 
   <section class="hero wrap" aria-labelledby="hero-title">
+    <canvas class="hero-scope" id="scope" aria-hidden="true"></canvas>
     <div class="hero-copy">
       <p class="prompt">$ <span>Java / Spring Boot / Linux / Redis</span></p>
       <h1 id="hero-title">做后端，<br>也把后端拆开写下来。</h1>
@@ -309,17 +328,17 @@
         <span>2026-11</span>
       </div>
       <dl class="readout-rows">
-        <div class="readout-row"><dt>笔记</dt><dd>137<em>篇</em></dd></div>
-        <div class="readout-row"><dt>分类</dt><dd>23<em>个</em></dd></div>
-        <div class="readout-row"><dt>标签</dt><dd>172<em>个</em></dd></div>
-        <div class="readout-row"><dt>公开项目</dt><dd>8<em>个</em></dd></div>
-        <div class="readout-row"><dt>归档</dt><dd>12<em>页</em></dd></div>
+        <div class="readout-row"><dt>笔记</dt><dd><span data-n="137">137</span><em>篇</em></dd></div>
+        <div class="readout-row"><dt>分类</dt><dd><span data-n="23">23</span><em>个</em></dd></div>
+        <div class="readout-row"><dt>标签</dt><dd><span data-n="172">172</span><em>个</em></dd></div>
+        <div class="readout-row"><dt>公开项目</dt><dd><span data-n="8">8</span><em>个</em></dd></div>
+        <div class="readout-row"><dt>归档</dt><dd><span data-n="12">12</span><em>页</em></dd></div>
       </dl>
       <p class="readout-stamp">数字取自博客统计与 GitHub，随文章更新。</p>
     </div>
   </section>
 
-  <section id="stack" class="sec wrap" aria-labelledby="stack-title">
+  <section id="stack" class="sec wrap fx" aria-labelledby="stack-title">
     <h2 class="sec-title" id="stack-title">笔记里的技术栈</h2>
     <p class="sec-note">按 137 篇笔记的标签计数，一条笔记打多个标签就算多次。前十个如下。</p>
     <ul class="bars">
@@ -376,7 +395,7 @@
     </ul>
   </section>
 
-  <section id="work" class="sec wrap" aria-labelledby="work-title">
+  <section id="work" class="sec wrap fx" aria-labelledby="work-title">
     <h2 class="sec-title" id="work-title">在造的东西</h2>
     <p class="sec-note">自己每天在用的，或者拿来把某个问题想透的。全部开源在 GitHub。</p>
     <ul class="projects">
@@ -423,7 +442,7 @@
     </ul>
   </section>
 
-  <section id="notes" class="sec wrap" aria-labelledby="notes-title">
+  <section id="notes" class="sec wrap fx" aria-labelledby="notes-title">
     <h2 class="sec-title" id="notes-title">写下来的东西</h2>
     <p class="sec-note">源码解析和线上故障追查占大头，长文居多。想按技术点找，走标签更快。</p>
     <ul class="links">
@@ -446,7 +465,7 @@
     </ul>
   </section>
 
-  <section id="elsewhere" class="sec wrap" aria-labelledby="elsewhere-title">
+  <section id="elsewhere" class="sec wrap fx" aria-labelledby="elsewhere-title">
     <h2 class="sec-title" id="elsewhere-title">在别处</h2>
     <ul class="links">
       <li>
@@ -474,6 +493,171 @@
     </p>
   </div>
 </footer>
+
+<script>
+(function(){
+  'use strict';
+  var doc = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── 示波器波形 ───────────────────────────────
+     三条通道 + 刻度网格 + 沿主波移动的扫描光点。
+     reduce-motion 用户只画一帧静态波形，不循环。 */
+  var canvas = document.getElementById('scope');
+  if(canvas && canvas.getContext){
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0, raf = 0, t0 = performance.now(), pausedAt = 0;
+    var heroVis = true, pageVis = !document.hidden;
+
+    function resize(){
+      var r = canvas.parentElement.getBoundingClientRect();
+      W = Math.max(1, Math.round(r.width));
+      H = Math.max(1, Math.round(r.height));
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if(!raf) draw(performance.now());
+    }
+
+    function ch(y0, amp, k1, k2, p1, p2, a, color, t, glow){
+      ctx.beginPath();
+      for(var x = 0; x <= W + 3; x += 3){
+        var y = y0 + amp * Math.sin(x * k1 + t * 0.9 + p1) + amp * 0.45 * Math.sin(x * k2 - t * 0.6 + p2);
+        if(x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      if(glow){
+        ctx.globalAlpha = a * 0.28;
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = color;
+        ctx.stroke();
+      }
+      ctx.globalAlpha = a;
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.6;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    function grid(){
+      ctx.globalAlpha = 0.08;
+      ctx.strokeStyle = '#4EC2C6';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for(var x = 84; x < W; x += 84){ ctx.moveTo(x + .5, 0); ctx.lineTo(x + .5, H); }
+      for(var y = 84; y < H; y += 84){ ctx.moveTo(0, y + .5); ctx.lineTo(W, y + .5); }
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    function draw(now){
+      var t = (now - t0) / 1000;
+      ctx.clearRect(0, 0, W, H);
+      grid();
+      var amp1 = H * 0.07, y1 = H * 0.68;
+      ch(H * 0.56, H * 0.045, 0.013, 0.031, 1.7, 0.4, 0.18, '#D89A3F', t * 0.7, false);
+      ch(H * 0.76, H * 0.05,  0.009, 0.027, 4.1, 2.2, 0.24, '#4EC2C6', t * 0.55, false);
+      ch(y1, amp1, 0.011, 0.023, 0, 1.3, 0.6, '#4EC2C6', t, true);
+      var sx = (t * 80) % (W + 140) - 70;
+      if(sx > -60 && sx < W + 60){
+        var sy = y1 + amp1 * Math.sin(sx * 0.011 + t * 0.9) + amp1 * 0.45 * Math.sin(sx * 0.023 - t * 0.6 + 1.3);
+        var g = ctx.createRadialGradient(sx, sy, 0, sx, sy, 16);
+        g.addColorStop(0, 'rgba(78,194,198,.85)');
+        g.addColorStop(1, 'rgba(78,194,198,0)');
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(sx, sy, 16, 0, 6.2832); ctx.fill();
+        ctx.fillStyle = '#BFF2F3';
+        ctx.beginPath(); ctx.arc(sx, sy, 2.2, 0, 6.2832); ctx.fill();
+      }
+    }
+
+    function loop(now){ draw(now); raf = requestAnimationFrame(loop); }
+    function pause(){ if(raf){ cancelAnimationFrame(raf); raf = 0; pausedAt = performance.now(); } }
+    function resume(){
+      if(!raf){ t0 += performance.now() - pausedAt; raf = requestAnimationFrame(loop); }
+    }
+    function sync(){ (heroVis && pageVis) ? resume() : pause(); }
+
+    if(reduce){
+      resize();
+      window.addEventListener('resize', function(){ resize(); draw(t0); });
+    }else{
+      resize();
+      window.addEventListener('resize', resize);
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){
+          es.forEach(function(e){ heroVis = e.isIntersecting; sync(); });
+        }, {threshold: 0}).observe(canvas.parentElement);
+      }
+      document.addEventListener('visibilitychange', function(){
+        pageVis = !document.hidden; sync();
+      });
+      raf = requestAnimationFrame(loop);
+    }
+  }
+
+  if(reduce || !('IntersectionObserver' in window)) return;
+
+  /* 以下动效只在 JS 可用且未减少动效时启用；无 JS 页面完整可见 */
+  doc.classList.add('js-anim');
+
+  /* ── 顶栏滚动反馈 ── */
+  var bar = document.querySelector('.bar');
+  if(bar){
+    var onScroll = function(){ bar.classList.toggle('scrolled', (window.scrollY || 0) > 8); };
+    window.addEventListener('scroll', onScroll, {passive: true});
+    onScroll();
+  }
+
+  /* ── 区块进视口淡入 ── */
+  var fx = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); fx.unobserve(e.target); }
+    });
+  }, {threshold: .12, rootMargin: '0px 0px -8% 0px'});
+  [].forEach.call(document.querySelectorAll('.fx'), function(el){ fx.observe(el); });
+  /* 兜底：IO 失灵或爬虫渲染时，3 秒后全部显示，不让内容困在透明里 */
+  setTimeout(function(){
+    [].forEach.call(document.querySelectorAll('.fx:not(.in)'), function(el){ el.classList.add('in'); });
+    fx.disconnect();
+  }, 3000);
+
+  /* ── 条形图：进入视口才开始生长（延迟链在 JS 里排） ── */
+  var bars = document.querySelector('.bars');
+  if(bars){
+    var bo = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        bo.disconnect();
+        [].forEach.call(bars.querySelectorAll('.b-fill'), function(f, i){
+          f.style.animationDelay = (0.05 + i * 0.05).toFixed(2) + 's';
+          f.classList.add('armed');
+        });
+      });
+    }, {threshold: .3});
+    bo.observe(bars);
+  }
+
+  /* ── 仪器读数：数字滚动到目标值 ── */
+  [].forEach.call(document.querySelectorAll('[data-n]'), function(el){
+    var target = parseInt(el.getAttribute('data-n'), 10) || 0;
+    var co = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        co.disconnect();
+        var t0 = performance.now(), dur = 950;
+        (function step(now){
+          var p = Math.min(1, (now - t0) / dur);
+          p = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * p);
+          if(p < 1) requestAnimationFrame(step);
+        })(t0);
+      });
+    }, {threshold: .5});
+    co.observe(el);
+  });
+})();
+</script>
 
 </body>
 </html>
