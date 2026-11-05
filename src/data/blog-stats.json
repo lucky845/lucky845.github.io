@@ -1,8 +1,8 @@
 {
-  "posts": 140,
+  "posts": 146,
   "categories": 23,
-  "tags": 179,
-  "archivePages": 12,
+  "tags": 209,
+  "archivePages": 13,
   "stack": [
     {
       "name": "Java",
@@ -45,7 +45,7 @@
       "count": 13
     }
   ],
-  "generatedAt": "2026-11-02T10:20:08.771Z",
+  "generatedAt": "2026-11-05T05:00:12.760Z",
   "source": "https://blog.lucky845.top/stats.json",
-  "fetchedAt": "2026-11-02T10:29:41.046Z"
+  "fetchedAt": "2026-11-05T05:01:46.638Z"
 }
