@@ -46,6 +46,7 @@ onBeforeUnmount(() => {
 
 <template>
   <a class="skip" href="#main">跳到主要内容</a>
+  <div class="ruler" aria-hidden="true"></div>
 
   <TopBar />
 
@@ -53,13 +54,16 @@ onBeforeUnmount(() => {
     <HeroSection />
     <StackBars />
     <ProjectList />
-    <LinkSection
-      section-id="notes"
-      title="写下来的东西"
-      note="源码解析和线上故障追查占大头，长文居多。想按技术点找，走标签更快。"
-      :links="noteLinks"
-    />
-    <LinkSection section-id="elsewhere" title="在别处" :links="elsewhereLinks" />
+    <div class="linkband wrap">
+      <LinkSection
+        section-id="notes"
+        fig="图 03"
+        title="写下来的东西"
+        note="源码解析和线上故障追查占大头，长文居多。想按技术点找，走标签更快。"
+        :links="noteLinks"
+      />
+      <LinkSection section-id="elsewhere" fig="图 04" title="在别处" :links="elsewhereLinks" />
+    </div>
   </main>
 
   <SiteFooter />

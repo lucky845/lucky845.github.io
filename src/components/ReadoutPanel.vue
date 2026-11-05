@@ -30,17 +30,17 @@ watch(inView, (visible) => {
 </script>
 
 <template>
-  <div ref="root" class="readout">
+  <aside ref="root" class="readout fx" aria-label="站点档案">
     <div class="readout-head">
-      <span>站点档案</span>
-      <span>{{ statsStamp }}</span>
+      <span class="rh-label"><i class="rdot"></i>PANEL · 站点档案</span>
+      <span class="mono">{{ statsStamp }}</span>
     </div>
     <dl class="readout-rows">
       <div v-for="stat in stats" :key="stat.label" class="readout-row">
         <dt>{{ stat.label }}</dt>
-        <dd><span :data-n="stat.value">{{ stat.value }}</span><em>{{ stat.unit }}</em></dd>
+        <dd><span class="num" :data-n="stat.value">{{ stat.value }}</span><em>{{ stat.unit }}</em></dd>
       </div>
     </dl>
     <p class="readout-stamp">数字取自博客统计与 GitHub，随文章更新。</p>
-  </div>
+  </aside>
 </template>

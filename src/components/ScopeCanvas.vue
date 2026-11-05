@@ -2,8 +2,9 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { prefersReducedMotion } from '../composables/useInView'
 
-/** 示波器：三条信号通道 + 刻度网格 + 沿主波移动的扫描光点。
- *  减少动效的用户只画一帧静态波形，不进入循环。 */
+/** 示波器：三条信号通道 + 四分网格 + 底部刻度 + 沿主波移动的扫描光点（B 方案构图）。
+ *  减少动效的用户只画一帧静态波形，不进入循环；离屏与后台标签页自动暂停。 */
+const wrapRef = ref<HTMLElement | null>(null)
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const reduce = prefersReducedMotion()
 
@@ -18,10 +19,22 @@ let heroVisible = true
 let pageVisible = true
 let observer: IntersectionObserver | null = null
 
+/** 三条波的参数与 proto-b/b.js 完全一致 */
+const waves = [
+  { a: 0.16, f: 0.006, s: 1.0, color: 'rgba(78,194,198,.34)', lineWidth: 1.4 },
+  { a: 0.1, f: 0.01, s: 1.6, color: 'rgba(78,194,198,.55)', lineWidth: 1.2 },
+  { a: 0.05, f: 0.017, s: 2.4, color: 'rgba(216,154,63,.5)', lineWidth: 1 },
+] as const
+
+function ybase(): number {
+  return height * 0.62
+}
+
 function resize(): void {
+  const wrap = wrapRef.value
   const canvas = canvasRef.value
-  if (!canvas || !ctx || !canvas.parentElement) return
-  const rect = canvas.parentElement.getBoundingClientRect()
+  if (!wrap || !canvas || !ctx) return
+  const rect = wrap.getBoundingClientRect()
   width = Math.max(1, Math.round(rect.width))
   height = Math.max(1, Math.round(rect.height))
   canvas.width = Math.round(width * dpr)
@@ -30,89 +43,65 @@ function resize(): void {
   if (!raf) draw(performance.now())
 }
 
-function channel(
-  y0: number,
-  amp: number,
-  k1: number,
-  k2: number,
-  p1: number,
-  p2: number,
-  alpha: number,
-  color: string,
-  t: number,
-  glow: boolean,
-): void {
+function drawGrid(): void {
   if (!ctx) return
-  ctx.beginPath()
-  for (let x = 0; x <= width + 3; x += 3) {
-    const y =
-      y0 +
-      amp * Math.sin(x * k1 + t * 0.9 + p1) +
-      amp * 0.45 * Math.sin(x * k2 - t * 0.6 + p2)
-    if (x === 0) ctx.moveTo(x, y)
-    else ctx.lineTo(x, y)
-  }
-  if (glow) {
-    ctx.globalAlpha = alpha * 0.28
-    ctx.lineWidth = 5
-    ctx.strokeStyle = color
-    ctx.stroke()
-  }
-  ctx.globalAlpha = alpha
-  ctx.strokeStyle = color
-  ctx.lineWidth = 1.6
-  ctx.stroke()
-  ctx.globalAlpha = 1
-}
-
-function grid(): void {
-  if (!ctx) return
-  ctx.globalAlpha = 0.08
-  ctx.strokeStyle = '#4EC2C6'
+  ctx.strokeStyle = 'rgba(31,44,51,.55)'
   ctx.lineWidth = 1
   ctx.beginPath()
-  for (let x = 84; x < width; x += 84) {
-    ctx.moveTo(x + 0.5, 0)
-    ctx.lineTo(x + 0.5, height)
+  for (let x = width * 0.25; x < width; x += width * 0.25) {
+    ctx.moveTo(x, 0)
+    ctx.lineTo(x, height)
   }
-  for (let y = 84; y < height; y += 84) {
-    ctx.moveTo(0, y + 0.5)
-    ctx.lineTo(width, y + 0.5)
+  for (let y = height * 0.33; y < height; y += height * 0.33) {
+    ctx.moveTo(0, y)
+    ctx.lineTo(width, y)
   }
   ctx.stroke()
-  ctx.globalAlpha = 1
+  // 底部刻度
+  ctx.strokeStyle = 'rgba(58,82,94,.8)'
+  ctx.beginPath()
+  for (let x = 0; x <= width; x += 64) {
+    ctx.moveTo(x + 0.5, height)
+    ctx.lineTo(x + 0.5, height - 6)
+  }
+  ctx.stroke()
+}
+
+function waveY(x: number, wave: (typeof waves)[number], t: number): number {
+  const envelope = Math.sin((x / width) * Math.PI)
+  return ybase() + Math.sin(x * wave.f + t * wave.s) * wave.a * height * envelope
 }
 
 function draw(now: number): void {
   if (!ctx) return
   const t = (now - t0) / 1000
   ctx.clearRect(0, 0, width, height)
-  grid()
+  drawGrid()
 
-  const amp1 = height * 0.07
-  const y1 = height * 0.68
-  channel(height * 0.56, height * 0.045, 0.013, 0.031, 1.7, 0.4, 0.18, '#D89A3F', t * 0.7, false)
-  channel(height * 0.76, height * 0.05, 0.009, 0.027, 4.1, 2.2, 0.24, '#4EC2C6', t * 0.55, false)
-  channel(y1, amp1, 0.011, 0.023, 0, 1.3, 0.6, '#4EC2C6', t, true)
-
-  const sx = ((t * 80) % (width + 140)) - 70
-  if (sx > -60 && sx < width + 60) {
-    const sy =
-      y1 +
-      amp1 * Math.sin(sx * 0.011 + t * 0.9) +
-      amp1 * 0.45 * Math.sin(sx * 0.023 - t * 0.6 + 1.3)
-    const glow = ctx.createRadialGradient(sx, sy, 0, sx, sy, 16)
-    glow.addColorStop(0, 'rgba(78,194,198,.85)')
-    glow.addColorStop(1, 'rgba(78,194,198,0)')
-    ctx.fillStyle = glow
+  for (const wave of waves) {
+    ctx.strokeStyle = wave.color
+    ctx.lineWidth = wave.lineWidth
     ctx.beginPath()
-    ctx.arc(sx, sy, 16, 0, 6.2832)
-    ctx.fill()
-    ctx.fillStyle = '#BFF2F3'
-    ctx.beginPath()
-    ctx.arc(sx, sy, 2.2, 0, 6.2832)
-    ctx.fill()
+    for (let px = 0; px <= width; px += 3) {
+      const py = waveY(px, wave, t)
+      if (px === 0) ctx.moveTo(px, py)
+      else ctx.lineTo(px, py)
+    }
+    ctx.stroke()
   }
+
+  // 扫描光点骑在第一条波上
+  const sx = (t * 60) % width
+  const sy = waveY(sx, waves[0], t)
+  ctx.fillStyle = '#4EC2C6'
+  ctx.beginPath()
+  ctx.arc(sx, sy, 2.6, 0, Math.PI * 2)
+  ctx.fill()
+  ctx.strokeStyle = 'rgba(78,194,198,.25)'
+  ctx.beginPath()
+  ctx.moveTo(sx, 0)
+  ctx.lineTo(sx, height)
+  ctx.stroke()
 }
 
 function loop(now: number): void {
@@ -140,7 +129,6 @@ function sync(): void {
 
 function onResize(): void {
   resize()
-  if (reduce) draw(t0)
 }
 
 function onVisibilityChange(): void {
@@ -164,7 +152,7 @@ onMounted(() => {
 
   if (reduce) return
 
-  if ('IntersectionObserver' in window && canvas.parentElement) {
+  if ('IntersectionObserver' in window && wrapRef.value) {
     observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) heroVisible = entry.isIntersecting
@@ -172,7 +160,7 @@ onMounted(() => {
       },
       { threshold: 0 },
     )
-    observer.observe(canvas.parentElement)
+    observer.observe(wrapRef.value)
   }
   raf = requestAnimationFrame(loop)
 })
@@ -188,5 +176,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <canvas ref="canvasRef" class="hero-scope" aria-hidden="true"></canvas>
+  <div ref="wrapRef" class="hero-scope" aria-hidden="true">
+    <canvas ref="canvasRef"></canvas>
+  </div>
 </template>

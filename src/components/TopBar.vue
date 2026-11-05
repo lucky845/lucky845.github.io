@@ -21,7 +21,7 @@ onBeforeUnmount(() => {
 <template>
   <header class="bar" :class="{ scrolled }">
     <div class="bar-in wrap">
-      <a class="bar-id" href="/">{{ site.name }}</a>
+      <a class="bar-id" href="/">{{ site.name }}<i class="cursor" aria-hidden="true"></i></a>
       <span class="bar-role">{{ site.role }}</span>
       <nav class="bar-nav" aria-label="主要导航">
         <a :href="site.blog">笔记</a>
