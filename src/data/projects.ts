@@ -17,6 +17,14 @@ export const projects: Project[] = [
     live: true,
   },
   {
+    name: 'frontend-toolbox',
+    href: 'https://frontend-toolbox.lucky845.top/',
+    description:
+      '23 个开发小工具，按文本、编码、数据格式化、开发辅助、图像、对比分成六块，从 Base64、JSON 格式化一直到图片压缩加水印。刻意做成纯前端：所有处理都在浏览器本地完成，没有后端可以上传，隐私是架构决定的，不是承诺出来的。',
+    tags: ['React', 'Vite', 'Tailwind'],
+    live: true,
+  },
+  {
     name: 'easy-captcha',
     href: 'https://github.com/lucky845/easy-captcha',
     description:

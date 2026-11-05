@@ -107,7 +107,7 @@ export const stats: Stat[] = [
   { label: '分类', value: numberOr('categories'), unit: '个' },
   { label: '标签', value: numberOr('tags'), unit: '个' },
   // 公开项目挂在 GitHub，博客统计拿不到，仍然手工维护
-  { label: '公开项目', value: 8, unit: '个' },
+  { label: '公开项目', value: 9, unit: '个' },
   { label: '归档', value: numberOr('archivePages'), unit: '页' },
 ]
 

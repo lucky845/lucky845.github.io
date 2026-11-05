@@ -35,9 +35,8 @@ src/
   composables/
     useInView.ts           元素首次进入视口即置真，之后不再翻转
   data/                    页面上的数字和文案都在这里，改内容只动这几个文件
-    site.ts                站点信息、档案五行、文案里引用的笔记篇数
-    stack.ts               技术栈十条，条形宽度由计数换算
-    projects.ts            八个项目
+    site.ts                站点信息、档案五行、技术栈十项、文案里的笔记篇数
+    projects.ts            九个项目
     links.ts               笔记入口与「在别处」
   styles/global.css        全部样式，设计 token 定义在 :root
 ```
@@ -47,13 +46,13 @@ src/
 | 想改什么 | 改哪里 |
 | --- | --- |
 | 档案里的数字、站点信息 | `src/data/site.ts` |
-| 技术栈条目与计数 | `src/data/stack.ts` |
+| 技术栈条目与计数 | `src/data/site.ts` |
 | 项目列表、描述、标签 | `src/data/projects.ts` |
 | 笔记入口与联系方式 | `src/data/links.ts` |
 | 配色、字号、间距、断点 | `src/styles/global.css` 的 `:root` 与各区块规则 |
 | 标题、描述、og、JSON-LD | `index.html` |
 
-文章更新后，`src/data/site.ts` 的笔记篇数、分类数、标签数与 `src/data/stack.ts` 的计数需要手动同步；`index.html` 与 `src/data/site.ts` 里出现篇数的地方一起改。
+文章更新后，笔记篇数、分类数、标签数由构建前的 `scripts/fetch-stats.mjs` 自动从博客拉取，不需要手改；只有 `index.html` 的 `meta description` 里写死的篇数要手动跟进。
 
 ## 动效约定
 
@@ -76,4 +75,4 @@ Pages 的 source 设为 **GitHub Actions**（`build_type=workflow`），自定�
 
 ## 数据口径
 
-笔记 137 篇、分类 23 个、标签 172 个、公开项目 8 个、归档 12 页，取自博客侧栏统计与 GitHub 仓库列表；技术栈十项是该博客标签的真实计数。
+笔记 146 篇、分类 23 个、标签 209 个、公开项目 9 个、归档 13 页，取自博客侧栏统计与 GitHub 仓库列表；技术栈十项是该博客标签的真实计数。
