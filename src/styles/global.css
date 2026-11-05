@@ -125,7 +125,7 @@
   }
   .readout-head{
     display:flex;justify-content:space-between;align-items:baseline;
-    font-family:var(--mono);font-size:.72rem;color:var(--dim);
+    font-family:var(--mono);font-size:.76rem;color:var(--dim);
     padding-bottom:.7rem;border-bottom:1px solid var(--line);
   }
   .readout-rows{margin:0}
@@ -139,9 +139,9 @@
     margin:0;font-family:var(--mono);font-size:.92rem;font-weight:600;
     color:var(--ink);font-variant-numeric:tabular-nums;
   }
-  .readout-row dd em{font-style:normal;color:var(--dim);font-weight:400;font-size:.76rem;margin-left:.25rem}
+  .readout-row dd em{font-style:normal;color:var(--dim);font-weight:400;font-size:.78rem;margin-left:.25rem}
   .readout-stamp{
-    margin:.4rem 0 0;font-size:.72rem;color:var(--dim);line-height:1.65;
+    margin:.4rem 0 0;font-size:.76rem;color:var(--dim);line-height:1.65;
     padding-top:.7rem;border-top:1px solid var(--line);
   }
 
@@ -208,7 +208,7 @@
   .p-desc{margin:0;font-size:.89rem;line-height:1.7;color:var(--ink-soft)}
   .p-meta{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end}
   .p-meta span{
-    font-family:var(--mono);font-size:.68rem;
+    font-family:var(--mono);font-size:.76rem;
     color:var(--dim);border:1px solid var(--line);
     padding:.1rem .45rem;white-space:normal;
     overflow-wrap:anywhere;
@@ -234,24 +234,88 @@
     padding:1.6rem 0 3rem;border-top:1px solid var(--line);
     background:var(--panel);
   }
-  .foot p{margin:0;font-family:var(--mono);font-size:.74rem;color:var(--dim);line-height:1.95}
+  .foot p{margin:0;font-family:var(--mono);font-size:.78rem;color:var(--dim);line-height:1.95}
   .foot a{color:var(--ink-soft);border-bottom:1px solid var(--line)}
   .foot a:hover{color:var(--trace);border-bottom-color:var(--trace)}
 
-  /* ── 响应式 ──────────────────────────────── */
-  @media (max-width:880px){
-    .hero{grid-template-columns:minmax(0,1fr);gap:2.2rem;padding-top:2.4rem}
-    .hero h1{max-width:none}
-    .readout{max-width:min(28rem,100%);width:100%}
-    .project{grid-template-columns:minmax(0,1fr);gap:.45rem}
-    .p-meta{justify-content:flex-start;margin-top:.3rem}
-    .bar-nav{width:100%;margin-left:0;gap:1rem 1.2rem;padding-top:.1rem;flex-wrap:wrap}
-    .bar-in{min-height:0;padding-top:.7rem;padding-bottom:.7rem}
+  /* ── 响应式 ──────────────────────────────────────────────
+     断点按各组件的需要分层，不再用一条 880 切全页。
+     原因：只缩列数、不调尺度，窄屏上缩掉的不是留白而是可读性——
+     辅助字号停在 10.9–11.8px、导航点击区只有 26px 高，
+     两者在任何视口下都是同一个数，等于没做响应式。       */
+
+  /* 1040 以下：hero 右栏收窄，正文拿回宽度 */
+  @media (max-width:1040px){
+    .hero{grid-template-columns:minmax(0,1fr) minmax(0,17rem)}
   }
-  @media (max-width:440px){
+
+  /* 880 以下：顶栏折行；hero 仍是两栏（平板不该缺一条腿）；
+     辅助字号与点击区开始往上抬 */
+  @media (max-width:880px){
+    .bar-in{min-height:0;padding-top:.6rem;padding-bottom:.5rem}
+    .bar-id{padding:.28rem 0}
+    .bar-role{font-size:.84rem}
+    .bar-nav{width:100%;margin-left:0;gap:0 1.3rem;padding-top:.05rem}
+    .bar-nav a{padding:.42rem 0}
+    .hero{grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:clamp(1.5rem,4.5vw,2.6rem);padding-top:2.4rem}
+    .hero h1{max-width:none}
+    .readout-row dt{font-size:.86rem}
+    .readout-head,.readout-stamp{font-size:.78rem}
+    .p-meta span{font-size:.78rem}
+    .foot p{font-size:.8rem}
+    /* 项目行：标题 + 描述两栏，标签挪到描述下方，
+       不再把每一条摊成标题/描述/标签三整行 */
+    .project{grid-template-columns:minmax(0,11rem) minmax(0,1fr)}
+    .p-title{padding:.3rem 0}
+    .links a{padding:.4rem 0}
+    .p-meta{grid-column:2;justify-content:flex-start;margin-top:.35rem}
+  }
+
+  /* 760 以下：标题列已经收不动，项目行回单栏 */
+  @media (max-width:760px){
+    .project{grid-template-columns:minmax(0,1fr);gap:.4rem}
+    .p-meta{grid-column:auto;margin-top:.3rem}
+  }
+
+  /* 640 以下：真·手机。字号抬到可读下限，点击区抬到 40px 上下 */
+  @media (max-width:640px){
+    .hero{grid-template-columns:minmax(0,1fr);gap:1.9rem;padding-top:2.1rem;padding-bottom:2.2rem}
+    .readout{max-width:none}
+    .lede{font-size:1.02rem;line-height:1.82}
+    .sec{padding:2.2rem 0}
+    .sec-note{font-size:.95rem}
+    .project{padding:1.15rem 0}
+    .project:first-child{padding-top:.2rem}
+    .p-title{padding:.3rem 0}
+    .p-meta span{font-size:.8rem;padding:.14rem .5rem}
+    .bars li{grid-template-columns:minmax(0,6.6rem) minmax(0,1fr) 2.4rem;gap:.6rem;padding:.5rem 0}
+    .links li{padding:.85rem 0}
+    .links a{padding:.45rem 0}
+    .readout-head,.readout-stamp{font-size:.8rem}
+    .readout-row{padding:.62rem 0}
+    .readout-row dt{font-size:.88rem}
+    .foot p{font-size:.8rem}
+    /* 窄屏上波形只做底纹，不跟文字抢注意力 */
+    .hero-scope{opacity:.6}
+  }
+
+  /* 400 以下：条形图改成「名字 + 计数」一行、条形通栏，
+     否则名字列被压到 6.6rem 里逐字折行 */
+  @media (max-width:400px){
     .bar-role{display:none}
+    .bars li{grid-template-columns:minmax(0,1fr) auto;gap:.12rem .8rem;padding:.58rem 0}
+    .b-name{grid-column:1;grid-row:1}
+    .b-num{grid-column:2;grid-row:1}
+    .b-track{grid-column:1 / -1;grid-row:2}
     .links li{flex-direction:column;gap:.15rem}
-    .bars li{grid-template-columns:minmax(0,7rem) minmax(0,1fr) minmax(0,2.6rem);gap:.7rem}
+  }
+
+  /* 触屏设备：指针换成手指，点击区就按手指的尺寸给 */
+  @media (pointer:coarse){
+    .bar-id{padding:.35rem 0}
+    .bar-nav a{padding:.55rem 0}
+    .p-title{padding:.35rem 0}
+    .links a{padding:.45rem 0}
   }
 
   /* ── 动效：只有条形图生长一处 ─────────────────
