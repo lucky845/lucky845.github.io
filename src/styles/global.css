@@ -161,7 +161,7 @@
   }
 
   /* ── 技术栈条形图（本页唯一的视觉重头）─────── */
-  .bars{list-style:none;margin:0;padding:0;max-width:44rem}
+  .bars{list-style:none;margin:0;padding:0;max-width:52rem}
   .bars li{
     display:grid;
     grid-template-columns:minmax(6.5rem,9rem) minmax(0,1fr) 2.6rem;
@@ -243,6 +243,14 @@
      原因：只缩列数、不调尺度，窄屏上缩掉的不是留白而是可读性——
      辅助字号停在 10.9–11.8px、导航点击区只有 26px 高，
      两者在任何视口下都是同一个数，等于没做响应式。       */
+
+  /* 1100 以下：项目行三列开始失衡——标题列被长仓库名撑到 17rem、
+     标签孤悬最右一列，中间描述反而被挤窄。
+     改成「标题 + 描述」两列，标签跟在描述下方 */
+  @media (max-width:1100px){
+    .project{grid-template-columns:minmax(0,12rem) minmax(0,1fr)}
+    .p-meta{grid-column:2;justify-content:flex-start;margin-top:.35rem}
+  }
 
   /* 1040 以下：hero 右栏收窄，正文拿回宽度 */
   @media (max-width:1040px){
